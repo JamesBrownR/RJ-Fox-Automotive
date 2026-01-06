@@ -8,7 +8,7 @@
   alt: "Red RJ Fox Automotive tow truck parked outside shop ready for roadside assistance"
 
 - image: RJ3.webp
-alt: "Engine and transmission removal setup with hoist in automotive repair shop bay"
+  alt: "Engine and transmission removal setup with hoist in automotive repair shop bay"
 
 - image: RJ4.webp
   alt: "Multiple vehicles on lifts in busy auto repair shop showing diagnostic and repair work in progress"
@@ -58,7 +58,7 @@ alt: "Engine and transmission removal setup with hoist in automotive repair shop
 - image: RJ19.webp
   alt: "V8 engine on pallet awaiting rebuild or installation in vehicle"
 
-  - image: RJ20.webp
+- image: RJ20.webp
   alt: "Yellow Dodge Charger transmission removal showing major drivetrain repair in progress"
 
 - image: RJ21.webp
