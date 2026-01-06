@@ -1,9 +1,111 @@
-- name: "John D."
+- name: "Gina Vinson"
   stars: 5
-  text: "Rob is the best in Eustis. Honest work, fair prices, and he actually explains what's wrong with the car."
-- name: "Sarah M."
+  text: "Mr. Fox recently did extensive work on our Honda Pilot. We found him compassionate, professional, and fast. It was over the Thanksgiving holiday time and we were very pleased with the response time and results."
+
+- name: "Mel"
   stars: 5
-  text: "RJ Fox Automotive saved me hundreds compared to the dealership. Highly recommend!"
-- name: "Mike T."
+  text: "This man has been a true saint to myself and my family. My transmission went out back in September, I couldn't find anybody affordable to help me fix it. I'm a single mother on very limited income, he worked with me in every way possible, took his time on all repairs, and my car has been running beautifully ever since."
+
+- name: "Eric Estell"
   stars: 5
-  text: "Great experience. Dropped my truck off in the morning and it was ready by noon. Professional service."
+  text: "RJ not only completed repairs and communicated with me throughout the job but got it done before he said he would. All around fantastic experience and top class workmanship."
+
+- name: "Barry MacDonald"
+  stars: 5
+  text: "RJ FOX AUTOMOTIVE checked over the ac system and got me back on the road with a couple of days. This was my first time using RJ FOX AUTOMOTIVE and I WAS VERY PLEASED!!"
+
+- name: "Stefan Rogers"
+  stars: 5
+  text: "This automotive workshop is fantastic, the work they do is first-class and fast. The owner knows his stuff and keeps you informed and up to date on exactly what is happening. Can not recommend this place enough..!"
+
+- name: "Steve Poe"
+  stars: 5
+  text: "Rob and his team are awesome to work with! Great Service, Great Price and Got the Job done right the first time!"
+
+- name: "Paul Pelky Jr"
+  stars: 5
+  text: "Rob and co from start to finish with all of the obstacles was top shelf. I highly recommend fox automotive for anyone that is tired of the bs mechanics. Integrity and quality work!"
+
+- name: "Buddy Young"
+  stars: 5
+  text: "Be at ease doing business with Ryan Fox and Fox automotive. A journeyman technician and honest business man. I've used him twice and and a very happy patron."
+
+- name: "Jerrod Bridgeforth"
+  stars: 5
+  text: "Mr.Fox is a great mechanic... Robby came back, after hours, and fix the starter, and did a tune up, and he was reasonable and fair with the price."
+
+- name: "Tellina Johnson"
+  stars: 5
+  text: "They are very professional and they do excellent work I highly recommend them"
+
+- name: "Madaleine Bosler"
+  stars: 5
+  text: "Good people and easy service."
+
+- name: "Wesley Archer"
+  stars: 5
+  text: "Sent my daughter over there for ac problems and he fixed everything that was needed in good time. Nice guy"
+
+- name: "Steve Parker"
+  stars: 5
+  text: "These guys saved me recently when they rented me a UHaul truck after the dealer down the street stiffed me. I can't thank them enough."
+
+- name: "Toby Mitchell"
+  stars: 5
+  text: "This place does real good. The mechanic is really good. Great diagnost"
+
+- name: "Lord Tyrion The Hand Lion"
+  stars: 5
+  text: "I can say that Mr Fox is thorough and explains everything. Great customer service."
+
+- name: "Susan Keyes"
+  stars: 5
+  text: "Rob was very helpful. They are polite, friendly, courteous and efficient. Would use them again"
+
+- name: "Alicia R"
+  stars: 5
+  text: "The absolute best mechanic in this area!! He worked on my vehicle until all of the issues were fixed."
+
+- name: "John Milliman"
+  stars: 5
+  text: "Fox automotive is true to his word and the work is always great"
+
+- name: "Axe-A-Dent"
+  stars: 5
+  text: "If you're looking for an honest, personable, and reliable mechanic, look not further. 10/10 highly recommended!"
+
+- name: "Sammy Aravena"
+  stars: 5
+  text: "Excellent and nice costumer service, friendly, courteous and efficient..."
+
+- name: "michael africano"
+  stars: 5
+  text: "Very reasonable and price and he takes care of the problem"
+
+- name: "Matt Smith"
+  stars: 5
+  text: "Did a great job for me."
+
+- name: "Travis Horton"
+  stars: 5
+  text: "Excellent and trustworthy."
+
+- name: "ron mink"
+  stars: 5
+  text: "Great service."
+
+- name: "Thomas"
+  stars: 5
+  text: "Good service."
+
+- name: "Chris Abdnour"
+  stars: 5
+  text: "Top notch!"
+
+- name: "KC Scott"
+  stars: 5
+  text: "Mr Fox and his crew have regularly serviced my Friend's car for a while. The owner is very personable... He always treats everyone with respect and the dude embodies enthusiasm & positivity."
+
+- name: "penny roberts"
+  stars: 1
+  text: "Rob is a stand-up guy. He's always done right by me."
