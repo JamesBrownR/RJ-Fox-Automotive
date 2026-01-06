@@ -6,7 +6,7 @@ phone_display: "(352) 436-6133"
 address: "801 David Walker Dr, Eustis, FL 32726"
 owner: "Rob"
 description: "Premier Auto Repair Shop in Eustis, FL. Owned and operated by Rob."
-baseurl: "" # Leave empty for root domain
+baseurl: ""
 
 # Build settings
 markdown: kramdown
