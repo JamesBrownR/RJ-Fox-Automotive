@@ -1,0 +1,224 @@
+---
+layout: default
+title: Blog
+---
+
+<header style="background: 
+    linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), 
+    url('Pics/Hero.webp') center/cover no-repeat; 
+    height: 40vh; 
+    display: flex; 
+    align-items: center;">
+    <div class="container text-center text-white">
+        <h1 class="display-3 fw-bold mb-3">Auto Care Blog</h1>
+        <p class="lead">Tips, advice, and news from RJ Fox Automotive</p>
+    </div>
+</header>
+
+<section class="section-padding">
+    <div class="container">
+        <div class="row">
+            <!-- Main Content -->
+            <div class="col-lg-8">
+                {% if site.posts.size > 0 %}
+                    {% for post in site.posts %}
+                    <article class="card mb-4 border-0 shadow-sm">
+                        {% if post.image %}
+                        <img src="{{ post.image }}" class="card-img-top" alt="{{ post.title }}" style="height: 300px; object-fit: cover;">
+                        {% endif %}
+                        <div class="card-body p-4">
+                            <div class="d-flex align-items-center mb-3">
+                                <span class="badge bg-primary me-2">{{ post.category | default: "Auto Care" }}</span>
+                                <small class="text-muted">
+                                    <i class="fas fa-calendar-alt me-1"></i> {{ post.date | date: "%B %d, %Y" }}
+                                </small>
+                            </div>
+                            <h2 class="card-title h3 mb-3">
+                                <a href="{{ post.url }}" class="text-dark text-decoration-none hover-primary">{{ post.title }}</a>
+                            </h2>
+                            <p class="card-text text-muted">{{ post.excerpt | strip_html | truncatewords: 40 }}</p>
+                            <a href="{{ post.url }}" class="btn btn-outline-primary">
+                                Read More <i class="fas fa-arrow-right ms-1"></i>
+                            </a>
+                        </div>
+                    </article>
+                    {% endfor %}
+                {% else %}
+                    <!-- Placeholder content when no posts exist -->
+                    <article class="card mb-4 border-0 shadow-sm">
+                        <img src="Pics/maintenance.jpg" class="card-img-top" alt="Car Maintenance" style="height: 300px; object-fit: cover;" onerror="this.src='https://via.placeholder.com/800x300?text=Car+Maintenance'">
+                        <div class="card-body p-4">
+                            <div class="d-flex align-items-center mb-3">
+                                <span class="badge bg-primary me-2">Maintenance</span>
+                                <small class="text-muted">
+                                    <i class="fas fa-calendar-alt me-1"></i> January 5, 2025
+                                </small>
+                            </div>
+                            <h2 class="card-title h3 mb-3">
+                                <a href="#" class="text-dark text-decoration-none">5 Signs Your Car Needs Immediate Attention</a>
+                            </h2>
+                            <p class="card-text text-muted">Learn to recognize the warning signs that indicate your vehicle needs professional service. From unusual noises to dashboard warning lights, we'll help you understand when it's time to visit RJ Fox Automotive.</p>
+                            <a href="#" class="btn btn-outline-primary">
+                                Read More <i class="fas fa-arrow-right ms-1"></i>
+                            </a>
+                        </div>
+                    </article>
+
+                    <article class="card mb-4 border-0 shadow-sm">
+                        <img src="Pics/winter.jpg" class="card-img-top" alt="Winter Car Care" style="height: 300px; object-fit: cover;" onerror="this.src='https://via.placeholder.com/800x300?text=Winter+Care'">
+                        <div class="card-body p-4">
+                            <div class="d-flex align-items-center mb-3">
+                                <span class="badge bg-primary me-2">Seasonal Tips</span>
+                                <small class="text-muted">
+                                    <i class="fas fa-calendar-alt me-1"></i> December 28, 2024
+                                </small>
+                            </div>
+                            <h2 class="card-title h3 mb-3">
+                                <a href="#" class="text-dark text-decoration-none">Preparing Your Vehicle for Winter in Florida</a>
+                            </h2>
+                            <p class="card-text text-muted">Even in Florida, your car needs winter preparation. Discover essential maintenance tips to keep your vehicle running smoothly during the cooler months, from checking your battery to inspecting your cooling system.</p>
+                            <a href="#" class="btn btn-outline-primary">
+                                Read More <i class="fas fa-arrow-right ms-1"></i>
+                            </a>
+                        </div>
+                    </article>
+
+                    <article class="card mb-4 border-0 shadow-sm">
+                        <img src="Pics/diesel-truck.jpg" class="card-img-top" alt="Diesel Maintenance" style="height: 300px; object-fit: cover;" onerror="this.src='https://via.placeholder.com/800x300?text=Diesel+Maintenance'">
+                        <div class="card-body p-4">
+                            <div class="d-flex align-items-center mb-3">
+                                <span class="badge bg-primary me-2">Diesel</span>
+                                <small class="text-muted">
+                                    <i class="fas fa-calendar-alt me-1"></i> December 20, 2024
+                                </small>
+                            </div>
+                            <h2 class="card-title h3 mb-3">
+                                <a href="#" class="text-dark text-decoration-none">The Ultimate Guide to Diesel Engine Maintenance</a>
+                            </h2>
+                            <p class="card-text text-muted">Diesel engines require specialized care. Learn the key differences between diesel and gasoline maintenance, including fuel system care, oil change intervals, and common diesel-specific issues to watch for.</p>
+                            <a href="#" class="btn btn-outline-primary">
+                                Read More <i class="fas fa-arrow-right ms-1"></i>
+                            </a>
+                        </div>
+                    </article>
+                {% endif %}
+
+                <!-- Pagination (if needed) -->
+                {% if paginator.total_pages > 1 %}
+                <nav aria-label="Blog pagination">
+                    <ul class="pagination justify-content-center">
+                        {% if paginator.previous_page %}
+                        <li class="page-item">
+                            <a class="page-link" href="{{ paginator.previous_page_path }}">Previous</a>
+                        </li>
+                        {% endif %}
+                        
+                        {% for page in (1..paginator.total_pages) %}
+                        <li class="page-item {% if page == paginator.page %}active{% endif %}">
+                            <a class="page-link" href="{% if page == 1 %}/blog{% else %}{{ site.paginate_path | replace: ':num', page }}{% endif %}">{{ page }}</a>
+                        </li>
+                        {% endfor %}
+                        
+                        {% if paginator.next_page %}
+                        <li class="page-item">
+                            <a class="page-link" href="{{ paginator.next_page_path }}">Next</a>
+                        </li>
+                        {% endif %}
+                    </ul>
+                </nav>
+                {% endif %}
+            </div>
+
+            <!-- Sidebar -->
+            <div class="col-lg-4">
+                <!-- About Widget -->
+                <div class="card border-0 shadow-sm mb-4">
+                    <div class="card-body p-4">
+                        <h5 class="card-title mb-3">About RJ Fox Automotive</h5>
+                        <p class="card-text small text-muted">Your trusted auto repair shop in Eustis, FL. We share tips, maintenance advice, and industry insights to help you keep your vehicle in top condition.</p>
+                    </div>
+                </div>
+
+                <!-- Categories Widget -->
+                <div class="card border-0 shadow-sm mb-4">
+                    <div class="card-body p-4">
+                        <h5 class="card-title mb-3">Categories</h5>
+                        <ul class="list-unstyled mb-0">
+                            <li class="mb-2">
+                                <a href="#" class="text-dark text-decoration-none d-flex justify-content-between align-items-center">
+                                    <span><i class="fas fa-folder text-primary me-2"></i> Maintenance Tips</span>
+                                    <span class="badge bg-light text-dark">5</span>
+                                </a>
+                            </li>
+                            <li class="mb-2">
+                                <a href="#" class="text-dark text-decoration-none d-flex justify-content-between align-items-center">
+                                    <span><i class="fas fa-folder text-primary me-2"></i> Diesel Care</span>
+                                    <span class="badge bg-light text-dark">3</span>
+                                </a>
+                            </li>
+                            <li class="mb-2">
+                                <a href="#" class="text-dark text-decoration-none d-flex justify-content-between align-items-center">
+                                    <span><i class="fas fa-folder text-primary me-2"></i> Seasonal Tips</span>
+                                    <span class="badge bg-light text-dark">4</span>
+                                </a>
+                            </li>
+                            <li class="mb-2">
+                                <a href="#" class="text-dark text-decoration-none d-flex justify-content-between align-items-center">
+                                    <span><i class="fas fa-folder text-primary me-2"></i> Diagnostics</span>
+                                    <span class="badge bg-light text-dark">2</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" class="text-dark text-decoration-none d-flex justify-content-between align-items-center">
+                                    <span><i class="fas fa-folder text-primary me-2"></i> Auto Care News</span>
+                                    <span class="badge bg-light text-dark">6</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Call to Action Widget -->
+                <div class="card border-0 shadow-sm bg-primary text-white mb-4">
+                    <div class="card-body p-4 text-center">
+                        <i class="fas fa-tools fa-3x mb-3"></i>
+                        <h5 class="card-title mb-3">Need Service?</h5>
+                        <p class="card-text small mb-3">Schedule an appointment with our expert mechanics today!</p>
+                        <a href="/contact" class="btn btn-light btn-sm">Contact Us</a>
+                    </div>
+                </div>
+
+                <!-- Recent Posts Widget -->
+                <div class="card border-0 shadow-sm mb-4">
+                    <div class="card-body p-4">
+                        <h5 class="card-title mb-3">Recent Posts</h5>
+                        <div class="mb-3 pb-3 border-bottom">
+                            <h6 class="mb-1">
+                                <a href="#" class="text-dark text-decoration-none small">How to Check Your Oil Level</a>
+                            </h6>
+                            <small class="text-muted"><i class="fas fa-calendar-alt me-1"></i> Jan 3, 2025</small>
+                        </div>
+                        <div class="mb-3 pb-3 border-bottom">
+                            <h6 class="mb-1">
+                                <a href="#" class="text-dark text-decoration-none small">Understanding Warning Lights</a>
+                            </h6>
+                            <small class="text-muted"><i class="fas fa-calendar-alt me-1"></i> Dec 30, 2024</small>
+                        </div>
+                        <div>
+                            <h6 class="mb-1">
+                                <a href="#" class="text-dark text-decoration-none small">Tire Pressure Tips</a>
+                            </h6>
+                            <small class="text-muted"><i class="fas fa-calendar-alt me-1"></i> Dec 25, 2024</small>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<style>
+    .hover-primary:hover {
+        color: var(--primary-blue) !important;
+    }
+</style>
