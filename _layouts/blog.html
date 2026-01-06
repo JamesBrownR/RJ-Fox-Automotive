@@ -1,1 +1,259 @@
+---
+layout: default
+---
 
+<article>
+    <header style="background: 
+        linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), 
+        url('{{ page.image | default: "Pics/Hero.webp" }}') center/cover no-repeat; 
+        height: 50vh; 
+        display: flex; 
+        align-items: center;">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-8 text-center text-white">
+                    <div class="mb-3">
+                        <span class="badge bg-primary me-2">{{ page.category | default: "Auto Care" }}</span>
+                        <span class="text-white-50">
+                            <i class="fas fa-calendar-alt me-1"></i> {{ page.date | date: "%B %d, %Y" }}
+                            {% if page.author %}
+                            <span class="mx-2">•</span>
+                            <i class="fas fa-user me-1"></i> {{ page.author }}
+                            {% endif %}
+                        </span>
+                    </div>
+                    <h1 class="display-4 fw-bold mb-0">{{ page.title }}</h1>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <section class="section-padding">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-8">
+                    <!-- Article Content -->
+                    <div class="article-content mb-5">
+                        {{ content }}
+                    </div>
+
+                    <!-- Tags -->
+                    {% if page.tags %}
+                    <div class="mb-4 pb-4 border-bottom">
+                        <h6 class="mb-3">Tags:</h6>
+                        {% for tag in page.tags %}
+                        <a href="/tags/{{ tag | slugify }}" class="badge bg-light text-dark text-decoration-none me-2 mb-2">
+                            <i class="fas fa-tag me-1"></i> {{ tag }}
+                        </a>
+                        {% endfor %}
+                    </div>
+                    {% endif %}
+
+                    <!-- Share Buttons -->
+                    <div class="mb-5 pb-5 border-bottom">
+                        <h6 class="mb-3">Share this post:</h6>
+                        <div class="d-flex gap-2">
+                            <a href="https://www.facebook.com/sharer/sharer.php?u={{ site.url }}{{ page.url }}" target="_blank" class="btn btn-outline-primary btn-sm">
+                                <i class="fab fa-facebook-f me-1"></i> Facebook
+                            </a>
+                            <a href="https://twitter.com/intent/tweet?url={{ site.url }}{{ page.url }}&text={{ page.title | uri_escape }}" target="_blank" class="btn btn-outline-info btn-sm">
+                                <i class="fab fa-twitter me-1"></i> Twitter
+                            </a>
+                            <a href="https://www.linkedin.com/shareArticle?mini=true&url={{ site.url }}{{ page.url }}" target="_blank" class="btn btn-outline-primary btn-sm">
+                                <i class="fab fa-linkedin-in me-1"></i> LinkedIn
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Author Bio -->
+                    <div class="card border-0 bg-light mb-5">
+                        <div class="card-body p-4">
+                            <div class="d-flex align-items-start">
+                                <div class="flex-shrink-0 me-3">
+                                    <div class="bg-primary text-white rounded-circle d-flex align-items-center justify-content-center" style="width: 80px; height: 80px;">
+                                        <i class="fas fa-user fa-2x"></i>
+                                    </div>
+                                </div>
+                                <div class="flex-grow-1">
+                                    <h5 class="mb-2">About the Author</h5>
+                                    <p class="text-muted mb-2"><strong>{{ page.author | default: "RJ Fox Automotive Team" }}</strong></p>
+                                    <p class="mb-0 small text-muted">{{ page.author_bio | default: "The expert mechanics at RJ Fox Automotive have decades of combined experience in automotive repair and maintenance. We're dedicated to keeping the Eustis community's vehicles running smoothly." }}</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Related Posts -->
+                    {% if site.related_posts.size > 0 %}
+                    <div class="mb-5">
+                        <h4 class="mb-4">Related Articles</h4>
+                        <div class="row">
+                            {% for post in site.related_posts limit:3 %}
+                            <div class="col-md-4 mb-3">
+                                <div class="card h-100 border-0 shadow-sm">
+                                    {% if post.image %}
+                                    <img src="{{ post.image }}" class="card-img-top" alt="{{ post.title }}" style="height: 150px; object-fit: cover;">
+                                    {% endif %}
+                                    <div class="card-body">
+                                        <h6 class="card-title">
+                                            <a href="{{ post.url }}" class="text-dark text-decoration-none">{{ post.title }}</a>
+                                        </h6>
+                                        <small class="text-muted">{{ post.date | date: "%b %d, %Y" }}</small>
+                                    </div>
+                                </div>
+                            </div>
+                            {% endfor %}
+                        </div>
+                    </div>
+                    {% endif %}
+
+                    <!-- Navigation -->
+                    <div class="d-flex justify-content-between align-items-center py-4">
+                        {% if page.previous.url %}
+                        <a href="{{ page.previous.url }}" class="text-decoration-none">
+                            <i class="fas fa-arrow-left me-2"></i> {{ page.previous.title | truncatewords: 5 }}
+                        </a>
+                        {% else %}
+                        <span></span>
+                        {% endif %}
+
+                        <a href="/blog" class="btn btn-outline-primary btn-sm">
+                            <i class="fas fa-th me-1"></i> All Posts
+                        </a>
+
+                        {% if page.next.url %}
+                        <a href="{{ page.next.url }}" class="text-decoration-none">
+                            {{ page.next.title | truncatewords: 5 }} <i class="fas fa-arrow-right ms-2"></i>
+                        </a>
+                        {% else %}
+                        <span></span>
+                        {% endif %}
+                    </div>
+                </div>
+
+                <!-- Sidebar -->
+                <div class="col-lg-4">
+                    <div class="sticky-top" style="top: 100px;">
+                        <!-- CTA -->
+                        <div class="card border-0 shadow-sm bg-primary text-white mb-4">
+                            <div class="card-body p-4 text-center">
+                                <i class="fas fa-wrench fa-3x mb-3"></i>
+                                <h5 class="card-title mb-3">Need Help?</h5>
+                                <p class="card-text small mb-3">Our expert mechanics are ready to help with all your automotive needs.</p>
+                                <a href="/contact" class="btn btn-light">Schedule Service</a>
+                            </div>
+                        </div>
+
+                        <!-- Recent Posts -->
+                        <div class="card border-0 shadow-sm mb-4">
+                            <div class="card-body p-4">
+                                <h6 class="card-title mb-3">Recent Posts</h6>
+                                {% for post in site.posts limit:5 %}
+                                {% if post.url != page.url %}
+                                <div class="{% unless forloop.last %}mb-3 pb-3 border-bottom{% endunless %}">
+                                    <h6 class="mb-1">
+                                        <a href="{{ post.url }}" class="text-dark text-decoration-none small">{{ post.title }}</a>
+                                    </h6>
+                                    <small class="text-muted">{{ post.date | date: "%b %d, %Y" }}</small>
+                                </div>
+                                {% endif %}
+                                {% endfor %}
+                            </div>
+                        </div>
+
+                        <!-- Categories -->
+                        <div class="card border-0 shadow-sm">
+                            <div class="card-body p-4">
+                                <h6 class="card-title mb-3">Categories</h6>
+                                <ul class="list-unstyled mb-0">
+                                    <li class="mb-2">
+                                        <a href="#" class="text-dark text-decoration-none small">
+                                            <i class="fas fa-folder text-primary me-2"></i> Maintenance Tips
+                                        </a>
+                                    </li>
+                                    <li class="mb-2">
+                                        <a href="#" class="text-dark text-decoration-none small">
+                                            <i class="fas fa-folder text-primary me-2"></i> Diesel Care
+                                        </a>
+                                    </li>
+                                    <li class="mb-2">
+                                        <a href="#" class="text-dark text-decoration-none small">
+                                            <i class="fas fa-folder text-primary me-2"></i> Seasonal Tips
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#" class="text-dark text-decoration-none small">
+                                            <i class="fas fa-folder text-primary me-2"></i> Auto Care News
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</article>
+
+<style>
+    .article-content {
+        font-size: 1.1rem;
+        line-height: 1.8;
+    }
+    
+    .article-content h2 {
+        margin-top: 2rem;
+        margin-bottom: 1rem;
+        font-size: 1.75rem;
+    }
+    
+    .article-content h3 {
+        margin-top: 1.5rem;
+        margin-bottom: 0.75rem;
+        font-size: 1.5rem;
+    }
+    
+    .article-content p {
+        margin-bottom: 1.5rem;
+    }
+    
+    .article-content ul, .article-content ol {
+        margin-bottom: 1.5rem;
+        padding-left: 2rem;
+    }
+    
+    .article-content li {
+        margin-bottom: 0.5rem;
+    }
+    
+    .article-content img {
+        max-width: 100%;
+        height: auto;
+        border-radius: 8px;
+        margin: 2rem 0;
+        box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    }
+    
+    .article-content blockquote {
+        border-left: 4px solid var(--primary-blue);
+        padding-left: 1.5rem;
+        margin: 2rem 0;
+        font-style: italic;
+        color: #666;
+    }
+
+    .article-content code {
+        background-color: #f8f9fa;
+        padding: 2px 6px;
+        border-radius: 3px;
+        font-size: 0.9em;
+    }
+
+    .article-content pre {
+        background-color: #f8f9fa;
+        padding: 1rem;
+        border-radius: 8px;
+        overflow-x: auto;
+    }
+</style>
