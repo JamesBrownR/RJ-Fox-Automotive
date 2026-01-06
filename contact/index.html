@@ -1,0 +1,170 @@
+---
+layout: default
+title: Contact
+---
+
+<header style="background: 
+    linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), 
+    url('Pics/Hero.webp') center/cover no-repeat; 
+    height: 40vh; 
+    display: flex; 
+    align-items: center;">
+    <div class="container text-center text-white">
+        <h1 class="display-3 fw-bold mb-3">Contact Us</h1>
+        <p class="lead">Get in touch with RJ Fox Automotive today</p>
+    </div>
+</header>
+
+<section class="section-padding">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-6 mb-5 mb-lg-0">
+                <h2 class="mb-4">Send Us a Message</h2>
+                <p class="text-muted mb-4">Have a question or need to schedule a service? Fill out the form below and we'll get back to you as soon as possible.</p>
+                
+                <form action="https://formspree.io/f/YOUR_FORM_ID" method="POST" class="needs-validation" novalidate>
+                    <div class="mb-3">
+                        <label for="name" class="form-label">Full Name <span class="text-danger">*</span></label>
+                        <input type="text" class="form-control" id="name" name="name" required>
+                        <div class="invalid-feedback">
+                            Please enter your name.
+                        </div>
+                    </div>
+                    
+                    <div class="mb-3">
+                        <label for="email" class="form-label">Email Address <span class="text-danger">*</span></label>
+                        <input type="email" class="form-control" id="email" name="email" required>
+                        <div class="invalid-feedback">
+                            Please enter a valid email address.
+                        </div>
+                    </div>
+                    
+                    <div class="mb-3">
+                        <label for="phone" class="form-label">Phone Number</label>
+                        <input type="tel" class="form-control" id="phone" name="phone">
+                    </div>
+                    
+                    <div class="mb-3">
+                        <label for="service" class="form-label">Service Interested In</label>
+                        <select class="form-select" id="service" name="service">
+                            <option value="">Select a service...</option>
+                            <option value="diagnostics">Automotive Diagnostics</option>
+                            <option value="diesel">Diesel Repair</option>
+                            <option value="electrical">Auto Electrical Repair</option>
+                            <option value="transmission">Transmission Maintenance</option>
+                            <option value="oil-change">Oil Change</option>
+                            <option value="brake-service">Brake Service</option>
+                            <option value="ac-repair">AC Repair</option>
+                            <option value="engine-repair">Engine Repair</option>
+                            <option value="other">Other</option>
+                        </select>
+                    </div>
+                    
+                    <div class="mb-3">
+                        <label for="message" class="form-label">Message <span class="text-danger">*</span></label>
+                        <textarea class="form-control" id="message" name="message" rows="5" required></textarea>
+                        <div class="invalid-feedback">
+                            Please enter your message.
+                        </div>
+                    </div>
+                    
+                    <button type="submit" class="btn btn-primary btn-lg w-100">
+                        <i class="fas fa-paper-plane me-2"></i> Send Message
+                    </button>
+                </form>
+            </div>
+            
+            <div class="col-lg-6">
+                <div class="ps-lg-5">
+                    <h2 class="mb-4">Get In Touch</h2>
+                    
+                    <div class="card border-0 shadow-sm mb-4">
+                        <div class="card-body p-4">
+                            <div class="d-flex mb-4">
+                                <div class="flex-shrink-0">
+                                    <i class="fas fa-map-marker-alt fa-2x text-primary"></i>
+                                </div>
+                                <div class="flex-grow-1 ms-3">
+                                    <h5 class="mb-2">Address</h5>
+                                    <p class="text-muted mb-0">{{ site.address }}</p>
+                                    <a href="https://maps.google.com/?q={{ site.address | url_encode }}" target="_blank" class="text-primary text-decoration-none">
+                                        <small>Get Directions <i class="fas fa-arrow-right ms-1"></i></small>
+                                    </a>
+                                </div>
+                            </div>
+                            
+                            <div class="d-flex mb-4">
+                                <div class="flex-shrink-0">
+                                    <i class="fas fa-phone fa-2x text-primary"></i>
+                                </div>
+                                <div class="flex-grow-1 ms-3">
+                                    <h5 class="mb-2">Phone</h5>
+                                    <p class="text-muted mb-0">
+                                        <a href="tel:{{ site.phone }}" class="text-muted text-decoration-none">{{ site.phone_display }}</a>
+                                    </p>
+                                    <small class="text-muted">Call us during business hours</small>
+                                </div>
+                            </div>
+                            
+                            <div class="d-flex">
+                                <div class="flex-shrink-0">
+                                    <i class="fas fa-clock fa-2x text-primary"></i>
+                                </div>
+                                <div class="flex-grow-1 ms-3">
+                                    <h5 class="mb-3">Hours of Operation</h5>
+                                    <ul class="list-unstyled mb-0">
+                                        <li class="d-flex justify-content-between mb-2">
+                                            <span class="fw-bold">Monday - Friday:</span>
+                                            <span>8:30 AM – 6:00 PM</span>
+                                        </li>
+                                        <li class="d-flex justify-content-between mb-2">
+                                            <span class="fw-bold">Saturday:</span>
+                                            <span>8:30 AM – 2:00 PM</span>
+                                        </li>
+                                        <li class="d-flex justify-content-between text-muted">
+                                            <span class="fw-bold">Sunday:</span>
+                                            <span>Closed</span>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="alert alert-info border-0 shadow-sm">
+                        <i class="fas fa-info-circle me-2"></i>
+                        <strong>Need immediate assistance?</strong> Call us directly at <a href="tel:{{ site.phone }}" class="alert-link">{{ site.phone_display }}</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="bg-light py-5">
+    <div class="container">
+        <h3 class="text-center mb-4">Find Us on the Map</h3>
+        <div class="ratio ratio-21x9 border border-4 border-secondary rounded shadow-lg">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3495.1214762967224!2d-81.6943742!3d28.835243199999997!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x88e7bde6dc0c0e6f%3A0x32bd9bee3261a0ba!2sRJ%20Fox%20Automotive!5e0!3m2!1sen!2sus!4v1767663223288!5m2!1sen!2sus" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+    </div>
+</section>
+
+<script>
+// Form validation
+(function() {
+    'use strict';
+    window.addEventListener('load', function() {
+        var forms = document.getElementsByClassName('needs-validation');
+        var validation = Array.prototype.filter.call(forms, function(form) {
+            form.addEventListener('submit', function(event) {
+                if (form.checkValidity() === false) {
+                    event.preventDefault();
+                    event.stopPropagation();
+                }
+                form.classList.add('was-validated');
+            }, false);
+        });
+    }, false);
+})();
+</script>
