@@ -1,1 +1,132 @@
+---
+layout: default
+title: Home
+---
 
+<header style="background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('assets/images/Hero.webp') center/cover no-repeat; height: 80vh; display: flex; align-items: center;">
+    <div class="container text-center text-white">
+        <h1 class="display-1 fw-bold mb-3">RJ FOX AUTOMOTIVE</h1>
+        <h3 class="mb-4 text-warning">Your Premier Auto Repair Shop in Eustis, FL</h3>
+        <p class="lead mb-5">Professional service. Honest pricing. Owned and operated by Rob.</p>
+        <a href="#contact" class="btn btn-primary btn-lg">Contact Us Today</a>
+    </div>
+</header>
+
+<section id="about" class="section-padding">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-md-6">
+                <h2 class="mb-4">Welcome to <span class="text-primary">RJ Fox Automotive</span></h2>
+                <p class="lead">We are dedicated to providing professional customer service and automotive repair.</p>
+                <p>Located conveniently on David Walker Dr, <strong>Rob</strong> and the team specialize in getting your vehicle back on the road safely and quickly. Whether it's a simple oil change, a complex engine repair, or routine maintenance, we treat every car as if it were our own.</p>
+                <ul class="list-unstyled mt-4">
+                    <li><i class="fas fa-check-circle text-success me-2"></i> Experienced Mechanics</li>
+                    <li><i class="fas fa-check-circle text-success me-2"></i> Transparent Pricing</li>
+                    <li><i class="fas fa-check-circle text-success me-2"></i> Locally Owned & Operated</li>
+                </ul>
+            </div>
+            <div class="col-md-6">
+                <img src="assets/images/Hero.webp" alt="Shop Interior" class="img-fluid rounded shadow border border-4 border-light">
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="bg-primary text-white py-5">
+    <div class="container">
+        <div class="row text-center">
+            <div class="col-md-4 mb-3">
+                <i class="fas fa-car-crash fa-3x mb-3"></i>
+                <h4>Diagnostics</h4>
+            </div>
+            <div class="col-md-4 mb-3">
+                <i class="fas fa-tools fa-3x mb-3"></i>
+                <h4>General Repair</h4>
+            </div>
+            <div class="col-md-4 mb-3">
+                <i class="fas fa-oil-can fa-3x mb-3"></i>
+                <h4>Maintenance</h4>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="section-padding bg-light">
+    <div class="container">
+        <div class="d-flex justify-content-between align-items-end mb-5">
+            <div>
+                <h2 class="mb-0">Our Work</h2>
+                <p class="text-muted">A glimpse inside the shop</p>
+            </div>
+            <a href="/gallery" class="btn btn-outline-dark">View Full Gallery</a>
+        </div>
+        
+        <div class="row g-4">
+            {% for item in site.data.gallery limit:3 %}
+            <div class="col-md-4">
+                <div class="card h-100 border-0 shadow-sm">
+                    <img src="{{ item.image }}" class="card-img-top" alt="{{ item.alt }}" style="height: 250px; object-fit: cover;" onerror="this.src='https://via.placeholder.com/400x300?text=RJ+Fox+Auto'">
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</section>
+
+<section class="section-padding">
+    <div class="container">
+        <h2 class="text-center mb-5">What Our Customers Say</h2>
+        <div class="row">
+            {% for review in site.data.reviews limit:3 %}
+            <div class="col-md-4 mb-4">
+                <div class="card review-card h-100 bg-light p-4">
+                    <div class="card-body">
+                        <div class="stars mb-3">
+                            {% for i in (1..review.stars) %}
+                                <i class="fas fa-star"></i>
+                            {% endfor %}
+                        </div>
+                        <p class="card-text fst-italic">"{{ review.text }}"</p>
+                        <h6 class="card-subtitle mb-2 text-primary fw-bold">- {{ review.name }}</h6>
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+        <div class="text-center mt-4">
+            <p class="text-muted">Rated 5 Stars by over 41 happy customers.</p>
+        </div>
+    </div>
+</section>
+
+<section id="contact" class="bg-dark-custom py-5">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-5 text-white mb-4">
+                <h2 class="text-warning mb-4">Visit Us</h2>
+                <div class="mb-4">
+                    <h5><i class="fas fa-map-marker-alt me-2 text-primary"></i> Address</h5>
+                    <p>{{ site.address }}</p>
+                </div>
+                <div class="mb-4">
+                    <h5><i class="fas fa-phone me-2 text-primary"></i> Phone</h5>
+                    <p><a href="tel:{{ site.phone }}" class="text-white text-decoration-none">{{ site.phone_display }}</a></p>
+                </div>
+                <div>
+                    <h5><i class="fas fa-clock me-2 text-primary"></i> Hours</h5>
+                    <ul class="list-unstyled">
+                        <li class="d-flex justify-content-between" style="max-width: 300px;"><span>Mon - Fri:</span> <span>8:30 AM – 6:00 PM</span></li>
+                        <li class="d-flex justify-content-between" style="max-width: 300px;"><span>Saturday:</span> <span>8:30 AM – 2:00 PM</span></li>
+                        <li class="d-flex justify-content-between text-muted" style="max-width: 300px;"><span>Sunday:</span> <span>Closed</span></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="col-lg-7">
+                <div class="ratio ratio-16x9 border border-4 border-secondary rounded">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3500.587842368945!2d-81.6961856236968!3d28.850409975547614!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x88e70b3b8b8b8b8b%3A0x8b8b8b8b8b8b8b8b!2s801%20David%20Walker%20Dr%2C%20Eustis%2C%20FL%2032726!5e0!3m2!1sen!2sus!4v1700000000000!5m2!1sen!2sus" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
