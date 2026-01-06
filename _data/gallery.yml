@@ -1,6 +1,89 @@
-- image: "Pics/RJ1.webp"
-  alt: "Engine repair"
-- image: "Pics/RJ2.webp"
-  alt: "Brake service"
-- image: "Pics/RJ3.webp"
-  alt: "Classic car restoration"
+- image: Hero.webp
+  alt: "Yellow Dodge vehicle with hood open showing engine bay during repair work at RJ Fox Automotive"
+
+- image: RJ1.webp
+  alt: "Blue Toyota Tundra truck lifted on hydraulic car lift for undercarriage service and inspection"
+
+- image: RJ2.webp
+  alt: "Red RJ Fox Automotive tow truck parked outside shop ready for roadside assistance"
+
+- image: RJ3.webp
+  alt: "Engine and transmission removal setup with hoist in automotive repair shop bay"
+
+- image: RJ4.webp
+  alt: "Multiple vehicles on lifts in busy auto repair shop showing diagnostic and repair work in progress"
+
+- image: RJ5.webp
+  alt: "Close-up of transmission flywheel showing wear during automotive repair inspection"
+
+- image: RJ6.webp
+  alt: "Classic red car elevated on lift in vintage automotive restoration shop"
+
+- image: RJ7.webp
+  alt: "Brake rotor and hub assembly showing rust and wear before replacement service"
+
+- image: RJ8.webp
+  alt: "Auto repair shop interior with classic car on lift and orange Snap-on tool chest"
+
+- image: RJ9.webp
+  alt: "Exterior view of RJ Fox Automotive complete service facility with customer vehicles in parking lot"
+
+- image: RJ10.webp
+  alt: "Ford transmission case opened for internal inspection and diagnostic repair"
+
+- image: RJ11.webp
+  alt: "Clean automotive radiator showing quality cooling system maintenance work"
+
+- image: RJ12.webp
+  alt: "Yellow Dodge engine bay showing detailed engine work and component installation"
+
+- image: RJ13.webp
+  alt: "Auto repair bay with Honda on lift and security camera system monitoring work area"
+
+- image: RJ14.webp
+  alt: "Refurbished engine manifold with fresh coating ready for reinstallation"
+
+- image: RJ15.webp
+  alt: "Engine block suspended on chain hoist during major automotive repair procedure"
+
+- image: RJ16.webp
+  alt: "Yellow Dodge front end showing completed engine repair and detailed work"
+
+- image: RJ17.webp
+  alt: "Drive shaft and CV joint components disassembled for inspection and replacement"
+
+- image: RJ18.webp
+  alt: "Close-up of engine block showing precision machining and leak repair work"
+
+- image: RJ19.webp
+  alt: "V8 engine on pallet awaiting rebuild or installation in vehicle"
+
+  - image: RJ20.webp
+  alt: "Yellow Dodge Charger transmission removal showing major drivetrain repair in progress"
+
+- image: RJ21.webp
+  alt: "Engine cylinder head intake ports prepared for gasket installation and sealing"
+
+- image: RJ22.webp
+  alt: "Rebuilt V8 engine suspended on chain hoist ready for installation at RJ Fox Automotive"
+
+- image: RJ23.webp
+  alt: "V8 engine block showing intake manifold surface and spark plug wells during rebuild"
+
+- image: RJ24.webp
+  alt: "Remanufactured V8 engine head assembly on engine stand showing valve train components"
+
+- image: RJ25.webp
+  alt: "Engine cylinder head with intake manifold surface showing detailed machining work"
+
+- image: RJ26.webp
+  alt: "Completely rebuilt V8 engine on stand ready for vehicle installation and testing"
+
+- image: RJ27.webp
+  alt: "Yellow Dodge Charger engine bay during major engine replacement service"
+
+- image: RJ28.webp
+  alt: "RJ Fox Automotive shop interior with classic cars and modern vehicles under repair"
+
+- image: Shop.webp
+  alt: "RJ Fox Automotive complete service facility exterior with customer vehicles and U-Haul rentals"
