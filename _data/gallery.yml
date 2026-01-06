@@ -1,0 +1,8 @@
+- image: "Pics/Hero.webp"
+  alt: "Shop interior"
+- image: "Pics/RJ1.webp"
+  alt: "Engine repair"
+- image: "Pics/RJ2.webp"
+  alt: "Brake service"
+- image: "Pics/RJ3.webp"
+  alt: "Classic car restoration"
