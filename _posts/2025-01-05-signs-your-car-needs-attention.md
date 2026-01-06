@@ -5,7 +5,7 @@ date: 2025-01-05
 category: Maintenance
 author: Rob Fox
 author_bio: "Rob is the owner of RJ Fox Automotive with over 20 years of experience in automotive repair and diagnostics."
-image: "{{ site.baseurl }}/Pics/maintenance.webp"
+image: "{{ site.baseurl }}/Pics/RJ1.webp"
 tags: [maintenance, diagnostics, warning signs, car care]
 excerpt: "Learn to recognize the warning signs that indicate your vehicle needs professional service before a small problem becomes a major repair."
 ---
