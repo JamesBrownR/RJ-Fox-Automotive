@@ -10,6 +10,7 @@ tags: [maintenance, diagnostics, warning signs, car care]
 excerpt: "Learn to recognize the warning signs that indicate your vehicle needs professional service before a small problem becomes a major repair."
 ---
 
+
 Your vehicle communicates with you constantly through various sounds, sensations, and warning lights. Knowing how to interpret these signals can save you from costly repairs and dangerous breakdowns. At RJ Fox Automotive, we've seen countless cases where early intervention could have prevented major damage. Here are five critical signs that your car needs immediate professional attention.
 
 ## 1. Dashboard Warning Lights
