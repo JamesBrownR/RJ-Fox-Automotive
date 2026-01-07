@@ -38,7 +38,7 @@ title: Blog
                                 <a href="{{ post.url }}" class="text-dark text-decoration-none hover-primary">{{ post.title }}</a>
                             </h2>
                             <p class="card-text text-muted">{{ post.excerpt | strip_html | truncatewords: 40 }}</p>
-                            <a href="{{ post.url }}" class="btn btn-outline-primary">
+                            <a href="{{ site.baseurl }}/{{ post.url }}" class="btn btn-outline-primary">
                                 Read More <i class="fas fa-arrow-right ms-1"></i>
                             </a>
                         </div>
