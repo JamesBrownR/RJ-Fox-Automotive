@@ -87,4 +87,4 @@ If you've noticed any of these warning signs, don't put it off. Contact us today
 
 ---
 
-**Have questions about your vehicle?** Call us at (352) 589-0001 or [schedule an appointment](/contact) online. We're conveniently located on David Walker Dr in Eustis, FL, and we're here to keep your vehicle running safely and reliably.
+**Have questions about your vehicle?** Call us at (352) 589-0001 or [schedule an appointment]({{ site.baseurl }}/contact) online. We're conveniently located on David Walker Dr in Eustis, FL, and we're here to keep your vehicle running safely and reliably.
