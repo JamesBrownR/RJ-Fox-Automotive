@@ -1,172 +1,528 @@
 ---
 layout: default
-title: Contact
+title: Contact | Diamond Auto Spa Detailing
+description: Book mobile auto detailing in Lake County, FL. Call or text 352-931-4860. Available 7 days a week, 7 AM to 8 PM. Serving Eustis, Mount Dora, Tavares, Leesburg, and surrounding areas.
 ---
 
-<header style="background: 
-    radial-gradient(circle, transparent 1px, rgba(0,0,0,0.6) 1px), 
-    linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.8)), 
-    url('{{ site.baseurl }}/Pics/Hero.webp') center/cover no-repeat; 
-    height: 50vh; 
-    display: flex; 
-    align-items: center;">
-    <div class="container text-center text-white">
-        <h1 class="display-3 fw-bold mb-3">Contact Us</h1>
-        <p class="lead">Get in touch with RJ Fox Automotive today</p>
-    </div>
-</header>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "AutoDetailing",
+  "name": "Diamond Auto Spa Detailing",
+  "telephone": "+1-352-931-4860",
+  "email": "diamondautospa.fl23@gmail.com",
+  "url": "https://diamondautospallc.com/",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Mobile Service",
+    "addressLocality": "Eustis",
+    "addressRegion": "FL",
+    "postalCode": "32726",
+    "addressCountry": "US"
+  },
+  "openingHoursSpecification": [
+    {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"],
+      "opens": "07:00",
+      "closes": "20:00"
+    }
+  ]
+}
+</script>
 
+<style>
+  :root {
+    --blue: #5BA3C7;
+    --black: #000;
+    --charcoal: #0d0d0d;
+    --border: #1a1a1a;
+    --muted: #555;
+  }
 
-<section class="section-padding">
-    <div class="container">
-        <div class="row">
-            <div class="col-lg-6 mb-5 mb-lg-0">
-                <h2 class="mb-4">Send Us a Message</h2>
-                <p class="text-muted mb-4">Have a question or need to schedule a service? Fill out the form below and we'll get back to you as soon as possible.</p>
-                
-                <form action="https://formspree.io/f/mqedrple" method="POST" class="needs-validation" novalidate>
-                    <div class="mb-3">
-                        <label for="name" class="form-label">Full Name <span class="text-danger">*</span></label>
-                        <input type="text" class="form-control" id="name" name="name" required>
-                        <div class="invalid-feedback">
-                            Please enter your name.
-                        </div>
-                    </div>
-                    
-                    <div class="mb-3">
-                        <label for="email" class="form-label">Email Address <span class="text-danger">*</span></label>
-                        <input type="email" class="form-control" id="email" name="email" required>
-                        <div class="invalid-feedback">
-                            Please enter a valid email address.
-                        </div>
-                    </div>
-                    
-                    <div class="mb-3">
-                        <label for="phone" class="form-label">Phone Number</label>
-                        <input type="tel" class="form-control" id="phone" name="phone">
-                    </div>
-                    
-                    <div class="mb-3">
-                        <label for="service" class="form-label">Service Interested In</label>
-                        <select class="form-select" id="service" name="service">
-                            <option value="">Select a service...</option>
-                            <option value="diagnostics">Automotive Diagnostics</option>
-                            <option value="diesel">Diesel Repair</option>
-                            <option value="electrical">Auto Electrical Repair</option>
-                            <option value="transmission">Transmission Maintenance</option>
-                            <option value="oil-change">Oil Change</option>
-                            <option value="brake-service">Brake Service</option>
-                            <option value="ac-repair">AC Repair</option>
-                            <option value="engine-repair">Engine Repair</option>
-                            <option value="other">Other</option>
-                        </select>
-                    </div>
-                    
-                    <div class="mb-3">
-                        <label for="message" class="form-label">Message <span class="text-danger">*</span></label>
-                        <textarea class="form-control" id="message" name="message" rows="5" required></textarea>
-                        <div class="invalid-feedback">
-                            Please enter your message.
-                        </div>
-                    </div>
-                    
-                    <button type="submit" class="btn btn-primary btn-lg w-100">
-                        <i class="fas fa-paper-plane me-2"></i> Send Message
-                    </button>
-                </form>
-            </div>
-            
-            <div class="col-lg-6">
-                <div class="ps-lg-5">
-                    <h2 class="mb-4">Get In Touch</h2>
-                    
-                    <div class="card border-0 shadow-sm mb-4">
-                        <div class="card-body p-4">
-                            <div class="d-flex mb-4">
-                                <div class="flex-shrink-0">
-                                    <i class="fas fa-map-marker-alt fa-2x text-primary"></i>
-                                </div>
-                                <div class="flex-grow-1 ms-3">
-                                    <h5 class="mb-2">Address</h5>
-                                    <p class="text-muted mb-0">{{ site.address }}</p>
-                                    <a href="https://maps.google.com/?q={{ site.address | url_encode }}" target="_blank" class="text-primary text-decoration-none">
-                                        <small>Get Directions <i class="fas fa-arrow-right ms-1"></i></small>
-                                    </a>
-                                </div>
-                            </div>
-                            
-                            <div class="d-flex mb-4">
-                                <div class="flex-shrink-0">
-                                    <i class="fas fa-phone fa-2x text-primary"></i>
-                                </div>
-                                <div class="flex-grow-1 ms-3">
-                                    <h5 class="mb-2">Phone</h5>
-                                    <p class="text-muted mb-0">
-                                        <a href="tel:{{ site.phone }}" class="text-muted text-decoration-none">{{ site.phone_display }}</a>
-                                    </p>
-                                    <small class="text-muted">Call us during business hours</small>
-                                </div>
-                            </div>
-                            
-                            <div class="d-flex">
-                                <div class="flex-shrink-0">
-                                    <i class="fas fa-clock fa-2x text-primary"></i>
-                                </div>
-                                <div class="flex-grow-1 ms-3">
-                                    <h5 class="mb-3">Hours of Operation</h5>
-                                    <ul class="list-unstyled mb-0">
-                                        <li class="d-flex justify-content-between mb-2">
-                                            <span class="fw-bold">Monday - Friday:</span>
-                                            <span>8:00 AM – 6:00 PM</span>
-                                        </li>
-                                        <li class="d-flex justify-content-between mb-2">
-                                            <span class="fw-bold">Saturday:</span>
-                                            <span>8:00 AM – 2:00 PM</span>
-                                        </li>
-                                        <li class="d-flex justify-content-between text-muted">
-                                            <span class="fw-bold">Sunday:</span>
-                                            <span>Closed</span>
-                                        </li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <div class="alert alert-info border-0 shadow-sm">
-                        <i class="fas fa-info-circle me-2"></i>
-                        <strong>Need immediate assistance?</strong> Call us directly at <a href="tel:{{ site.phone }}" class="alert-link">{{ site.phone_display }}</a>
-                    </div>
-                </div>
-            </div>
+  /* ── HERO ── */
+  .ct-hero {
+    background: #000;
+    padding: 7rem 2rem 4rem;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+    border-bottom: 1px solid #111;
+  }
+  .ct-hero::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background-image: radial-gradient(rgba(91,163,199,0.11) 1px, transparent 1px);
+    background-size: 24px 24px;
+  }
+  .ct-eyebrow {
+    display: inline-block;
+    font-size: 0.78rem;
+    font-weight: 700;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    color: var(--blue);
+    margin-bottom: 1rem;
+    position: relative; z-index: 2;
+    opacity: 0;
+    animation: ctFadeUp 0.6s 0.1s ease forwards;
+  }
+  .ct-hero h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(2rem, 5vw, 3.4rem);
+    color: #fff;
+    margin-bottom: 0.6rem;
+    position: relative; z-index: 2;
+    opacity: 0;
+    animation: ctFadeUp 0.6s 0.25s ease forwards;
+  }
+  .ct-hero p {
+    font-family: 'Playfair Display', serif;
+    font-style: italic;
+    color: #555;
+    font-size: 1.05rem;
+    position: relative; z-index: 2;
+    opacity: 0;
+    animation: ctFadeUp 0.6s 0.4s ease forwards;
+  }
+  @keyframes ctFadeUp {
+    from { opacity: 0; transform: translateY(18px); }
+    to   { opacity: 1; transform: translateY(0); }
+  }
+
+  /* ── BREADCRUMB ── */
+  .breadcrumb {
+    background: #000;
+    padding: 1rem 2rem;
+    font-size: 0.82rem;
+    color: #444;
+    border-bottom: 1px solid #111;
+  }
+  .breadcrumb a { color: #555; text-decoration: none; }
+  .breadcrumb a:hover { color: var(--blue); }
+
+  /* ── MAIN LAYOUT ── */
+  .ct-body {
+    background: var(--black);
+    padding: 4rem 2rem 5rem;
+  }
+  .ct-inner {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 380px;
+    gap: 3rem;
+    align-items: start;
+  }
+  @media (max-width: 900px) {
+    .ct-inner { grid-template-columns: 1fr; }
+    .ct-sidebar { order: -1; }
+  }
+
+  /* ── FORM COLUMN ── */
+  .ct-form-wrap h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.6rem;
+    color: #fff;
+    margin-bottom: 0.4rem;
+  }
+  .ct-form-wrap > p {
+    font-size: 0.9rem;
+    color: var(--muted);
+    margin-bottom: 2rem;
+    line-height: 1.6;
+  }
+
+  /* form */
+  .ct-form { display: flex; flex-direction: column; gap: 1.2rem; }
+
+  .ct-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.2rem;
+  }
+  @media (max-width: 540px) { .ct-row { grid-template-columns: 1fr; } }
+
+  .ct-field { display: flex; flex-direction: column; gap: 0.45rem; }
+  .ct-field label {
+    font-size: 0.78rem;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    color: #555;
+  }
+  .ct-field input,
+  .ct-field select,
+  .ct-field textarea {
+    background: #080808;
+    border: 1px solid #1e1e1e;
+    color: #ccc;
+    padding: 0.85rem 1rem;
+    font-size: 0.92rem;
+    font-family: inherit;
+    width: 100%;
+    box-sizing: border-box;
+    transition: border-color 0.2s;
+    appearance: none;
+    -webkit-appearance: none;
+    border-radius: 0;
+  }
+  .ct-field input::placeholder,
+  .ct-field textarea::placeholder { color: #333; }
+  .ct-field input:focus,
+  .ct-field select:focus,
+  .ct-field textarea:focus {
+    outline: none;
+    border-color: var(--blue);
+  }
+  .ct-field select {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath fill='%23555' d='M6 8L0 0h12z'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 1rem center;
+    padding-right: 2.5rem;
+    cursor: pointer;
+  }
+  .ct-field select option { background: #111; color: #ccc; }
+  .ct-field textarea { height: 130px; resize: vertical; }
+
+  .ct-submit {
+    display: inline-block;
+    padding: 1rem 3rem;
+    background: var(--blue);
+    color: #000;
+    border: none;
+    font-weight: 700;
+    font-size: 0.88rem;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: background 0.2s, color 0.2s;
+    font-family: inherit;
+    align-self: flex-start;
+  }
+  .ct-submit:hover { background: #fff; color: #000; }
+
+  .ct-note {
+    font-size: 0.78rem;
+    color: #333;
+    margin-top: 0.5rem;
+  }
+
+  /* success state */
+  .ct-success {
+    display: none;
+    padding: 1.5rem;
+    border: 1px solid #1e1e1e;
+    border-left: 3px solid var(--blue);
+    background: #080808;
+    font-size: 0.92rem;
+    color: #aaa;
+    line-height: 1.7;
+    margin-top: 1rem;
+  }
+  .ct-success strong { color: #fff; display: block; margin-bottom: 0.3rem; }
+
+  /* ── SIDEBAR ── */
+  .ct-sidebar { display: flex; flex-direction: column; gap: 1.5px; }
+
+  .ct-card {
+    background: #080808;
+    border: 1px solid #111;
+    padding: 1.8rem 1.6rem;
+  }
+  .ct-card + .ct-card { border-top: none; }
+
+  .ct-card-label {
+    font-size: 0.72rem;
+    font-weight: 700;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: var(--blue);
+    display: block;
+    margin-bottom: 1rem;
+  }
+
+  /* phone */
+  .ct-phone {
+    display: block;
+    font-family: 'Playfair Display', serif;
+    font-size: 1.8rem;
+    color: #fff;
+    text-decoration: none;
+    line-height: 1.1;
+    margin-bottom: 0.3rem;
+    transition: color 0.2s;
+  }
+  .ct-phone:hover { color: var(--blue); }
+  .ct-phone-sub { font-size: 0.78rem; color: #333; }
+
+  /* email */
+  .ct-email {
+    display: block;
+    font-size: 0.9rem;
+    color: #777;
+    text-decoration: none;
+    margin-top: 1.2rem;
+    transition: color 0.2s;
+    word-break: break-all;
+  }
+  .ct-email:hover { color: var(--blue); }
+
+  /* hours table */
+  .ct-hours {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.85rem;
+  }
+  .ct-hours tr { border-bottom: 1px solid #111; }
+  .ct-hours tr:last-child { border-bottom: none; }
+  .ct-hours td { padding: 0.55rem 0; color: #666; }
+  .ct-hours td:last-child { text-align: right; color: #aaa; }
+
+  /* service areas */
+  .ct-areas {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0.5rem 1rem;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+  .ct-areas li { font-size: 0.85rem; }
+  .ct-areas a {
+    color: #555;
+    text-decoration: none;
+    transition: color 0.2s;
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+  }
+  .ct-areas a::before {
+    content: '';
+    display: inline-block;
+    width: 4px;
+    height: 4px;
+    background: var(--blue);
+    border-radius: 50%;
+    flex-shrink: 0;
+  }
+  .ct-areas a:hover { color: var(--blue); }
+
+  /* social links */
+  .ct-socials { display: flex; flex-direction: column; gap: 0.6rem; }
+  .ct-social-link {
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+    padding: 0.75rem 1rem;
+    border: 1px solid #1a1a1a;
+    color: #666;
+    text-decoration: none;
+    font-size: 0.85rem;
+    font-weight: 600;
+    transition: border-color 0.2s, color 0.2s, background 0.2s;
+  }
+  .ct-social-link:hover {
+    border-color: var(--blue);
+    color: var(--blue);
+    background: rgba(91,163,199,0.04);
+  }
+  .ct-social-link svg { flex-shrink: 0; }
+
+  /* ── STRIP ── */
+  .ct-strip {
+    background: var(--charcoal);
+    border-top: 1px solid #1a1a1a;
+    padding: 3rem 2rem;
+    text-align: center;
+  }
+  .ct-strip p { font-size: 0.88rem; color: #444; margin: 0; line-height: 1.7; }
+  .ct-strip a { color: var(--blue); text-decoration: none; }
+  .ct-strip a:hover { text-decoration: underline; }
+</style>
+
+<!-- BREADCRUMB -->
+<div class="breadcrumb">
+  <a href="/">Home</a> &rsaquo; Contact
+</div>
+
+<!-- HERO -->
+<div class="ct-hero">
+  <div class="ct-eyebrow">Diamond Auto Spa &middot; Eustis, FL</div>
+  <h1>Book Your Detail</h1>
+  <p>Mobile service throughout Lake County and Central Florida. We come to you.</p>
+</div>
+
+<!-- BODY -->
+<div class="ct-body">
+  <div class="ct-inner">
+
+    <!-- ── FORM ── -->
+    <div class="ct-form-wrap">
+      <h2>Request a Free Quote</h2>
+      <p>Fill out the form and Andrew will get back to you quickly with a price and availability. No obligation, no pressure.</p>
+
+      <form
+        class="ct-form"
+        name="contact"
+        method="POST"
+        data-netlify="true"
+        netlify-honeypot="bot-field"
+        onsubmit="handleSubmit(event)"
+      >
+        <input type="hidden" name="form-name" value="contact">
+        <input type="hidden" name="bot-field" style="display:none">
+
+        <div class="ct-row">
+          <div class="ct-field">
+            <label for="fname">First Name *</label>
+            <input type="text" id="fname" name="first_name" required placeholder="Andrew">
+          </div>
+          <div class="ct-field">
+            <label for="lname">Last Name</label>
+            <input type="text" id="lname" name="last_name" placeholder="Smith">
+          </div>
         </div>
-    </div>
-</section>
 
-<section class="bg-light py-5">
-    <div class="container">
-        <h3 class="text-center mb-4">Find Us on the Map</h3>
-        <div class="ratio ratio-21x9 border border-4 border-secondary rounded shadow-lg">
-            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3495.1214762967224!2d-81.6943742!3d28.835243199999997!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x88e7bde6dc0c0e6f%3A0x32bd9bee3261a0ba!2sRJ%20Fox%20Automotive!5e0!3m2!1sen!2sus!4v1767663223288!5m2!1sen!2sus" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        <div class="ct-row">
+          <div class="ct-field">
+            <label for="phone">Phone *</label>
+            <input type="tel" id="phone" name="phone" required placeholder="(352) 555-0000">
+          </div>
+          <div class="ct-field">
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" placeholder="you@example.com">
+          </div>
         </div>
+
+        <div class="ct-field">
+          <label for="service">Service Interested In</label>
+          <select id="service" name="service">
+            <option value="" disabled selected>Select a service</option>
+            <option value="interior-detailing">Interior Detailing</option>
+            <option value="exterior-detailing">Exterior Detailing</option>
+            <option value="interior-and-exterior">Interior &amp; Exterior (Full Detail)</option>
+            <option value="ceramic-coating">Ceramic Coating</option>
+            <option value="paint-repair">Paint Repair</option>
+            <option value="headlight-polishing">Headlight Polishing</option>
+            <option value="engine-detailing">Engine Detailing</option>
+            <option value="not-sure">Not Sure — Need a Recommendation</option>
+          </select>
+        </div>
+
+        <div class="ct-field">
+          <label for="vehicle">Vehicle Year, Make &amp; Model</label>
+          <input type="text" id="vehicle" name="vehicle" placeholder="2019 Toyota Camry">
+        </div>
+
+        <div class="ct-field">
+          <label for="city">Your City / Location</label>
+          <input type="text" id="city" name="city" placeholder="Eustis, FL">
+        </div>
+
+        <div class="ct-field">
+          <label for="message">Tell Us About Your Vehicle</label>
+          <textarea id="message" name="message" placeholder="Describe what you need or what condition the vehicle is in. The more detail the better."></textarea>
+        </div>
+
+        <button type="submit" class="ct-submit">Send Message</button>
+        <p class="ct-note">Or call or text directly: <a href="tel:+13529314860" style="color:var(--blue);text-decoration:none;">352-931-4860</a></p>
+      </form>
+
+      <div class="ct-success" id="ctSuccess">
+        <strong>Message sent.</strong>
+        Andrew will get back to you shortly with a quote and availability. If you need a faster response, call or text <a href="tel:+13529314860" style="color:var(--blue);">352-931-4860</a> directly.
+      </div>
     </div>
-</section>
+
+    <!-- ── SIDEBAR ── -->
+    <aside class="ct-sidebar">
+
+      <!-- Call / Text -->
+      <div class="ct-card">
+        <span class="ct-card-label">Call or Text</span>
+        <a href="tel:+13529314860" class="ct-phone">352-931-4860</a>
+        <span class="ct-phone-sub">Fastest way to get a quote and get on the schedule</span>
+        <a href="mailto:diamondautospa.fl23@gmail.com" class="ct-email">diamondautospa.fl23@gmail.com</a>
+      </div>
+
+      <!-- Hours -->
+      <div class="ct-card">
+        <span class="ct-card-label">Hours</span>
+        <table class="ct-hours">
+          <tr><td>Monday</td><td>7:00 AM &ndash; 8:00 PM</td></tr>
+          <tr><td>Tuesday</td><td>7:00 AM &ndash; 8:00 PM</td></tr>
+          <tr><td>Wednesday</td><td>7:00 AM &ndash; 8:00 PM</td></tr>
+          <tr><td>Thursday</td><td>7:00 AM &ndash; 8:00 PM</td></tr>
+          <tr><td>Friday</td><td>7:00 AM &ndash; 8:00 PM</td></tr>
+          <tr><td>Saturday</td><td>7:00 AM &ndash; 8:00 PM</td></tr>
+          <tr><td>Sunday</td><td>7:00 AM &ndash; 8:00 PM</td></tr>
+        </table>
+      </div>
+
+      <!-- Service Areas -->
+      <div class="ct-card">
+        <span class="ct-card-label">Service Areas</span>
+        <ul class="ct-areas">
+          <li><a href="/service-area/eustis-fl/">Eustis, FL</a></li>
+          <li><a href="/service-area/mount-dora-fl/">Mount Dora, FL</a></li>
+          <li><a href="/service-area/tavares-fl/">Tavares, FL</a></li>
+          <li><a href="/service-area/leesburg-fl/">Leesburg, FL</a></li>
+          <li><a href="/service-area/lady-lake-fl/">Lady Lake, FL</a></li>
+          <li><a href="/service-area/clermont-fl/">Clermont, FL</a></li>
+          <li><a href="/service-area/apopka-fl/">Apopka, FL</a></li>
+          <li><a href="/service-area/umatilla-fl/">Umatilla, FL</a></li>
+          <li><a href="/service-area/altoona-fl/">Altoona, FL</a></li>
+          <li><a href="/service-area/madeira-beach-fl/">Madeira Beach, FL</a></li>
+        </ul>
+        <p style="font-size:0.78rem;color:#333;margin-top:1rem;">Based in Eustis. We travel throughout Lake County and Central Florida. Travel fees may apply for distant locations.</p>
+      </div>
+
+      <!-- Social / Reviews -->
+      <div class="ct-card">
+        <span class="ct-card-label">Find Us Online</span>
+        <div class="ct-socials">
+          <a href="https://www.facebook.com/DiamondAutoSpaFL/" target="_blank" rel="noopener" class="ct-social-link">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
+            Facebook &mdash; Diamond Auto Spa FL
+          </a>
+          <a href="https://www.google.com/search?q=Diamond+Auto+Spa+Detailing+Eustis+FL+reviews" target="_blank" rel="noopener" class="ct-social-link">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+            Google Reviews &mdash; 63+ Five Stars
+          </a>
+        </div>
+      </div>
+
+    </aside>
+
+  </div>
+</div>
+
+<!-- BOTTOM STRIP -->
+<div class="ct-strip">
+  <p>Diamond Auto Spa Detailing &middot; Mobile Service Based in Eustis, FL 32726 &middot; <a href="tel:+13529314860">352-931-4860</a> &middot; <a href="mailto:diamondautospa.fl23@gmail.com">diamondautospa.fl23@gmail.com</a></p>
+</div>
 
 <script>
-// Form validation
-(function() {
-    'use strict';
-    window.addEventListener('load', function() {
-        var forms = document.getElementsByClassName('needs-validation');
-        var validation = Array.prototype.filter.call(forms, function(form) {
-            form.addEventListener('submit', function(event) {
-                if (form.checkValidity() === false) {
-                    event.preventDefault();
-                    event.stopPropagation();
-                }
-                form.classList.add('was-validated');
-            }, false);
-        });
-    }, false);
-})();
+  function handleSubmit(e) {
+    e.preventDefault();
+    const form = e.target;
+    const data = new FormData(form);
+
+    fetch('/', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+      body: new URLSearchParams(data).toString()
+    })
+    .then(() => {
+      form.style.display = 'none';
+      document.querySelector('.ct-form-wrap > p').style.display = 'none';
+      document.getElementById('ctSuccess').style.display = 'block';
+    })
+    .catch(() => {
+      // fallback — submit normally
+      form.submit();
+    });
+  }
 </script>
