@@ -534,7 +534,7 @@ layout: default
   <div class="sa-other-cities__inner">
     <h2>{{ svc.name }} Near You</h2>
     <div class="sa-other-cities__grid">
-      {% for a in site.data.service_areas %}
+      {% for a in site.data.service-areas %}
         {% unless a.slug == page.city_slug %}
         <a href="/service-areas/{{ a.slug }}/{{ page.service_slug }}/">{{ a.name }}</a>
         {% endunless %}
