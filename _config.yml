@@ -1,19 +1,147 @@
-# Site settings
-title: RJ Fox Automotive
-email: contact@rjfoxautomotive.com
-phone: "+13522503210"
-phone_display: "(352) 250-3210"
-address: "801 David Walker Dr, Eustis, FL 32726"
-owner: "Rob"
-description: "Premier Auto Repair Shop in Eustis, FL. Owned and operated by Rob."
-baseurl: "/"
 
-# Build settings
-markdown: kramdown
-permalink: pretty
-permalink: /:year/:month/:day/:title/
-# Enable Liquid processing in markdown files
+title:              "RJ Fox Automotive"
+tagline:            "Honest Auto Repair in Eustis, FL"
+description:        "RJ Fox Automotive is Eustis, FL's trusted auto repair shop. Specializing in transmission repair, engine diagnostics, AC service, diesel repair, brakes, and more. Honest pricing. All makes and models."
+author:             "Rob Fox"
+owner:              "Rob Fox"
+lang:               "en-US"
+
+# ── CONTACT & LOCATION ────────────────────────────────────────
+email:              "contact@rjfoxauto.com"
+phone:              "+13522503210"
+phone_display:      "(352) 250-3210"
+phone_alt:          "+13525890001"
+phone_alt_display:  "(352) 589-0001"
+
+address:            "801 David Walker Dr, Eustis, FL 32726"
+address_street:     "801 David Walker Dr"
+address_city:       "Eustis"
+address_state:      "FL"
+address_zip:        "32726"
+address_country:    "US"
+
+latitude:           "28.835243"
+longitude:          "-81.694374"
+
+google_maps_embed:  "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3495.1214762967224!2d-81.6943742!3d28.835243199999997!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x88e7bde6dc0c0e6f%3A0x32bd9bee3261a0ba!2sRJ%20Fox%20Automotive!5e0!3m2!1sen!2sus!4v1767663223288!5m2!1sen!2sus"
+google_maps_link:   "https://maps.google.com/?q=801+David+Walker+Dr+Eustis+FL+32726"
+google_place_id:    "ChIJb--cDOa9e4gRuqChYj691zI"
+
+# ── HOURS ─────────────────────────────────────────────────────
+hours:
+  monday:    "8:00 AM – 6:00 PM"
+  tuesday:   "8:00 AM – 6:00 PM"
+  wednesday: "8:00 AM – 6:00 PM"
+  thursday:  "8:00 AM – 6:00 PM"
+  friday:    "8:00 AM – 6:00 PM"
+  saturday:  "8:00 AM – 2:00 PM"
+  sunday:    "Closed"
+
+# ── SOCIAL MEDIA ──────────────────────────────────────────────
+social:
+  facebook:   "https://www.facebook.com/rjfoxautomotive"   # update if different
+  google:     "https://g.page/rjfoxautomotive"             # update with real link
+  yelp:       ""                                           # add if applicable
+
+# ── URLs & BUILD ──────────────────────────────────────────────
+url:                "https://rjfoxauto.com"
+baseurl:            ""
+CNAME:              "rjfoxauto.com"
+
+# ── PERMALINKS ────────────────────────────────────────────────
+permalink:          /blog/:year/:month/:day/:title/
+
+# ── COLLECTIONS ───────────────────────────────────────────────
+collections:
+  services:
+    output:  true
+    permalink: /services/:name/
+
+# ── DEFAULTS ──────────────────────────────────────────────────
+defaults:
+  # Blog posts
+  - scope:
+      path:   "_posts"
+      type:   posts
+    values:
+      layout:     blog
+      author:     "Rob Fox"
+      author_bio: "Rob is the owner of RJ Fox Automotive with over 20 years of experience in automotive repair and diagnostics."
+      image:      "Pics/Hero.webp"
+
+  # Service pages
+  - scope:
+      path:   "_services"
+      type:   services
+    values:
+      layout:     services
+      hero_image: "/Pics/Hero.webp"
+
+  # Static pages
+  - scope:
+      path:   ""
+      type:   pages
+    values:
+      layout: default
+
+# ── MARKDOWN & PLUGINS ────────────────────────────────────────
+markdown:    kramdown
+highlighter: rouge
+
 kramdown:
   parse_block_html: true
+  hard_wrap:        false
+  input:            GFM
 
+plugins:
+  - jekyll-seo-tag
+  - jekyll-sitemap
+  - jekyll-feed
+  - jekyll-relative-links
+# ── FEED (jekyll-feed) ────────────────────────────────────────
+feed:
+  path:  atom.xml
+  posts_limit: 20
 
+# ── SASS / CSS ────────────────────────────────────────────────
+sass:
+  style: compressed
+
+# ── EXCLUDE FROM BUILD ────────────────────────────────────────
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - node_modules
+  - vendor
+  - .git
+  - .gitignore
+  - README.md
+  - "*.sh"
+  - "*.bat"
+
+# ── INCLUDE ───────────────────────────────────────────────────
+include:
+  - _pages
+  - .htaccess
+
+# ── ANALYTICS ─────────────────────────────────────────────────
+google_analytics: "G-ER4XLHYHRC"
+
+# ── THEME COLORS (reference for templates) ────────────────────
+colors:
+  blue:    "#004aad"
+  blue_dk: "#003380"
+  yellow:  "#ffc107"
+  dark:    "#111111"
+
+# ── PAGINATION ────────────────────────────────────────────────
+paginate:      6
+paginate_path: "/blog/page:num/"
+
+# ── SERVICE AREAS (used in footer / service pages) ────────────
+service_areas:
+  - "Eustis, FL"
+  - "Mount Dora, FL"
+  - "Tavares, FL"
+  - "Leesburg, FL"
+  - "Clermont, FL"
