@@ -1,0 +1,561 @@
+---
+layout: default
+---
+
+<style>
+  /* ── TOKENS ──────────────────────────────────────────── */
+  :root {
+    --sa-blue:    #004aad;
+    --sa-blue-dk: #003380;
+    --sa-yellow:  #ffc107;
+    --sa-dark:    #111;
+    --sa-light:   #f5f6f8;
+    --sa-border:  #e2e5ea;
+    --sa-text:    #222;
+    --sa-muted:   #666;
+    --sa-radius:  10px;
+  }
+
+  /* ── HERO ────────────────────────────────────────────── */
+  .sa-hero {
+    background:
+      linear-gradient(rgba(0,0,0,.75), rgba(0,0,0,.85)),
+      url('{{ page.hero_image | default: "/Pics/Hero.webp" }}') center/cover no-repeat;
+    padding: 90px 24px 70px;
+    color: #fff;
+  }
+  .sa-hero__inner { margin: 0 auto; max-width: 780px; }
+  .sa-hero__breadcrumb {
+    font-size: .8rem;
+    color: rgba(255,255,255,.5);
+    margin-bottom: 18px;
+    font-family: 'Open Sans', sans-serif;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 4px;
+  }
+  .sa-hero__breadcrumb a { color: rgba(255,255,255,.5); text-decoration: none; }
+  .sa-hero__breadcrumb a:hover { color: var(--sa-yellow); }
+  .sa-hero__breadcrumb span { margin: 0 4px; opacity: .4; }
+  .sa-hero__eyebrow {
+    font-size: .75rem;
+    letter-spacing: .18em;
+    text-transform: uppercase;
+    color: var(--sa-yellow);
+    margin-bottom: 12px;
+    font-family: 'Open Sans', sans-serif;
+  }
+  .sa-hero h1 {
+    font-size: clamp(1.9rem, 5vw, 3.2rem);
+    line-height: 1.1;
+    margin-bottom: 18px;
+  }
+  .sa-hero h1 span { color: var(--sa-yellow); }
+  .sa-hero__sub {
+    font-size: 1.05rem;
+    color: rgba(255,255,255,.75);
+    max-width: 580px;
+    margin-bottom: 32px;
+    line-height: 1.65;
+  }
+  .sa-hero__ctas { display: flex; flex-wrap: wrap; gap: 12px; }
+  .sa-hero__btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 9px;
+    padding: 13px 26px;
+    border-radius: var(--sa-radius);
+    font-family: 'Oswald', sans-serif;
+    font-size: 1rem;
+    text-transform: uppercase;
+    letter-spacing: .05em;
+    text-decoration: none;
+    transition: background .2s, color .2s;
+  }
+  .sa-hero__btn--primary { background: var(--sa-blue); color: #fff; }
+  .sa-hero__btn--primary:hover { background: var(--sa-blue-dk); color: #fff; }
+  .sa-hero__btn--outline { background: transparent; color: #fff; border: 2px solid rgba(255,255,255,.4); }
+  .sa-hero__btn--outline:hover { background: rgba(255,255,255,.08); color: #fff; }
+
+  /* ── TRUST BAR ───────────────────────────────────────── */
+  .sa-trust {
+    background: var(--sa-yellow);
+    padding: 14px 24px;
+  }
+  .sa-trust__inner {
+    max-width: 1100px;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px 36px;
+    justify-content: center;
+  }
+  .sa-trust__item {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-family: 'Oswald', sans-serif;
+    font-size: .85rem;
+    text-transform: uppercase;
+    letter-spacing: .06em;
+    color: var(--sa-dark);
+  }
+  .sa-trust__item i { font-size: .85rem; }
+
+  /* ── MAIN LAYOUT ─────────────────────────────────────── */
+  .sa-layout {
+    max-width: 1180px;
+    margin: 0 auto;
+    padding: 56px 24px;
+    display: grid;
+    grid-template-columns: 1fr 320px;
+    gap: 48px;
+    align-items: start;
+  }
+
+  /* ── CONTENT ─────────────────────────────────────────── */
+  .sa-content h2 {
+    font-size: 1.55rem;
+    color: var(--sa-blue);
+    margin: 38px 0 14px;
+    text-transform: uppercase;
+  }
+  .sa-content h2:first-child { margin-top: 0; }
+  .sa-content h3 {
+    font-family: 'Oswald', sans-serif;
+    font-size: 1.1rem;
+    color: var(--sa-text);
+    text-transform: uppercase;
+    margin: 28px 0 10px;
+  }
+  .sa-content p { line-height: 1.8; color: #333; margin-bottom: 16px; }
+  .sa-content ul {
+    padding-left: 0;
+    list-style: none;
+    margin-bottom: 24px;
+  }
+  .sa-content ul li {
+    padding: 8px 0 8px 28px;
+    position: relative;
+    border-bottom: 1px solid var(--sa-border);
+    font-size: .95rem;
+    color: #333;
+    line-height: 1.55;
+  }
+  .sa-content ul li:last-child { border-bottom: none; }
+  .sa-content ul li::before {
+    content: '\f00c';
+    font-family: 'Font Awesome 6 Free';
+    font-weight: 900;
+    position: absolute;
+    left: 0;
+    top: 9px;
+    color: var(--sa-blue);
+    font-size: .8rem;
+  }
+
+  /* Chips */
+  .sa-chips { display: flex; flex-wrap: wrap; gap: 10px; margin-bottom: 32px; }
+  .sa-chip {
+    background: var(--sa-light);
+    border: 1px solid var(--sa-border);
+    border-radius: 100px;
+    padding: 7px 18px;
+    font-size: .82rem;
+    font-family: 'Oswald', sans-serif;
+    text-transform: uppercase;
+    letter-spacing: .06em;
+    color: var(--sa-blue);
+  }
+
+  /* Photo */
+  .sa-photo {
+    border-radius: var(--sa-radius);
+    overflow: hidden;
+    margin: 28px 0;
+    box-shadow: 0 6px 24px rgba(0,0,0,.1);
+  }
+  .sa-photo img { width: 100%; display: block; max-height: 420px; object-fit: cover; }
+  .sa-photo figcaption {
+    background: var(--sa-dark);
+    color: rgba(255,255,255,.55);
+    font-size: .78rem;
+    padding: 10px 16px;
+    font-family: 'Open Sans', sans-serif;
+  }
+
+  /* Review block */
+  .sa-review {
+    background: var(--sa-light);
+    border-left: 4px solid var(--sa-blue);
+    border-radius: var(--sa-radius);
+    padding: 24px 28px;
+    margin: 40px 0;
+  }
+  .sa-review__stars { color: var(--sa-yellow); font-size: 1rem; margin-bottom: 12px; }
+  .sa-review__text {
+    font-size: .95rem;
+    line-height: 1.75;
+    color: #333;
+    font-style: italic;
+    margin: 0 0 14px;
+    padding: 0;
+    border: none;
+  }
+  .sa-review__name {
+    font-family: 'Oswald', sans-serif;
+    font-size: .85rem;
+    text-transform: uppercase;
+    letter-spacing: .06em;
+    color: var(--sa-blue);
+    margin: 0;
+  }
+
+  /* FAQ */
+  .sa-faq { margin-top: 36px; }
+  .sa-faq .accordion-button {
+    font-family: 'Oswald', sans-serif;
+    font-size: .95rem;
+    text-transform: uppercase;
+    letter-spacing: .04em;
+    color: var(--sa-text);
+    background: #fff;
+  }
+  .sa-faq .accordion-button:not(.collapsed) { color: var(--sa-blue); background: #f0f5ff; }
+  .sa-faq .accordion-button:focus { box-shadow: none; }
+  .sa-faq .accordion-body { font-size: .9rem; color: var(--sa-muted); line-height: 1.75; }
+
+  /* ── SIDEBAR ─────────────────────────────────────────── */
+  .sa-sidebar { position: sticky; top: 80px; display: flex; flex-direction: column; gap: 20px; }
+
+  .sa-sidebar__card {
+    background: #fff;
+    border: 1px solid var(--sa-border);
+    border-radius: var(--sa-radius);
+    overflow: hidden;
+  }
+  .sa-sidebar__head {
+    background: var(--sa-blue);
+    color: #fff;
+    padding: 14px 20px;
+    font-family: 'Oswald', sans-serif;
+    font-size: .88rem;
+    text-transform: uppercase;
+    letter-spacing: .08em;
+  }
+  .sa-sidebar__head--yellow { background: var(--sa-yellow); color: var(--sa-dark); }
+  .sa-sidebar__body { padding: 20px; }
+
+  /* CTA card */
+  .sa-cta-card {
+    background: var(--sa-blue);
+    color: #fff;
+    padding: 26px 20px;
+    text-align: center;
+    border-radius: var(--sa-radius);
+  }
+  .sa-cta-card h3 { font-size: 1.05rem; margin-bottom: 8px; text-transform: uppercase; }
+  .sa-cta-card p { font-size: .85rem; color: rgba(255,255,255,.75); margin-bottom: 18px; }
+  .sa-cta-phone {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    background: var(--sa-yellow);
+    color: var(--sa-dark);
+    font-family: 'Oswald', sans-serif;
+    font-size: 1.15rem;
+    text-transform: uppercase;
+    padding: 13px;
+    border-radius: 8px;
+    text-decoration: none;
+    margin-bottom: 10px;
+    transition: background .2s;
+  }
+  .sa-cta-phone:hover { background: #e6ac00; color: var(--sa-dark); }
+  .sa-cta-appt {
+    display: block;
+    background: rgba(255,255,255,.12);
+    color: #fff;
+    font-family: 'Oswald', sans-serif;
+    text-transform: uppercase;
+    font-size: .88rem;
+    padding: 11px;
+    border-radius: 8px;
+    text-decoration: none;
+    transition: background .2s;
+  }
+  .sa-cta-appt:hover { background: rgba(255,255,255,.2); color: #fff; }
+
+  /* Hours table */
+  .sa-hours-table { width: 100%; border-collapse: collapse; font-size: .875rem; }
+  .sa-hours-table tr { border-bottom: 1px solid var(--sa-border); }
+  .sa-hours-table tr:last-child { border-bottom: none; }
+  .sa-hours-table td { padding: 8px 0; }
+  .sa-hours-table td:last-child { text-align: right; color: var(--sa-muted); }
+
+  /* Services nav */
+  .sa-related { display: flex; flex-direction: column; gap: 0; }
+  .sa-related a {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 10px 0;
+    border-bottom: 1px solid var(--sa-border);
+    text-decoration: none;
+    color: var(--sa-text);
+    font-size: .875rem;
+    transition: color .15s, padding-left .15s;
+  }
+  .sa-related a:last-child { border-bottom: none; }
+  .sa-related a:hover { color: var(--sa-blue); padding-left: 4px; }
+  .sa-related a.sa-related--active { color: var(--sa-blue); font-weight: 700; }
+  .sa-related a i { color: var(--sa-blue); font-size: .7rem; width: 12px; flex-shrink: 0; }
+
+  /* ── SAME SERVICE OTHER CITIES ───────────────────────── */
+  .sa-other-cities {
+    background: var(--sa-light);
+    border-top: 1px solid var(--sa-border);
+    padding: 44px 24px;
+  }
+  .sa-other-cities__inner { max-width: 1180px; margin: 0 auto; }
+  .sa-other-cities__inner h2 {
+    font-size: 1.2rem;
+    color: var(--sa-blue);
+    margin-bottom: 18px;
+    text-transform: uppercase;
+  }
+  .sa-other-cities__grid { display: flex; flex-wrap: wrap; gap: 10px; }
+  .sa-other-cities__grid a {
+    background: #fff;
+    border: 1px solid var(--sa-border);
+    border-radius: 100px;
+    padding: 8px 20px;
+    font-size: .85rem;
+    font-family: 'Oswald', sans-serif;
+    text-transform: uppercase;
+    letter-spacing: .06em;
+    color: var(--sa-text);
+    text-decoration: none;
+    transition: border-color .2s, color .2s;
+  }
+  .sa-other-cities__grid a:hover { border-color: var(--sa-blue); color: var(--sa-blue); }
+
+  /* ── BOTTOM CTA ──────────────────────────────────────── */
+  .sa-bottom-cta {
+    background: var(--sa-dark);
+    color: #fff;
+    padding: 60px 24px;
+    text-align: center;
+  }
+  .sa-bottom-cta__inner { max-width: 600px; margin: 0 auto; }
+  .sa-bottom-cta h2 { font-size: clamp(1.5rem, 4vw, 2.2rem); margin-bottom: 12px; }
+  .sa-bottom-cta p { color: rgba(255,255,255,.65); margin-bottom: 28px; }
+  .sa-bottom-cta__btns { display: flex; flex-wrap: wrap; gap: 14px; justify-content: center; }
+  .sa-bottom-cta__btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 13px 28px;
+    border-radius: var(--sa-radius);
+    font-family: 'Oswald', sans-serif;
+    font-size: 1rem;
+    text-transform: uppercase;
+    letter-spacing: .05em;
+    text-decoration: none;
+    transition: background .2s, color .2s;
+  }
+  .sa-bottom-cta__btn--yellow { background: var(--sa-yellow); color: var(--sa-dark); }
+  .sa-bottom-cta__btn--yellow:hover { background: #e6ac00; }
+  .sa-bottom-cta__btn--outline { background: transparent; color: #fff; border: 2px solid rgba(255,255,255,.35); }
+  .sa-bottom-cta__btn--outline:hover { background: rgba(255,255,255,.07); color: #fff; }
+
+  /* ── RESPONSIVE ──────────────────────────────────────── */
+  @media (max-width: 900px) {
+    .sa-layout { grid-template-columns: 1fr; }
+    .sa-sidebar { position: static; }
+  }
+  @media (max-width: 580px) {
+    .sa-hero { padding: 80px 20px 56px; }
+    .sa-trust__inner { gap: 14px 20px; }
+  }
+</style>
+
+{% assign area   = site.data.service_areas | where: "slug", page.city_slug | first %}
+{% assign svc    = area.services | where: "slug", page.service_slug | first %}
+
+<!-- HERO -->
+<section class="sa-hero">
+  <div class="sa-hero__inner">
+    <p class="sa-hero__breadcrumb">
+      <a href="/">Home</a><span>/</span>
+      <a href="/service-areas/">Service Areas</a><span>/</span>
+      <a href="/service-areas/{{ page.city_slug }}/">{{ area.name }}</a><span>/</span>
+      {{ svc.name }}
+    </p>
+    <p class="sa-hero__eyebrow">RJ Fox Automotive &middot; {{ area.name }}</p>
+    <h1>{{ svc.name }} <span>in {{ area.name }}</span></h1>
+    <p class="sa-hero__sub">{{ svc.hero_sub }}</p>
+    <div class="sa-hero__ctas">
+      <a href="tel:{{ site.phone }}" class="sa-hero__btn sa-hero__btn--primary">
+        <i class="fa-solid fa-phone"></i> {{ site.phone_display }}
+      </a>
+      <a href="/contact/" class="sa-hero__btn sa-hero__btn--outline">
+        Schedule Service
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- TRUST BAR -->
+<div class="sa-trust">
+  <div class="sa-trust__inner">
+    <div class="sa-trust__item"><i class="fa-solid fa-shield-halved"></i> Honest Pricing</div>
+    <div class="sa-trust__item"><i class="fa-solid fa-clock"></i> Fast Turnaround</div>
+    <div class="sa-trust__item"><i class="fa-solid fa-wrench"></i> All Makes &amp; Models</div>
+    <div class="sa-trust__item"><i class="fa-solid fa-map-pin"></i> Serving {{ area.name }}</div>
+    <div class="sa-trust__item"><i class="fa-solid fa-phone"></i> {{ site.phone_display }}</div>
+  </div>
+</div>
+
+<!-- MAIN LAYOUT -->
+<div class="sa-layout">
+
+  <!-- CONTENT -->
+  <article class="sa-content">
+    {{ content }}
+
+    <!-- REVIEW -->
+    {% if area.review %}
+    <div class="sa-review">
+      <div class="sa-review__stars">
+        <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+      </div>
+      <blockquote class="sa-review__text">"{{ area.review.text }}"</blockquote>
+      <p class="sa-review__name">{{ area.review.name }} &mdash; {{ area.name }}</p>
+    </div>
+    {% endif %}
+
+    <!-- FAQ -->
+    {% if svc.faq %}
+    <div class="sa-faq">
+      <h2>Frequently Asked Questions</h2>
+      <div class="accordion" id="faqAccordion">
+        {% for item in svc.faq %}
+        <div class="accordion-item">
+          <h2 class="accordion-header">
+            <button class="accordion-button collapsed" type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#faq{{ forloop.index }}">
+              {{ item.q }}
+            </button>
+          </h2>
+          <div id="faq{{ forloop.index }}" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+            <div class="accordion-body">{{ item.a }}</div>
+          </div>
+        </div>
+        {% endfor %}
+      </div>
+    </div>
+    {% endif %}
+  </article>
+
+  <!-- SIDEBAR -->
+  <aside class="sa-sidebar">
+
+    <!-- CTA -->
+    <div class="sa-cta-card">
+      <h3>Ready to Get Started?</h3>
+      <p>Call or stop by. We give honest estimates before any work begins.</p>
+      <a href="tel:{{ site.phone }}" class="sa-cta-phone">
+        <i class="fa-solid fa-phone"></i> {{ site.phone_display }}
+      </a>
+      <a href="/contact/" class="sa-cta-appt">
+        <i class="fa-solid fa-calendar-check"></i> Schedule Service
+      </a>
+    </div>
+
+    <!-- Hours -->
+    <div class="sa-sidebar__card">
+      <div class="sa-sidebar__head">Shop Hours</div>
+      <div class="sa-sidebar__body">
+        <table class="sa-hours-table">
+          <tr><td>Monday</td><td>8am to 6pm</td></tr>
+          <tr><td>Tuesday</td><td>8am to 6pm</td></tr>
+          <tr><td>Wednesday</td><td>8am to 6pm</td></tr>
+          <tr><td>Thursday</td><td>8am to 6pm</td></tr>
+          <tr><td>Friday</td><td>8am to 6pm</td></tr>
+          <tr><td>Saturday</td><td>8am to 2pm</td></tr>
+          <tr><td>Sunday</td><td>Closed</td></tr>
+        </table>
+      </div>
+    </div>
+
+    <!-- All services in this city -->
+    <div class="sa-sidebar__card">
+      <div class="sa-sidebar__head">Services in {{ area.name }}</div>
+      <div class="sa-sidebar__body">
+        <nav class="sa-related">
+          {% for s in area.services %}
+          <a href="/service-areas/{{ page.city_slug }}/{{ s.slug }}/"
+             class="{% if s.slug == page.service_slug %}sa-related--active{% endif %}">
+            <i class="fa-solid fa-chevron-right"></i> {{ s.name }}
+          </a>
+          {% endfor %}
+          <a href="/service-areas/{{ page.city_slug }}/">
+            <i class="fa-solid fa-chevron-right"></i> All Services in {{ area.name }}
+          </a>
+        </nav>
+      </div>
+    </div>
+
+    <!-- Address -->
+    <div class="sa-sidebar__card">
+      <div class="sa-sidebar__head sa-sidebar__head--yellow">Find Us</div>
+      <div class="sa-sidebar__body" style="font-size:.875rem; line-height:1.7;">
+        <p style="margin:0 0 10px;">
+          <strong>RJ Fox Automotive</strong><br>
+          {{ site.address_street }}<br>
+          {{ site.address_city }}, {{ site.address_state }} {{ site.address_zip }}
+        </p>
+        <a href="{{ site.google_maps_link }}" target="_blank" rel="noopener"
+           style="color:var(--sa-blue); font-size:.82rem; font-weight:600;">
+          <i class="fa-solid fa-map-pin"></i> Get Directions
+        </a>
+      </div>
+    </div>
+
+  </aside>
+</div>
+
+<!-- SAME SERVICE IN OTHER CITIES -->
+<section class="sa-other-cities">
+  <div class="sa-other-cities__inner">
+    <h2>{{ svc.name }} Near You</h2>
+    <div class="sa-other-cities__grid">
+      {% for a in site.data.service_areas %}
+        {% unless a.slug == page.city_slug %}
+        <a href="/service-areas/{{ a.slug }}/{{ page.service_slug }}/">{{ a.name }}</a>
+        {% endunless %}
+      {% endfor %}
+      <a href="/services/{{ page.service_slug }}/">Eustis, FL</a>
+    </div>
+  </div>
+</section>
+
+<!-- BOTTOM CTA -->
+<section class="sa-bottom-cta">
+  <div class="sa-bottom-cta__inner">
+    <h2>{{ svc.name }} in {{ area.name }}</h2>
+    <p>Stop by 801 David Walker Dr in Eustis or call us to schedule. Honest estimates before any work begins.</p>
+    <div class="sa-bottom-cta__btns">
+      <a href="tel:{{ site.phone }}" class="sa-bottom-cta__btn sa-bottom-cta__btn--yellow">
+        <i class="fa-solid fa-phone"></i> Call {{ site.phone_display }}
+      </a>
+      <a href="/contact/" class="sa-bottom-cta__btn sa-bottom-cta__btn--outline">
+        <i class="fa-solid fa-calendar-check"></i> Schedule Service
+      </a>
+    </div>
+  </div>
+</section>
