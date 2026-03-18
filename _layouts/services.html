@@ -1,505 +1,462 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>{{ page.title }} | RJ Fox Automotive | Eustis, FL</title>
-  <meta name="description" content="{{ page.meta_description }}">
-  <link rel="canonical" href="{{ site.url }}{{ page.url }}">
+---
+layout: default
+---
 
-  <!-- Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&family=Oswald:wght@500;700&display=swap" rel="stylesheet">
+<style>
+  /* ── SERVICE PAGE TOKENS ─────────────────────────────── */
+  :root {
+    --sp-blue:    #004aad;
+    --sp-blue-dk: #003380;
+    --sp-yellow:  #ffc107;
+    --sp-dark:    #111;
+    --sp-light:   #f5f6f8;
+    --sp-border:  #e2e5ea;
+    --sp-text:    #222;
+    --sp-muted:   #666;
+    --sp-radius:  10px;
+  }
 
-  <!-- Bootstrap -->
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  /* ── HERO ────────────────────────────────────────────── */
+  .sp-hero {
+    background:
+      linear-gradient(rgba(0,0,0,.75), rgba(0,0,0,.85)),
+      url('{{ page.hero_image | default: "/Pics/Hero.webp" }}') center/cover no-repeat;
+    padding: 90px 24px 70px;
+    color: #fff;
+  }
+  .sp-hero__inner { margin: 0 auto; max-width: 780px; }
+  .sp-hero__breadcrumb {
+    font-size: .8rem;
+    color: rgba(255,255,255,.5);
+    margin-bottom: 18px;
+    font-family: 'Open Sans', sans-serif;
+  }
+  .sp-hero__breadcrumb a { color: rgba(255,255,255,.5); text-decoration: none; }
+  .sp-hero__breadcrumb a:hover { color: var(--sp-yellow); }
+  .sp-hero__breadcrumb span { margin: 0 8px; }
+  .sp-hero__eyebrow {
+    font-size: .75rem;
+    letter-spacing: .18em;
+    text-transform: uppercase;
+    color: var(--sp-yellow);
+    margin-bottom: 12px;
+    font-family: 'Open Sans', sans-serif;
+  }
+  .sp-hero h1 {
+    font-size: clamp(2rem, 5vw, 3.4rem);
+    line-height: 1.1;
+    margin-bottom: 18px;
+  }
+  .sp-hero h1 span { color: var(--sp-yellow); }
+  .sp-hero__sub {
+    font-size: 1.05rem;
+    color: rgba(255,255,255,.75);
+    max-width: 580px;
+    margin-bottom: 32px;
+    line-height: 1.65;
+  }
+  .sp-hero__ctas { display: flex; flex-wrap: wrap; gap: 12px; }
+  .sp-hero__btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 9px;
+    padding: 13px 26px;
+    border-radius: var(--sp-radius);
+    font-family: 'Oswald', sans-serif;
+    font-size: 1rem;
+    text-transform: uppercase;
+    letter-spacing: .05em;
+    text-decoration: none;
+    transition: background .2s, color .2s;
+  }
+  .sp-hero__btn--primary { background: var(--sp-blue); color: #fff; }
+  .sp-hero__btn--primary:hover { background: var(--sp-blue-dk); color: #fff; }
+  .sp-hero__btn--outline { background: transparent; color: #fff; border: 2px solid rgba(255,255,255,.4); }
+  .sp-hero__btn--outline:hover { background: rgba(255,255,255,.08); color: #fff; }
 
-  <!-- Icons -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  /* ── TRUST BAR ───────────────────────────────────────── */
+  .sp-trust {
+    background: var(--sp-yellow);
+    padding: 14px 24px;
+  }
+  .sp-trust__inner {
+    max-width: 1100px;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px 36px;
+    justify-content: center;
+  }
+  .sp-trust__item {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-family: 'Oswald', sans-serif;
+    font-size: .85rem;
+    text-transform: uppercase;
+    letter-spacing: .06em;
+    color: var(--sp-dark);
+  }
+  .sp-trust__item i { font-size: .85rem; }
 
-  <!-- Favicon -->
-  <link rel="icon" type="image/jpg" href="https://github.com/JamesBrownR/RJ-Fox-Automotive/blob/f43797043476d4e7f9e3dad95907353c061a1f0d/Pics/RJLogo.jpg?raw=true">
+  /* ── MAIN LAYOUT ─────────────────────────────────────── */
+  .sp-layout {
+    max-width: 1180px;
+    margin: 0 auto;
+    padding: 56px 24px;
+    display: grid;
+    grid-template-columns: 1fr 320px;
+    gap: 48px;
+    align-items: start;
+  }
 
-  <!-- GA -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-ER4XLHYHRC"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-    gtag('config', 'G-ER4XLHYHRC');
-  </script>
+  /* ── CONTENT ─────────────────────────────────────────── */
+  .sp-content h2 {
+    font-size: 1.55rem;
+    color: var(--sp-blue);
+    margin: 38px 0 14px;
+    text-transform: uppercase;
+  }
+  .sp-content h2:first-child { margin-top: 0; }
+  .sp-content p { line-height: 1.8; color: #333; margin-bottom: 16px; }
+  .sp-content ul {
+    padding-left: 0;
+    list-style: none;
+    margin-bottom: 24px;
+  }
+  .sp-content ul li {
+    padding: 8px 0 8px 28px;
+    position: relative;
+    border-bottom: 1px solid var(--sp-border);
+    font-size: .95rem;
+    color: #333;
+    line-height: 1.55;
+  }
+  .sp-content ul li:last-child { border-bottom: none; }
+  .sp-content ul li::before {
+    content: '\f00c';
+    font-family: 'Font Awesome 6 Free';
+    font-weight: 900;
+    position: absolute;
+    left: 0;
+    top: 9px;
+    color: var(--sp-blue);
+    font-size: .8rem;
+  }
 
-  <style>
-    /* ── TOKENS ─────────────────────────────────────────── */
-    :root {
-      --blue:    #004aad;
-      --blue-dk: #003380;
-      --yellow:  #ffc107;
-      --dark:    #111;
-      --mid:     #1e1e1e;
-      --light:   #f5f6f8;
-      --border:  #e2e5ea;
-      --text:    #222;
-      --muted:   #666;
-      --radius:  10px;
-    }
-    body        { font-family: 'Open Sans', sans-serif; color: var(--text); }
-    h1,h2,h3,h4 { font-family: 'Oswald', sans-serif; text-transform: uppercase; }
+  /* Chips */
+  .sp-chips { display: flex; flex-wrap: wrap; gap: 10px; margin-bottom: 32px; }
+  .sp-chip {
+    background: var(--sp-light);
+    border: 1px solid var(--sp-border);
+    border-radius: 100px;
+    padding: 7px 18px;
+    font-size: .82rem;
+    font-family: 'Oswald', sans-serif;
+    text-transform: uppercase;
+    letter-spacing: .06em;
+    color: var(--sp-blue);
+  }
 
-    /* ── HERO ────────────────────────────────────────────── */
-    .sp-hero {
-      background:
-        linear-gradient(rgba(0,0,0,.75), rgba(0,0,0,.85)),
-        url('{{ page.hero_image | default: "/Pics/Hero.webp" }}') center/cover no-repeat;
-      padding: 110px 24px 80px;
-      color: #fff;
-    }
-    .sp-hero__inner    { margin: 0 auto; max-width: 780px; }
-    .sp-hero__breadcrumb {
-      font-size: .8rem;
-      color: rgba(255,255,255,.5);
-      margin-bottom: 18px;
-      font-family: 'Open Sans', sans-serif;
-    }
-    .sp-hero__breadcrumb a { color: rgba(255,255,255,.5); text-decoration: none; }
-    .sp-hero__breadcrumb a:hover { color: var(--yellow); }
-    .sp-hero__breadcrumb span { margin: 0 8px; }
-    .sp-hero__eyebrow {
-      font-size: .75rem;
-      letter-spacing: .18em;
-      text-transform: uppercase;
-      color: var(--yellow);
-      margin-bottom: 12px;
-      font-family: 'Open Sans', sans-serif;
-    }
-    .sp-hero h1 {
-      font-size: clamp(2.2rem, 5.5vw, 3.6rem);
-      line-height: 1.1;
-      margin-bottom: 18px;
-    }
-    .sp-hero h1 span { color: var(--yellow); }
-    .sp-hero__sub {
-      font-size: 1.1rem;
-      color: rgba(255,255,255,.75);
-      max-width: 580px;
-      margin-bottom: 36px;
-      line-height: 1.65;
-    }
-    .sp-hero__ctas { display: flex; flex-wrap: wrap; gap: 14px; }
-    .sp-hero__btn {
-      display: inline-flex;
-      align-items: center;
-      gap: 9px;
-      padding: 14px 28px;
-      border-radius: var(--radius);
-      font-family: 'Oswald', sans-serif;
-      font-size: 1rem;
-      text-transform: uppercase;
-      letter-spacing: .05em;
-      text-decoration: none;
-      transition: background .2s, color .2s;
-    }
-    .sp-hero__btn--primary { background: var(--blue); color: #fff; }
-    .sp-hero__btn--primary:hover { background: var(--blue-dk); color: #fff; }
-    .sp-hero__btn--outline { background: transparent; color: #fff; border: 2px solid rgba(255,255,255,.4); }
-    .sp-hero__btn--outline:hover { background: rgba(255,255,255,.08); color: #fff; }
+  /* Photo */
+  .sp-photo {
+    border-radius: var(--sp-radius);
+    overflow: hidden;
+    margin: 28px 0;
+    box-shadow: 0 6px 24px rgba(0,0,0,.1);
+  }
+  .sp-photo img { width: 100%; display: block; max-height: 420px; object-fit: cover; }
+  .sp-photo figcaption {
+    background: var(--sp-dark);
+    color: rgba(255,255,255,.55);
+    font-size: .78rem;
+    padding: 10px 16px;
+    font-family: 'Open Sans', sans-serif;
+  }
 
-    /* ── TRUST BAR ───────────────────────────────────────── */
-    .sp-trust {
-      background: var(--yellow);
-      padding: 16px 24px;
-    }
-    .sp-trust__inner {
-      max-width: 1100px;
-      margin: 0 auto;
-      display: flex;
-      flex-wrap: wrap;
-      gap: 24px 40px;
-      justify-content: center;
-    }
-    .sp-trust__item {
-      display: flex;
-      align-items: center;
-      gap: 8px;
-      font-family: 'Oswald', sans-serif;
-      font-size: .88rem;
-      text-transform: uppercase;
-      letter-spacing: .06em;
-      color: var(--dark);
-    }
-    .sp-trust__item i { font-size: .9rem; }
+  /* FAQ */
+  .sp-faq { margin-top: 36px; }
+  .sp-faq__title { font-size: 1.35rem; color: var(--sp-blue); margin-bottom: 18px; }
+  .sp-faq .accordion-button {
+    font-family: 'Oswald', sans-serif;
+    font-size: .95rem;
+    text-transform: uppercase;
+    letter-spacing: .04em;
+    color: var(--sp-text);
+    background: #fff;
+  }
+  .sp-faq .accordion-button:not(.collapsed) { color: var(--sp-blue); background: #f0f5ff; }
+  .sp-faq .accordion-button:focus { box-shadow: none; }
+  .sp-faq .accordion-body { font-size: .9rem; color: var(--sp-muted); line-height: 1.75; }
 
-    /* ── LAYOUT ──────────────────────────────────────────── */
-    .sp-layout {
-      max-width: 1180px;
-      margin: 0 auto;
-      padding: 60px 24px;
-      display: grid;
-      grid-template-columns: 1fr 340px;
-      gap: 48px;
-      align-items: start;
-    }
+  /* ── SIDEBAR ─────────────────────────────────────────── */
+  .sp-sidebar { position: sticky; top: 80px; display: flex; flex-direction: column; gap: 20px; }
 
-    /* ── CONTENT ─────────────────────────────────────────── */
-    .sp-content h2 {
-      font-size: 1.6rem;
-      color: var(--blue);
-      margin: 40px 0 14px;
-    }
-    .sp-content h2:first-child { margin-top: 0; }
-    .sp-content p { line-height: 1.8; color: #333; margin-bottom: 16px; }
-    .sp-content ul {
-      padding-left: 0;
-      list-style: none;
-      margin-bottom: 24px;
-    }
-    .sp-content ul li {
-      padding: 8px 0 8px 28px;
-      position: relative;
-      border-bottom: 1px solid var(--border);
-      font-size: .95rem;
-      color: #333;
-      line-height: 1.55;
-    }
-    .sp-content ul li:last-child { border-bottom: none; }
-    .sp-content ul li::before {
-      content: '\f00c';
-      font-family: 'Font Awesome 6 Free';
-      font-weight: 900;
-      position: absolute;
-      left: 0;
-      top: 9px;
-      color: var(--blue);
-      font-size: .8rem;
-    }
+  .sp-sidebar__card {
+    background: #fff;
+    border: 1px solid var(--sp-border);
+    border-radius: var(--sp-radius);
+    overflow: hidden;
+  }
+  .sp-sidebar__head {
+    background: var(--sp-blue);
+    color: #fff;
+    padding: 14px 20px;
+    font-family: 'Oswald', sans-serif;
+    font-size: .88rem;
+    text-transform: uppercase;
+    letter-spacing: .08em;
+  }
+  .sp-sidebar__head--yellow { background: var(--sp-yellow); color: var(--sp-dark); }
+  .sp-sidebar__body { padding: 20px; }
 
-    /* Sub-services chips */
-    .sp-chips { display: flex; flex-wrap: wrap; gap: 10px; margin-bottom: 32px; }
-    .sp-chip {
-      background: var(--light);
-      border: 1px solid var(--border);
-      border-radius: 100px;
-      padding: 7px 18px;
-      font-size: .82rem;
-      font-family: 'Oswald', sans-serif;
-      text-transform: uppercase;
-      letter-spacing: .06em;
-      color: var(--blue);
-    }
+  /* CTA card */
+  .sp-cta-card {
+    background: var(--sp-blue);
+    color: #fff;
+    padding: 26px 20px;
+    text-align: center;
+    border-radius: var(--sp-radius);
+  }
+  .sp-cta-card h3 { font-size: 1.05rem; margin-bottom: 8px; text-transform: uppercase; }
+  .sp-cta-card p { font-size: .85rem; color: rgba(255,255,255,.75); margin-bottom: 18px; }
+  .sp-cta-phone {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    background: var(--sp-yellow);
+    color: var(--sp-dark);
+    font-family: 'Oswald', sans-serif;
+    font-size: 1.15rem;
+    text-transform: uppercase;
+    padding: 13px;
+    border-radius: 8px;
+    text-decoration: none;
+    margin-bottom: 10px;
+    transition: background .2s;
+  }
+  .sp-cta-phone:hover { background: #e6ac00; color: var(--sp-dark); }
+  .sp-cta-appt {
+    display: block;
+    background: rgba(255,255,255,.12);
+    color: #fff;
+    font-family: 'Oswald', sans-serif;
+    text-transform: uppercase;
+    font-size: .88rem;
+    padding: 11px;
+    border-radius: 8px;
+    text-decoration: none;
+    transition: background .2s;
+  }
+  .sp-cta-appt:hover { background: rgba(255,255,255,.2); color: #fff; }
 
-    /* Photo block */
-    .sp-photo {
-      border-radius: var(--radius);
-      overflow: hidden;
-      margin: 32px 0;
-      box-shadow: 0 6px 24px rgba(0,0,0,.1);
-    }
-    .sp-photo img { width: 100%; display: block; max-height: 420px; object-fit: cover; }
-    .sp-photo figcaption {
-      background: var(--dark);
-      color: rgba(255,255,255,.55);
-      font-size: .78rem;
-      padding: 10px 16px;
-      font-family: 'Open Sans', sans-serif;
-    }
+  /* Hours table */
+  .sp-hours-table { width: 100%; border-collapse: collapse; font-size: .875rem; }
+  .sp-hours-table tr { border-bottom: 1px solid var(--sp-border); }
+  .sp-hours-table tr:last-child { border-bottom: none; }
+  .sp-hours-table td { padding: 8px 0; }
+  .sp-hours-table td:last-child { text-align: right; color: var(--sp-muted); }
 
-    /* FAQ accordion */
-    .sp-faq { margin-top: 40px; }
-    .sp-faq__title {
-      font-size: 1.4rem;
-      color: var(--blue);
-      margin-bottom: 20px;
-    }
-    .sp-faq .accordion-button {
-      font-family: 'Oswald', sans-serif;
-      font-size: .95rem;
-      text-transform: uppercase;
-      letter-spacing: .04em;
-      color: var(--text);
-      background: #fff;
-    }
-    .sp-faq .accordion-button:not(.collapsed) { color: var(--blue); background: #f0f5ff; }
-    .sp-faq .accordion-button:focus { box-shadow: none; }
-    .sp-faq .accordion-body { font-size: .9rem; color: var(--muted); line-height: 1.75; }
+  /* Related services nav */
+  .sp-related { display: flex; flex-direction: column; gap: 0; }
+  .sp-related a {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 10px 0;
+    border-bottom: 1px solid var(--sp-border);
+    text-decoration: none;
+    color: var(--sp-text);
+    font-size: .875rem;
+    transition: color .15s, padding-left .15s;
+  }
+  .sp-related a:last-child { border-bottom: none; }
+  .sp-related a:hover { color: var(--sp-blue); padding-left: 4px; }
+  .sp-related a i { color: var(--sp-blue); font-size: .7rem; width: 12px; }
 
-    /* ── SIDEBAR ─────────────────────────────────────────── */
-    .sp-sidebar { position: sticky; top: 88px; display: flex; flex-direction: column; gap: 20px; }
+  /* ── NEARBY CITIES ───────────────────────────────────── */
+  .sp-cities {
+    background: var(--sp-light);
+    border-top: 1px solid var(--sp-border);
+    padding: 44px 24px;
+  }
+  .sp-cities__inner { max-width: 1180px; margin: 0 auto; }
+  .sp-cities__inner h2 {
+    font-size: 1.2rem;
+    color: var(--sp-blue);
+    margin-bottom: 18px;
+    text-transform: uppercase;
+  }
+  .sp-cities__grid { display: flex; flex-wrap: wrap; gap: 10px; }
+  .sp-cities__grid a {
+    background: #fff;
+    border: 1px solid var(--sp-border);
+    border-radius: 100px;
+    padding: 8px 20px;
+    font-size: .85rem;
+    font-family: 'Oswald', sans-serif;
+    text-transform: uppercase;
+    letter-spacing: .06em;
+    color: var(--sp-text);
+    text-decoration: none;
+    transition: border-color .2s, color .2s;
+  }
+  .sp-cities__grid a:hover { border-color: var(--sp-blue); color: var(--sp-blue); }
 
-    .sp-sidebar__card {
-      background: #fff;
-      border: 1px solid var(--border);
-      border-radius: var(--radius);
-      overflow: hidden;
-    }
-    .sp-sidebar__card--cta { border-color: var(--blue); }
+  /* ── BOTTOM CTA ──────────────────────────────────────── */
+  .sp-bottom-cta {
+    background: var(--sp-dark);
+    color: #fff;
+    padding: 60px 24px;
+    text-align: center;
+  }
+  .sp-bottom-cta__inner { max-width: 600px; margin: 0 auto; }
+  .sp-bottom-cta h2 { font-size: clamp(1.5rem, 4vw, 2.2rem); margin-bottom: 12px; }
+  .sp-bottom-cta p { color: rgba(255,255,255,.65); margin-bottom: 28px; }
+  .sp-bottom-cta__btns { display: flex; flex-wrap: wrap; gap: 14px; justify-content: center; }
+  .sp-bottom-cta__btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 13px 28px;
+    border-radius: var(--sp-radius);
+    font-family: 'Oswald', sans-serif;
+    font-size: 1rem;
+    text-transform: uppercase;
+    letter-spacing: .05em;
+    text-decoration: none;
+    transition: background .2s, color .2s;
+  }
+  .sp-bottom-cta__btn--yellow { background: var(--sp-yellow); color: var(--sp-dark); }
+  .sp-bottom-cta__btn--yellow:hover { background: #e6ac00; color: var(--sp-dark); }
+  .sp-bottom-cta__btn--outline { background: transparent; color: #fff; border: 2px solid rgba(255,255,255,.35); }
+  .sp-bottom-cta__btn--outline:hover { background: rgba(255,255,255,.07); color: #fff; }
 
-    .sp-sidebar__head {
-      background: var(--blue);
-      color: #fff;
-      padding: 16px 20px;
-      font-family: 'Oswald', sans-serif;
-      font-size: .9rem;
-      text-transform: uppercase;
-      letter-spacing: .08em;
-    }
-    .sp-sidebar__head--yellow { background: var(--yellow); color: var(--dark); }
+  /* ── RESPONSIVE ──────────────────────────────────────── */
+  @media (max-width: 900px) {
+    .sp-layout { grid-template-columns: 1fr; }
+    .sp-sidebar { position: static; }
+  }
+  @media (max-width: 580px) {
+    .sp-hero { padding: 80px 20px 56px; }
+    .sp-trust__inner { gap: 14px 20px; }
+  }
+</style>
 
-    .sp-sidebar__body { padding: 20px; }
-
-    /* CTA card */
-    .sp-cta-card { background: var(--blue); color: #fff; padding: 28px 20px; text-align: center; border-radius: var(--radius); }
-    .sp-cta-card h3 {
-      font-size: 1.1rem;
-      margin-bottom: 8px;
-      text-transform: uppercase;
-    }
-    .sp-cta-card p { font-size: .875rem; color: rgba(255,255,255,.75); margin-bottom: 20px; }
-    .sp-cta-card .sp-cta-phone {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      gap: 10px;
-      background: var(--yellow);
-      color: var(--dark);
-      font-family: 'Oswald', sans-serif;
-      font-size: 1.2rem;
-      text-transform: uppercase;
-      padding: 14px;
-      border-radius: 8px;
-      text-decoration: none;
-      margin-bottom: 12px;
-      transition: background .2s;
-    }
-    .sp-cta-card .sp-cta-phone:hover { background: #e6ac00; }
-    .sp-cta-card .sp-cta-appt {
-      display: block;
-      background: rgba(255,255,255,.12);
-      color: #fff;
-      font-family: 'Oswald', sans-serif;
-      text-transform: uppercase;
-      font-size: .9rem;
-      padding: 12px;
-      border-radius: 8px;
-      text-decoration: none;
-      transition: background .2s;
-    }
-    .sp-cta-card .sp-cta-appt:hover { background: rgba(255,255,255,.2); }
-
-    /* Hours card */
-    .sp-hours-table { width: 100%; border-collapse: collapse; font-size: .875rem; }
-    .sp-hours-table tr { border-bottom: 1px solid var(--border); }
-    .sp-hours-table tr:last-child { border-bottom: none; }
-    .sp-hours-table td { padding: 8px 0; }
-    .sp-hours-table td:last-child { text-align: right; color: var(--muted); }
-    .sp-hours-table tr.today td { font-weight: 600; color: var(--blue); }
-
-    /* Related services */
-    .sp-related { display: flex; flex-direction: column; gap: 4px; }
-    .sp-related a {
-      display: flex;
-      align-items: center;
-      gap: 10px;
-      padding: 10px 0;
-      border-bottom: 1px solid var(--border);
-      text-decoration: none;
-      color: var(--text);
-      font-size: .875rem;
-      transition: color .15s, padding-left .15s;
-    }
-    .sp-related a:last-child { border-bottom: none; }
-    .sp-related a:hover { color: var(--blue); padding-left: 4px; }
-    .sp-related a i { color: var(--blue); font-size: .7rem; width: 12px; }
-
-    /* ── NEARBY CITIES ───────────────────────────────────── */
-    .sp-cities {
-      background: var(--light);
-      border-top: 1px solid var(--border);
-      padding: 48px 24px;
-    }
-    .sp-cities__inner { max-width: 1180px; margin: 0 auto; }
-    .sp-cities__inner h2 {
-      font-size: 1.3rem;
-      color: var(--blue);
-      margin-bottom: 20px;
-    }
-    .sp-cities__grid {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 10px;
-    }
-    .sp-cities__grid a {
-      background: #fff;
-      border: 1px solid var(--border);
-      border-radius: 100px;
-      padding: 8px 20px;
-      font-size: .85rem;
-      font-family: 'Oswald', sans-serif;
-      text-transform: uppercase;
-      letter-spacing: .06em;
-      color: var(--text);
-      text-decoration: none;
-      transition: border-color .2s, color .2s;
-    }
-    .sp-cities__grid a:hover { border-color: var(--blue); color: var(--blue); }
-
-    /* ── BOTTOM CTA ──────────────────────────────────────── */
-    .sp-bottom-cta {
-      background: var(--dark);
-      color: #fff;
-      padding: 64px 24px;
-      text-align: center;
-    }
-    .sp-bottom-cta__inner { max-width: 620px; margin: 0 auto; }
-    .sp-bottom-cta h2 { font-size: clamp(1.6rem, 4vw, 2.4rem); margin-bottom: 14px; }
-    .sp-bottom-cta p { color: rgba(255,255,255,.65); margin-bottom: 30px; }
-    .sp-bottom-cta__btns { display: flex; flex-wrap: wrap; gap: 14px; justify-content: center; }
-    .sp-bottom-cta__btn {
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
-      padding: 14px 30px;
-      border-radius: var(--radius);
-      font-family: 'Oswald', sans-serif;
-      font-size: 1rem;
-      text-transform: uppercase;
-      letter-spacing: .05em;
-      text-decoration: none;
-      transition: background .2s, color .2s;
-    }
-    .sp-bottom-cta__btn--yellow { background: var(--yellow); color: var(--dark); }
-    .sp-bottom-cta__btn--yellow:hover { background: #e6ac00; color: var(--dark); }
-    .sp-bottom-cta__btn--outline { background: transparent; color: #fff; border: 2px solid rgba(255,255,255,.35); }
-    .sp-bottom-cta__btn--outline:hover { background: rgba(255,255,255,.07); color: #fff; }
-
-    /* ── RESPONSIVE ──────────────────────────────────────── */
-    @media (max-width: 900px) {
-      .sp-layout {
-        grid-template-columns: 1fr;
-      }
-      .sp-sidebar { position: static; }
-    }
-    @media (max-width: 580px) {
-      .sp-hero { padding: 90px 20px 60px; }
-      .sp-trust__inner { gap: 16px 24px; }
-    }
-  </style>
-</head>
-<body>
-
-  {% include nav.html %}
-
-  <!-- HERO -->
-  <section class="sp-hero">
-    <div class="sp-hero__inner">
-      <p class="sp-hero__breadcrumb">
-        <a href="/">Home</a><span>/</span>
-        <a href="/services/">Services</a><span>/</span>
-        {{ page.title }}
-      </p>
-      <p class="sp-hero__eyebrow">RJ Fox Automotive · Eustis, FL</p>
-      <h1>{{ page.h1 | default: page.title }} <span>in Eustis, FL</span></h1>
-      <p class="sp-hero__sub">{{ page.hero_sub }}</p>
-      <div class="sp-hero__ctas">
-        <a href="tel:+13522503210" class="sp-hero__btn sp-hero__btn--primary">
-          <i class="fa-solid fa-phone"></i> (352) 250-3210
-        </a>
-        <a href="/contact/" class="sp-hero__btn sp-hero__btn--outline">
-          Schedule Service
-        </a>
-      </div>
-    </div>
-  </section>
-
-  <!-- TRUST BAR -->
-  <div class="sp-trust">
-    <div class="sp-trust__inner">
-      <div class="sp-trust__item"><i class="fa-solid fa-shield-halved"></i> Honest Pricing</div>
-      <div class="sp-trust__item"><i class="fa-solid fa-clock"></i> Fast Turnaround</div>
-      <div class="sp-trust__item"><i class="fa-solid fa-wrench"></i> All Makes and Models</div>
-      <div class="sp-trust__item"><i class="fa-solid fa-map-pin"></i> Eustis, FL</div>
-      <div class="sp-trust__item"><i class="fa-solid fa-phone"></i> (352) 250-3210</div>
+<!-- HERO -->
+<section class="sp-hero">
+  <div class="sp-hero__inner">
+    <p class="sp-hero__breadcrumb">
+      <a href="/">Home</a><span>/</span>
+      <a href="/services/">Services</a><span>/</span>
+      {{ page.title }}
+    </p>
+    <p class="sp-hero__eyebrow">RJ Fox Automotive · Eustis, FL</p>
+    <h1>{{ page.h1 | default: page.title }} <span>in Eustis, FL</span></h1>
+    <p class="sp-hero__sub">{{ page.hero_sub }}</p>
+    <div class="sp-hero__ctas">
+      <a href="tel:{{ site.phone }}" class="sp-hero__btn sp-hero__btn--primary">
+        <i class="fa-solid fa-phone"></i> {{ site.phone_display }}
+      </a>
+      <a href="/contact/" class="sp-hero__btn sp-hero__btn--outline">
+        Schedule Service
+      </a>
     </div>
   </div>
+</section>
 
-  <!-- MAIN LAYOUT -->
-  <div class="sp-layout">
+<!-- TRUST BAR -->
+<div class="sp-trust">
+  <div class="sp-trust__inner">
+    <div class="sp-trust__item"><i class="fa-solid fa-shield-halved"></i> Honest Pricing</div>
+    <div class="sp-trust__item"><i class="fa-solid fa-clock"></i> Fast Turnaround</div>
+    <div class="sp-trust__item"><i class="fa-solid fa-wrench"></i> All Makes &amp; Models</div>
+    <div class="sp-trust__item"><i class="fa-solid fa-map-pin"></i> Eustis, FL</div>
+    <div class="sp-trust__item"><i class="fa-solid fa-phone"></i> {{ site.phone_display }}</div>
+  </div>
+</div>
 
-    <!-- LEFT: CONTENT -->
-    <article class="sp-content">
-      {{ content }}
-    </article>
+<!-- MAIN LAYOUT -->
+<div class="sp-layout">
 
-    <!-- RIGHT: SIDEBAR -->
-    <aside class="sp-sidebar">
+  <!-- CONTENT -->
+  <article class="sp-content">
+    {{ content }}
+  </article>
 
-      <!-- CTA Card -->
-      <div class="sp-cta-card">
-        <h3>Ready to Get Started?</h3>
-        <p>Call or stop by. We give honest estimates before any work begins.</p>
-        <a href="tel:+13522503210" class="sp-cta-phone">
-          <i class="fa-solid fa-phone"></i> (352) 250-3210
+  <!-- SIDEBAR -->
+  <aside class="sp-sidebar">
+
+    <!-- CTA -->
+    <div class="sp-cta-card">
+      <h3>Ready to Get Started?</h3>
+      <p>Call or stop by. We give honest estimates before any work begins.</p>
+      <a href="tel:{{ site.phone }}" class="sp-cta-phone">
+        <i class="fa-solid fa-phone"></i> {{ site.phone_display }}
+      </a>
+      <a href="/contact/" class="sp-cta-appt">
+        <i class="fa-solid fa-calendar-check"></i> Schedule Service
+      </a>
+    </div>
+
+    <!-- Hours -->
+    <div class="sp-sidebar__card">
+      <div class="sp-sidebar__head">Shop Hours</div>
+      <div class="sp-sidebar__body">
+        <table class="sp-hours-table">
+          <tr><td>Monday</td><td>8am – 6pm</td></tr>
+          <tr><td>Tuesday</td><td>8am – 6pm</td></tr>
+          <tr><td>Wednesday</td><td>8am – 6pm</td></tr>
+          <tr><td>Thursday</td><td>8am – 6pm</td></tr>
+          <tr><td>Friday</td><td>8am – 6pm</td></tr>
+          <tr><td>Saturday</td><td>8am – 2pm</td></tr>
+          <tr><td>Sunday</td><td>Closed</td></tr>
+        </table>
+      </div>
+    </div>
+
+    <!-- Related Services -->
+    <div class="sp-sidebar__card">
+      <div class="sp-sidebar__head">Other Services</div>
+      <div class="sp-sidebar__body">
+        <nav class="sp-related">
+          <a href="/services/transmission-repair/"><i class="fa-solid fa-chevron-right"></i> Transmission Repair</a>
+          <a href="/services/transmission-replacement/"><i class="fa-solid fa-chevron-right"></i> Transmission Replacement</a>
+          <a href="/services/engine-repair/"><i class="fa-solid fa-chevron-right"></i> Engine Repair</a>
+          <a href="/services/auto-engine-diagnostic/"><i class="fa-solid fa-chevron-right"></i> Engine Diagnostics</a>
+          <a href="/services/ac-installation-repair/"><i class="fa-solid fa-chevron-right"></i> AC Repair</a>
+          <a href="/services/auto-electrical-repair/"><i class="fa-solid fa-chevron-right"></i> Electrical Repair</a>
+          <a href="/services/diesel-engines/"><i class="fa-solid fa-chevron-right"></i> Diesel Engines</a>
+          <a href="/services/auto-brake-repair/"><i class="fa-solid fa-chevron-right"></i> Brake Repair</a>
+          <a href="/services/steering-suspension-repair/"><i class="fa-solid fa-chevron-right"></i> Steering &amp; Suspension</a>
+          <a href="/services/check-engine-light/"><i class="fa-solid fa-chevron-right"></i> Check Engine Light</a>
+          <a href="/services/wheel-alignment/"><i class="fa-solid fa-chevron-right"></i> Wheel Alignment</a>
+          <a href="/services/"><i class="fa-solid fa-chevron-right"></i> All Services</a>
+        </nav>
+      </div>
+    </div>
+
+    <!-- Address -->
+    <div class="sp-sidebar__card">
+      <div class="sp-sidebar__head sp-sidebar__head--yellow">Find Us</div>
+      <div class="sp-sidebar__body" style="font-size:.875rem; line-height:1.7;">
+        <p style="margin:0 0 10px;">
+          <strong>RJ Fox Automotive</strong><br>
+          {{ site.address_street }}<br>
+          {{ site.address_city }}, {{ site.address_state }} {{ site.address_zip }}
+        </p>
+        <a href="{{ site.google_maps_link }}" target="_blank" rel="noopener"
+           style="color:var(--sp-blue); font-size:.82rem; font-weight:600;">
+          <i class="fa-solid fa-map-pin"></i> Get Directions
         </a>
-        <a href="/contact/" class="sp-cta-appt">
-          <i class="fa-solid fa-calendar-check"></i> Schedule Service
-        </a>
       </div>
+    </div>
 
-      <!-- Hours -->
-      <div class="sp-sidebar__card">
-        <div class="sp-sidebar__head">Shop Hours</div>
-        <div class="sp-sidebar__body">
-          <table class="sp-hours-table">
-            <tr><td>Monday</td><td>8am to 6pm</td></tr>
-            <tr><td>Tuesday</td><td>8am to 6pm</td></tr>
-            <tr><td>Wednesday</td><td>8am to 6pm</td></tr>
-            <tr><td>Thursday</td><td>8am to 6pm</td></tr>
-            <tr><td>Friday</td><td>8am to 6pm</td></tr>
-            <tr><td>Saturday</td><td>8am to 2pm</td></tr>
-            <tr><td>Sunday</td><td>Closed</td></tr>
-          </table>
-        </div>
-      </div>
+  </aside>
+</div>
 
-      <!-- Related Services -->
-      <div class="sp-sidebar__card">
-        <div class="sp-sidebar__head">Other Services</div>
-        <div class="sp-sidebar__body">
-          <nav class="sp-related">
-            <a href="/services/transmission-repair/"><i class="fa-solid fa-chevron-right"></i> Transmission Repair</a>
-            <a href="/services/transmission-replacement/"><i class="fa-solid fa-chevron-right"></i> Transmission Replacement</a>
-            <a href="/services/engine-repair/"><i class="fa-solid fa-chevron-right"></i> Engine Repair</a>
-            <a href="/services/engine-diagnostics/"><i class="fa-solid fa-chevron-right"></i> Engine Diagnostics</a>
-            <a href="/services/ac-installation-repair/"><i class="fa-solid fa-chevron-right"></i> AC Repair</a>
-            <a href="/services/auto-electrical-repair/"><i class="fa-solid fa-chevron-right"></i> Electrical Repair</a>
-            <a href="/services/diesel-engines/"><i class="fa-solid fa-chevron-right"></i> Diesel Engines</a>
-            <a href="/services/auto-brake-repair/"><i class="fa-solid fa-chevron-right"></i> Brake Repair</a>
-            <a href="/services/steering-suspension-repair/"><i class="fa-solid fa-chevron-right"></i> Steering and Suspension</a>
-            <a href="/services/check-engine-light/"><i class="fa-solid fa-chevron-right"></i> Check Engine Light</a>
-            <a href="/services/"><i class="fa-solid fa-chevron-right"></i> All Services</a>
-          </nav>
-        </div>
-      </div>
-
-      <!-- Address -->
-      <div class="sp-sidebar__card">
-        <div class="sp-sidebar__head sp-sidebar__head--yellow">Find Us</div>
-        <div class="sp-sidebar__body" style="font-size:.875rem; line-height:1.7;">
-          <p style="margin:0 0 10px;">
-            <strong>RJ Fox Automotive</strong><br>
-            801 David Walker Dr<br>
-            Eustis, FL 32726
-          </p>
-          <a href="https://maps.google.com/?q=801+David+Walker+Dr+Eustis+FL+32726"
-             target="_blank" rel="noopener"
-             style="color:var(--blue); font-size:.82rem; font-weight:600;">
-            <i class="fa-solid fa-map-pin"></i> Get Directions
-          </a>
-        </div>
-      </div>
-
-    </aside>
-  </div><!-- /sp-layout -->
-
-  <!-- NEARBY CITIES -->
+<!-- NEARBY CITIES -->
 {% assign service_slug = page.url | remove: '/services/' | remove: '/' %}
 <section class="sp-cities">
   <div class="sp-cities__inner">
@@ -513,24 +470,18 @@
   </div>
 </section>
 
-  <!-- BOTTOM CTA -->
-  <section class="sp-bottom-cta">
-    <div class="sp-bottom-cta__inner">
-      <h2>{{ page.cta_heading | default: "Need This Service?" }}</h2>
-      <p>{{ page.cta_body | default: "Stop by the shop or give us a call. Honest estimates. No pressure." }}</p>
-      <div class="sp-bottom-cta__btns">
-        <a href="tel:+13522503210" class="sp-bottom-cta__btn sp-bottom-cta__btn--yellow">
-          <i class="fa-solid fa-phone"></i> Call (352) 250-3210
-        </a>
-        <a href="/contact/" class="sp-bottom-cta__btn sp-bottom-cta__btn--outline">
-          Schedule Service
-        </a>
-      </div>
+<!-- BOTTOM CTA -->
+<section class="sp-bottom-cta">
+  <div class="sp-bottom-cta__inner">
+    <h2>{{ page.cta_heading | default: "Need This Service?" }}</h2>
+    <p>{{ page.cta_body | default: "Stop by the shop or give us a call. Honest estimates. No pressure." }}</p>
+    <div class="sp-bottom-cta__btns">
+      <a href="tel:{{ site.phone }}" class="sp-bottom-cta__btn sp-bottom-cta__btn--yellow">
+        <i class="fa-solid fa-phone"></i> Call {{ site.phone_display }}
+      </a>
+      <a href="/contact/" class="sp-bottom-cta__btn sp-bottom-cta__btn--outline">
+        Schedule Service
+      </a>
     </div>
-  </section>
-
-  {% include footer.html %}
-
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-</body>
-</html>
+  </div>
+</section>
