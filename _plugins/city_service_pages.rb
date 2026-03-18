@@ -122,7 +122,7 @@ module RJFox
         "generated"     => true,
       }
       
-      self.content = ""
+      self.content = svc["body"] || ""
     end
   end
 end
