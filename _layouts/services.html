@@ -500,18 +500,19 @@
   </div><!-- /sp-layout -->
 
   <!-- NEARBY CITIES -->
-  <section class="sp-cities">
-    <div class="sp-cities__inner">
-      <h2>Serving Eustis and the Surrounding Area</h2>
-      <div class="sp-cities__grid">
-        <a href="#">Eustis, FL</a>
-        <a href="#">Mount Dora, FL</a>
-        <a href="#">Tavares, FL</a>
-        <a href="#">Leesburg, FL</a>
-        <a href="#">Clermont, FL</a>
-      </div>
+{% assign service_slug = page.url | remove: '/services/' | remove: '/' %}
+<section class="sp-cities">
+  <div class="sp-cities__inner">
+    <h2>Serving Eustis and the Surrounding Area</h2>
+    <div class="sp-cities__grid">
+      <a href="/service-areas/eustis-fl/{{ service_slug }}/">Eustis, FL</a>
+      <a href="/service-areas/mount-dora-fl/{{ service_slug }}/">Mount Dora, FL</a>
+      <a href="/service-areas/tavares-fl/{{ service_slug }}/">Tavares, FL</a>
+      <a href="/service-areas/leesburg-fl/{{ service_slug }}/">Leesburg, FL</a>
+      <a href="/service-areas/clermont-fl/{{ service_slug }}/">Clermont, FL</a>
     </div>
-  </section>
+  </div>
+</section>
 
   <!-- BOTTOM CTA -->
   <section class="sp-bottom-cta">
