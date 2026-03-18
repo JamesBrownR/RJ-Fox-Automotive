@@ -385,7 +385,7 @@ layout: default
       {{ page.city | default: page.title }}
     </p>
     <p class="sp-hero__eyebrow">RJ Fox Automotive · {{ page.city | default: "Lake County, FL" }}</p>
-    <h1>Transmission Service <span>in {{ page.city | default: page.title }}</span></h1>
+    <h1>Transmission Services <span>in {{ page.city | default: page.title }}</span></h1>
     <p class="sp-hero__sub">{{ page.hero_sub }}</p>
     <div class="sp-hero__ctas">
       <a href="tel:{{ site.phone }}" class="sp-hero__btn sp-hero__btn--primary">
@@ -452,17 +452,18 @@ layout: default
     <div class="sp-sidebar__card">
       <div class="sp-sidebar__head">Services We Offer</div>
       <div class="sp-sidebar__body">
+        {% assign base = "/service-areas/" | append: page.city_slug | append: "/" %}
         <nav class="sp-related">
-          <a href="/services/transmission-repair/"><i class="fa-solid fa-chevron-right"></i> Transmission Repair</a>
-          <a href="/services/engine-repair/"><i class="fa-solid fa-chevron-right"></i> Engine Repair</a>
-          <a href="/services/ac-installation-repair/"><i class="fa-solid fa-chevron-right"></i> AC Repair</a>
-          <a href="/services/auto-brake-repair/"><i class="fa-solid fa-chevron-right"></i> Brake Repair</a>
-          <a href="/services/auto-electrical-repair/"><i class="fa-solid fa-chevron-right"></i> Electrical Repair</a>
-          <a href="/services/diesel-engines/"><i class="fa-solid fa-chevron-right"></i> Diesel Engines</a>
-          <a href="/services/steering-suspension-repair/"><i class="fa-solid fa-chevron-right"></i> Steering &amp; Suspension</a>
-          <a href="/services/wheel-alignment/"><i class="fa-solid fa-chevron-right"></i> Wheel Alignment</a>
-          <a href="/services/adas-calibration/"><i class="fa-solid fa-chevron-right"></i> ADAS Calibration</a>
-          <a href="/services/"><i class="fa-solid fa-chevron-right"></i> All Services</a>
+          <a href="{{ base }}transmission-repair/"><i class="fa-solid fa-chevron-right"></i> Transmission Repair</a>
+          <a href="{{ base }}engine-repair/"><i class="fa-solid fa-chevron-right"></i> Engine Repair</a>
+          <a href="{{ base }}ac-installation-repair/"><i class="fa-solid fa-chevron-right"></i> AC Repair</a>
+          <a href="{{ base }}auto-brake-repair/"><i class="fa-solid fa-chevron-right"></i> Brake Repair</a>
+          <a href="{{ base }}auto-electrical-repair/"><i class="fa-solid fa-chevron-right"></i> Electrical Repair</a>
+          <a href="{{ base }}diesel-engines/"><i class="fa-solid fa-chevron-right"></i> Diesel Engines</a>
+          <a href="{{ base }}steering-suspension-repair/"><i class="fa-solid fa-chevron-right"></i> Steering &amp; Suspension</a>
+          <a href="{{ base }}wheel-alignment/"><i class="fa-solid fa-chevron-right"></i> Wheel Alignment</a>
+          <a href="{{ base }}adas-calibration/"><i class="fa-solid fa-chevron-right"></i> ADAS Calibration</a>
+          <a href="/service-areas/{{ page.city_slug }}/"><i class="fa-solid fa-chevron-right"></i> All Services in {{ page.city }}</a>
         </nav>
       </div>
     </div>
