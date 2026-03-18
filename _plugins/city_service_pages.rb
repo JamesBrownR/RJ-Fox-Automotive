@@ -1,20 +1,3 @@
-# _plugins/city_service_pages.rb
-#
-# Generates one page per city+service combination defined in
-# _data/service-areas.yml.
-#
-# Output URL: /service-areas/{city-slug}/{service-slug}/
-# Layout used: service-areas
-#
-# All content (body, hero_sub, faq, review) lives in the YML —
-# this plugin just creates the page objects and sets front matter.
-# The layout reads site.data.service_areas at render time to
-# pull the actual copy.
-#
-# ⚠️  GitHub Pages blocks custom plugins.
-#     Deploy to Netlify / Cloudflare Pages, OR run `jekyll build`
-#     locally and commit the _site output to a gh-pages branch.
-
 module RJFox
   class CityServicePageGenerator < Jekyll::Generator
     safe true
@@ -138,10 +121,7 @@ module RJFox
         # ── Marker so you can filter these in Liquid if needed
         "generated"     => true,
       }
-
-      # Page body is intentionally empty — the layout pulls body,
-      # faq, and review directly from site.data.service_areas
-      # via the city_slug / service_slug front matter above.
+      
       self.content = ""
     end
   end
