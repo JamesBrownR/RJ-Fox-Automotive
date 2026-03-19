@@ -30,7 +30,7 @@ module RJFox
     }.freeze
 
     def generate(site)
-      areas = site.data["service-areas"]
+      areas = site.data["service_areas"]
 
       unless areas.is_a?(Array)
         Jekyll.logger.warn "CityServicePages:",
