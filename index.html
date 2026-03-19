@@ -3,147 +3,1225 @@ layout: default
 title: TRANSMISSION SHOP EUSTIS, FL | Transmission Repair, Rebuild, Flush, Clutch Repair, CVT Service, AC Service, Brake Repair, Diesel Engine Repair, Electrical Repair | Eustis, Mount Dora, Tavares, Leesburg & Clermont, FL | RJ Fox Automotive 
 ---
 
-<header style="background: 
-    radial-gradient(circle, transparent 1px, rgba(0,0,0,0.6) 1px), 
-    linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.8)), 
-    url('{{ site.baseurl }}/Pics/Hero.webp') center/cover no-repeat; 
-    background-size: 4px 4px, cover, cover;
-    height: 100vh; 
-    display: flex; 
-    align-items: center;">
-    <div class="container text-center text-white">
-        <h1 class="display-1 fw-bold mb-3">Transmission Repair Shop in Eustis, FL</h1>
-        <h3 class="mb-4 text-warning">RJ FOX AUTOMOTIVE</h3>
-        <p class="lead mb-5">Professional service. Honest pricing. Owned and operated by Rob.</p>
-        <a href="{{ site.baseurl }}/contact" class="btn btn-primary btn-lg">Contact Us Today</a>
+<style>
+  /* ── TOKENS ─────────────────────────────────────── */
+  :root {
+    --blue:    #004aad;
+    --blue-dk: #00357d;
+    --yellow:  #ffc107;
+    --dark:    #0d0d0d;
+    --mid:     #1a1a1a;
+    --off:     #111518;
+    --light:   #f4f5f7;
+    --border:  #232830;
+    --text:    #e8eaed;
+    --muted:   #8a9099;
+    --radius:  6px;
+  }
+ 
+  /* reset page background for this page */
+  body { background: var(--dark); }
+ 
+  /* ── HERO ─────────────────────────────────────── */
+  .rjf-hero {
+    position: relative;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    overflow: hidden;
+  }
+ 
+  .rjf-hero__bg {
+    position: absolute;
+    inset: 0;
+    background:
+      url('/Pics/Hero.webp') center/cover no-repeat;
+    transform: scale(1.04);
+    animation: heroZoom 14s ease-out forwards;
+  }
+ 
+  @keyframes heroZoom {
+    from { transform: scale(1.08); }
+    to   { transform: scale(1.0); }
+  }
+ 
+  .rjf-hero__overlay {
+    position: absolute;
+    inset: 0;
+    background:
+      linear-gradient(to top,
+        rgba(10,12,15,1) 0%,
+        rgba(10,12,15,0.72) 45%,
+        rgba(10,12,15,0.28) 100%
+      );
+  }
+ 
+  /* diagonal yellow accent bar */
+  .rjf-hero__accent {
+    position: absolute;
+    top: 0; left: 0;
+    width: 6px;
+    height: 100%;
+    background: var(--yellow);
+  }
+ 
+  .rjf-hero__content {
+    position: relative;
+    z-index: 2;
+    padding: 0 48px 72px;
+    max-width: 1200px;
+    margin: 0 auto;
+    width: 100%;
+  }
+ 
+  .rjf-hero__eyebrow {
+    font-family: 'Oswald', sans-serif;
+    font-size: 0.7rem;
+    letter-spacing: 0.28em;
+    text-transform: uppercase;
+    color: var(--yellow);
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    opacity: 0;
+    animation: fadeUp 0.6s 0.3s ease forwards;
+  }
+ 
+  .rjf-hero__eyebrow::before {
+    content: '';
+    display: block;
+    width: 32px;
+    height: 2px;
+    background: var(--yellow);
+    flex-shrink: 0;
+  }
+ 
+  .rjf-hero h1 {
+    font-family: 'Oswald', sans-serif;
+    font-size: clamp(3.2rem, 8vw, 7rem);
+    font-weight: 700;
+    text-transform: uppercase;
+    color: #fff;
+    line-height: 0.92;
+    margin: 0 0 28px;
+    opacity: 0;
+    animation: fadeUp 0.7s 0.5s ease forwards;
+  }
+ 
+  .rjf-hero h1 em {
+    font-style: normal;
+    color: var(--yellow);
+    display: block;
+  }
+ 
+  .rjf-hero__sub {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 1.1rem;
+    color: rgba(255,255,255,0.72);
+    max-width: 520px;
+    line-height: 1.7;
+    margin-bottom: 40px;
+    opacity: 0;
+    animation: fadeUp 0.7s 0.7s ease forwards;
+  }
+ 
+  .rjf-hero__ctas {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 14px;
+    opacity: 0;
+    animation: fadeUp 0.7s 0.9s ease forwards;
+  }
+ 
+  .rjf-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    padding: 15px 30px;
+    border-radius: var(--radius);
+    font-family: 'Oswald', sans-serif;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 0.07em;
+    text-decoration: none;
+    transition: all 0.2s;
+    cursor: pointer;
+    border: none;
+  }
+ 
+  .rjf-btn--yellow {
+    background: var(--yellow);
+    color: #111;
+    font-weight: 700;
+  }
+  .rjf-btn--yellow:hover {
+    background: #e6ac00;
+    color: #111;
+    transform: translateY(-2px);
+    box-shadow: 0 8px 24px rgba(255,193,7,0.35);
+  }
+ 
+  .rjf-btn--ghost {
+    background: rgba(255,255,255,0.06);
+    color: #fff;
+    border: 1px solid rgba(255,255,255,0.2);
+  }
+  .rjf-btn--ghost:hover {
+    background: rgba(255,255,255,0.12);
+    color: #fff;
+    transform: translateY(-2px);
+  }
+ 
+  /* hero scroll indicator */
+  .rjf-hero__scroll {
+    position: absolute;
+    bottom: 36px;
+    right: 48px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-family: 'Oswald', sans-serif;
+    font-size: 0.65rem;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--muted);
+    writing-mode: vertical-rl;
+    opacity: 0;
+    animation: fadeIn 1s 1.4s ease forwards;
+  }
+ 
+  .rjf-hero__scroll-line {
+    width: 1px;
+    height: 48px;
+    background: linear-gradient(to bottom, var(--yellow), transparent);
+  }
+ 
+  @keyframes fadeUp {
+    from { opacity: 0; transform: translateY(24px); }
+    to   { opacity: 1; transform: translateY(0); }
+  }
+ 
+  @keyframes fadeIn {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+  }
+ 
+  /* ── TRUST STRIP ──────────────────────────────── */
+  .rjf-trust {
+    background: var(--yellow);
+    padding: 0;
+    overflow: hidden;
+  }
+ 
+  .rjf-trust__inner {
+    max-width: 100%;
+    display: flex;
+    align-items: stretch;
+  }
+ 
+  .rjf-trust__item {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 18px 28px;
+    font-family: 'Oswald', sans-serif;
+    font-size: 0.78rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: #111;
+    border-right: 1px solid rgba(0,0,0,0.12);
+  }
+  .rjf-trust__item:last-child { border-right: none; }
+  .rjf-trust__item i { font-size: 1rem; }
+ 
+  /* ── SECTION SHARED ───────────────────────────── */
+  .rjf-section {
+    padding: 96px 48px;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+ 
+  .rjf-label {
+    font-family: 'Oswald', sans-serif;
+    font-size: 0.65rem;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    color: var(--yellow);
+    margin-bottom: 16px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+  .rjf-label::before {
+    content: '';
+    display: block;
+    width: 24px;
+    height: 2px;
+    background: var(--yellow);
+    flex-shrink: 0;
+  }
+ 
+  .rjf-h2 {
+    font-family: 'Oswald', sans-serif;
+    font-size: clamp(2rem, 4vw, 3rem);
+    font-weight: 700;
+    text-transform: uppercase;
+    color: #fff;
+    line-height: 1.0;
+    margin: 0 0 20px;
+  }
+ 
+  .rjf-body {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 1rem;
+    line-height: 1.8;
+    color: var(--muted);
+  }
+ 
+  /* ── ABOUT SECTION ────────────────────────────── */
+  .rjf-about {
+    background: var(--off);
+    padding: 0;
+  }
+ 
+  .rjf-about__inner {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 96px 48px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 80px;
+    align-items: center;
+  }
+ 
+  .rjf-about__img-wrap {
+    position: relative;
+  }
+ 
+  .rjf-about__img {
+    width: 100%;
+    aspect-ratio: 4/3;
+    object-fit: cover;
+    border-radius: var(--radius);
+    display: block;
+  }
+ 
+  .rjf-about__badge {
+    position: absolute;
+    bottom: -20px;
+    right: -20px;
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    background: var(--yellow);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Oswald', sans-serif;
+    text-transform: uppercase;
+    color: #111;
+    border: 4px solid var(--off);
+  }
+ 
+  .rjf-about__badge-num {
+    font-size: 2rem;
+    font-weight: 700;
+    line-height: 1;
+  }
+ 
+  .rjf-about__badge-text {
+    font-size: 0.58rem;
+    letter-spacing: 0.1em;
+    text-align: center;
+    line-height: 1.3;
+  }
+ 
+  .rjf-about__prose p {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 1.05rem;
+    line-height: 1.85;
+    color: var(--muted);
+    margin-bottom: 20px;
+  }
+ 
+  .rjf-about__prose p strong {
+    color: #fff;
+    font-weight: 600;
+  }
+ 
+  .rjf-about__pills {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 32px;
+  }
+ 
+  .rjf-pill {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    background: rgba(255,255,255,0.05);
+    border: 1px solid var(--border);
+    border-radius: 100px;
+    padding: 8px 16px;
+    font-family: 'Oswald', sans-serif;
+    font-size: 0.7rem;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: var(--text);
+  }
+ 
+  .rjf-pill i { color: var(--yellow); font-size: 0.75rem; }
+ 
+  /* ── SERVICES GRID ────────────────────────────── */
+  .rjf-services {
+    background: var(--dark);
+  }
+ 
+  .rjf-services__inner {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 96px 48px;
+  }
+ 
+  .rjf-services__head {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    margin-bottom: 56px;
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+ 
+  .rjf-services__grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2px;
+  }
+ 
+  .rjf-svc {
+    background: var(--mid);
+    padding: 36px 32px;
+    text-decoration: none;
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    transition: background 0.2s;
+    position: relative;
+    overflow: hidden;
+  }
+ 
+  .rjf-svc::before {
+    content: '';
+    position: absolute;
+    bottom: 0; left: 0;
+    width: 0;
+    height: 3px;
+    background: var(--yellow);
+    transition: width 0.3s ease;
+  }
+ 
+  .rjf-svc:hover { background: #202428; }
+  .rjf-svc:hover::before { width: 100%; }
+ 
+  .rjf-svc--featured {
+    background: var(--blue);
+    grid-column: span 1;
+  }
+  .rjf-svc--featured:hover { background: var(--blue-dk); }
+  .rjf-svc--featured::before { background: var(--yellow); }
+ 
+  .rjf-svc__icon {
+    width: 44px;
+    height: 44px;
+    border-radius: 8px;
+    background: rgba(255,255,255,0.08);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.1rem;
+    color: var(--yellow);
+    flex-shrink: 0;
+  }
+ 
+  .rjf-svc--featured .rjf-svc__icon {
+    background: rgba(255,255,255,0.15);
+  }
+ 
+  .rjf-svc__name {
+    font-family: 'Oswald', sans-serif;
+    font-size: 1.05rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    color: #fff;
+    line-height: 1.2;
+  }
+ 
+  .rjf-svc__desc {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 0.85rem;
+    color: var(--muted);
+    line-height: 1.6;
+    flex-grow: 1;
+  }
+ 
+  .rjf-svc--featured .rjf-svc__desc { color: rgba(255,255,255,0.72); }
+ 
+  .rjf-svc__arrow {
+    font-size: 0.75rem;
+    color: var(--yellow);
+    margin-top: auto;
+    transition: transform 0.2s;
+  }
+ 
+  .rjf-svc:hover .rjf-svc__arrow { transform: translateX(4px); }
+ 
+  /* ── GALLERY ──────────────────────────────────── */
+  .rjf-gallery-wrap {
+    background: var(--off);
+    padding: 0;
+  }
+ 
+  .rjf-gallery__head {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 96px 48px 48px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+ 
+  .rjf-gallery {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr;
+    grid-template-rows: 260px 260px;
+    gap: 2px;
+  }
+ 
+  .rjf-gallery__item {
+    overflow: hidden;
+    position: relative;
+    background: var(--mid);
+  }
+ 
+  .rjf-gallery__item:first-child {
+    grid-row: span 2;
+  }
+ 
+  .rjf-gallery__item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.5s ease;
+    filter: brightness(0.85) saturate(0.9);
+  }
+ 
+  .rjf-gallery__item:hover img {
+    transform: scale(1.05);
+    filter: brightness(1) saturate(1);
+  }
+ 
+  /* ── PROCESS STRIP ────────────────────────────── */
+  .rjf-process {
+    background: var(--blue);
+    padding: 72px 48px;
+  }
+ 
+  .rjf-process__inner {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 280px 1fr;
+    gap: 64px;
+    align-items: center;
+  }
+ 
+  .rjf-process__steps {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2px;
+  }
+ 
+  .rjf-step {
+    background: rgba(0,0,0,0.15);
+    padding: 28px 24px;
+    position: relative;
+  }
+ 
+  .rjf-step__num {
+    font-family: 'Oswald', sans-serif;
+    font-size: 3rem;
+    font-weight: 700;
+    color: rgba(255,255,255,0.12);
+    line-height: 1;
+    display: block;
+    margin-bottom: 12px;
+  }
+ 
+  .rjf-step__title {
+    font-family: 'Oswald', sans-serif;
+    font-size: 0.85rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: #fff;
+    margin-bottom: 8px;
+  }
+ 
+  .rjf-step__desc {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 0.8rem;
+    color: rgba(255,255,255,0.65);
+    line-height: 1.6;
+  }
+ 
+  /* ── REVIEWS ──────────────────────────────────── */
+  .rjf-reviews-wrap {
+    background: var(--dark);
+  }
+ 
+  .rjf-reviews__inner {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 96px 48px;
+  }
+ 
+  .rjf-reviews__head {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    margin-bottom: 48px;
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+ 
+  .rjf-reviews__rating {
+    text-align: right;
+  }
+ 
+  .rjf-reviews__stars {
+    color: var(--yellow);
+    font-size: 1.1rem;
+    display: flex;
+    gap: 3px;
+    justify-content: flex-end;
+    margin-bottom: 4px;
+  }
+ 
+  .rjf-reviews__count {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 0.8rem;
+    color: var(--muted);
+  }
+ 
+  .rjf-reviews__grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2px;
+    margin-bottom: 48px;
+  }
+ 
+  .rjf-review {
+    background: var(--mid);
+    padding: 36px 32px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+ 
+  .rjf-review__stars {
+    color: var(--yellow);
+    font-size: 0.85rem;
+    display: flex;
+    gap: 2px;
+  }
+ 
+  .rjf-review__text {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 0.92rem;
+    line-height: 1.75;
+    color: rgba(255,255,255,0.75);
+    font-style: italic;
+    flex-grow: 1;
+  }
+ 
+  .rjf-review__name {
+    font-family: 'Oswald', sans-serif;
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: var(--yellow);
+  }
+ 
+  /* ── MAP / CONTACT STRIP ─────────────────────── */
+  .rjf-contact-wrap {
+    background: var(--off);
+  }
+ 
+  .rjf-contact__inner {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 96px 48px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 64px;
+    align-items: center;
+  }
+ 
+  .rjf-contact__info { display: flex; flex-direction: column; gap: 28px; }
+ 
+  .rjf-contact__item {
+    display: flex;
+    align-items: flex-start;
+    gap: 20px;
+  }
+ 
+  .rjf-contact__icon {
+    width: 48px;
+    height: 48px;
+    background: rgba(255,193,7,0.12);
+    border-radius: var(--radius);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--yellow);
+    font-size: 1rem;
+    flex-shrink: 0;
+  }
+ 
+  .rjf-contact__label {
+    font-family: 'Oswald', sans-serif;
+    font-size: 0.65rem;
+    text-transform: uppercase;
+    letter-spacing: 0.15em;
+    color: var(--muted);
+    margin-bottom: 5px;
+  }
+ 
+  .rjf-contact__value {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 1rem;
+    color: #fff;
+    font-weight: 600;
+  }
+ 
+  .rjf-contact__value a {
+    color: #fff;
+    text-decoration: none;
+    transition: color 0.2s;
+  }
+  .rjf-contact__value a:hover { color: var(--yellow); }
+ 
+  .rjf-hours-grid {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    gap: 6px 20px;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 0.875rem;
+    margin-top: 4px;
+  }
+ 
+  .rjf-hours-grid .day { color: var(--muted); }
+  .rjf-hours-grid .time { color: #fff; font-weight: 600; }
+  .rjf-hours-grid .closed { color: var(--muted); }
+ 
+  .rjf-map {
+    border-radius: var(--radius);
+    overflow: hidden;
+    height: 380px;
+    border: 1px solid var(--border);
+  }
+ 
+  .rjf-map iframe {
+    width: 100%;
+    height: 100%;
+    display: block;
+    border: 0;
+    filter: grayscale(0.3) brightness(0.85);
+  }
+ 
+  /* ── BOTTOM CTA ─────────────────────────────── */
+  .rjf-cta-wrap {
+    background: var(--yellow);
+    padding: 80px 48px;
+    text-align: center;
+  }
+ 
+  .rjf-cta-wrap h2 {
+    font-family: 'Oswald', sans-serif;
+    font-size: clamp(2rem, 5vw, 3.8rem);
+    font-weight: 700;
+    text-transform: uppercase;
+    color: #111;
+    line-height: 1.0;
+    margin: 0 0 12px;
+  }
+ 
+  .rjf-cta-wrap p {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 1.1rem;
+    color: rgba(0,0,0,0.65);
+    margin-bottom: 36px;
+  }
+ 
+  .rjf-cta-wrap__btns {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 14px;
+    justify-content: center;
+  }
+ 
+  .rjf-btn--dark {
+    background: #111;
+    color: #fff;
+  }
+  .rjf-btn--dark:hover {
+    background: #000;
+    color: #fff;
+    transform: translateY(-2px);
+    box-shadow: 0 8px 24px rgba(0,0,0,0.3);
+  }
+ 
+  .rjf-btn--outline-dark {
+    background: transparent;
+    color: #111;
+    border: 2px solid rgba(0,0,0,0.25);
+  }
+  .rjf-btn--outline-dark:hover {
+    background: rgba(0,0,0,0.08);
+    color: #111;
+    transform: translateY(-2px);
+  }
+ 
+  /* ── RESPONSIVE ──────────────────────────────── */
+  @media (max-width: 1024px) {
+    .rjf-services__grid { grid-template-columns: repeat(2, 1fr); }
+    .rjf-reviews__grid { grid-template-columns: repeat(2, 1fr); }
+    .rjf-process__inner { grid-template-columns: 1fr; gap: 36px; }
+    .rjf-process__steps { grid-template-columns: repeat(2, 1fr); }
+    .rjf-gallery { grid-template-columns: 1fr 1fr; grid-template-rows: auto; }
+    .rjf-gallery__item:first-child { grid-row: span 1; }
+  }
+ 
+  @media (max-width: 768px) {
+    .rjf-hero__content { padding: 0 24px 56px; }
+    .rjf-hero__scroll { display: none; }
+    .rjf-section { padding: 64px 24px; }
+    .rjf-about__inner { grid-template-columns: 1fr; padding: 64px 24px; gap: 40px; }
+    .rjf-services__inner { padding: 64px 24px; }
+    .rjf-services__grid { grid-template-columns: 1fr; }
+    .rjf-reviews__inner { padding: 64px 24px; }
+    .rjf-reviews__grid { grid-template-columns: 1fr; }
+    .rjf-gallery { grid-template-columns: 1fr; }
+    .rjf-gallery__inner { height: auto; }
+    .rjf-gallery__item { height: 220px; }
+    .rjf-gallery__item:first-child { height: 260px; }
+    .rjf-contact__inner { grid-template-columns: 1fr; padding: 64px 24px; }
+    .rjf-cta-wrap { padding: 64px 24px; }
+    .rjf-process { padding: 64px 24px; }
+    .rjf-process__steps { grid-template-columns: 1fr 1fr; }
+    .rjf-trust__inner { flex-wrap: wrap; }
+    .rjf-trust__item { flex: none; width: 50%; border-bottom: 1px solid rgba(0,0,0,0.12); }
+    .rjf-gallery__head { padding: 64px 24px 40px; }
+    .rjf-about__badge { bottom: 12px; right: 12px; }
+  }
+ 
+  @media (max-width: 480px) {
+    .rjf-trust__item { width: 100%; }
+    .rjf-process__steps { grid-template-columns: 1fr; }
+    .rjf-about__badge { display: none; }
+  }
+</style>
+ 
+<!-- ── HERO ──────────────────────────────────────────────── -->
+<section class="rjf-hero">
+  <div class="rjf-hero__bg"></div>
+  <div class="rjf-hero__overlay"></div>
+  <div class="rjf-hero__accent"></div>
+ 
+  <div class="rjf-hero__content">
+    <p class="rjf-hero__eyebrow">Eustis, FL · 801 David Walker Dr · (352) 250-3210</p>
+    <h1>
+      Transmission
+      <em>Specialists</em>
+    </h1>
+    <p class="rjf-hero__sub">
+      Rob Fox has been fixing cars in Eustis for over 40 years. 
+      Honest diagnosis. Written estimates. No work starts until you say so.
+    </p>
+    <div class="rjf-hero__ctas">
+      <a href="tel:+13522503210" class="rjf-btn rjf-btn--yellow">
+        <i class="fa-solid fa-phone"></i> (352) 250-3210
+      </a>
+      <a href="/contact/" class="rjf-btn rjf-btn--ghost">
+        Schedule Service
+      </a>
+      <a href="/services/" class="rjf-btn rjf-btn--ghost">
+        All Services
+      </a>
     </div>
-</header>
-
-
-<section id="about" class="section-padding">
-    <div class="container">
-        <div class="row align-items-center">
-            <div class="col-md-6">
-                <h2 class="mb-4">Welcome to <span class="text-primary">RJ Fox Automotive</span></h2>
-                <p class="lead">We are dedicated to providing professional customer service and transmission services.</p>
-                <p>Located conveniently on David Walker Dr, <strong>Rob</strong> and the team specialize in getting your vehicle back on the road safely and quickly. Whether it's a simple oil change, a complex engine repair, or routine maintenance, we treat every car as if it were our own.</p>
-                <ul class="list-unstyled mt-4">
-                    <li><i class="fas fa-check-circle text-success me-2"></i> Experienced Mechanics</li>
-                    <li><i class="fas fa-check-circle text-success me-2"></i> Transparent Pricing</li>
-                    <li><i class="fas fa-check-circle text-success me-2"></i> Locally Owned & Operated</li>
-                </ul>
-            </div>
-            <div class="col-md-6">
-                <img src="Pics/Shop.webp" alt="Shop Interior" class="img-fluid rounded shadow border border-4 border-light">
-            </div>
-        </div>
-    </div>
+  </div>
+ 
+  <span class="rjf-hero__scroll">
+    <span class="rjf-hero__scroll-line"></span>
+    Scroll
+  </span>
 </section>
-
-<section class="bg-primary text-white py-5">
-    <div class="container">
-        <div class="row text-center">
-            <div class="col-md-4 mb-3">
-                <i class="fas fa-car-crash fa-3x mb-3"></i>
-                <h4>Diagnostics</h4>
-            </div>
-            <div class="col-md-4 mb-3">
-                <i class="fas fa-tools fa-3x mb-3"></i>
-                <h4>General Repair</h4>
-            </div>
-            <div class="col-md-4 mb-3">
-                <i class="fas fa-oil-can fa-3x mb-3"></i>
-                <h4>Maintenance</h4>
-            </div>
-        </div>
+ 
+<!-- ── TRUST STRIP ───────────────────────────────────────── -->
+<div class="rjf-trust">
+  <div class="rjf-trust__inner">
+    <div class="rjf-trust__item">
+      <i class="fa-solid fa-gears"></i> Transmission Specialists
     </div>
+    <div class="rjf-trust__item">
+      <i class="fa-solid fa-shield-halved"></i> Written Estimates Always
+    </div>
+    <div class="rjf-trust__item">
+      <i class="fa-solid fa-wrench"></i> All Makes & Models
+    </div>
+    <div class="rjf-trust__item">
+      <i class="fa-solid fa-clock"></i> Mon–Fri 8–6 · Sat 8–2
+    </div>
+    <div class="rjf-trust__item">
+      <i class="fa-solid fa-map-pin"></i> Serving All of Lake County
+    </div>
+  </div>
+</div>
+ 
+<!-- ── ABOUT ─────────────────────────────────────────────── -->
+<section class="rjf-about">
+  <div class="rjf-about__inner">
+ 
+    <div class="rjf-about__img-wrap">
+      <img src="/Pics/RJ34.webp" alt="RJ Fox Automotive shop in Eustis FL" class="rjf-about__img">
+      <div class="rjf-about__badge">
+        <span class="rjf-about__badge-num">40+</span>
+        <span class="rjf-about__badge-text">Years in<br>the Trade</span>
+      </div>
+    </div>
+ 
+    <div>
+      <p class="rjf-label">About Rob Fox</p>
+      <h2 class="rjf-h2">Born Here.<br>Still Here.</h2>
+ 
+      <div class="rjf-about__prose">
+        <p>
+          Robert J. Fox Jr. was born and raised in Eustis. He started working on cars in the 1980s, built his skills the way most good mechanics do — on real cars with real problems — and has been doing it here for over four decades. <strong>This is his community.</strong> That shapes how he runs the shop.
+        </p>
+        <p>
+          Most shops in Lake County send transmission jobs to an outside rebuilder and mark up the cost. <strong>We do it in-house.</strong> That means better quality control, direct communication with the person doing the work, and pricing that does not include a middleman. If you have been getting different answers from different shops, bring it to us. We will give you an accurate diagnosis in writing before anyone touches your car.
+        </p>
+      </div>
+ 
+      <div class="rjf-about__pills">
+        <span class="rjf-pill"><i class="fa-solid fa-check"></i> In-House Transmission Rebuilds</span>
+        <span class="rjf-pill"><i class="fa-solid fa-check"></i> Written Estimates Before Any Work</span>
+        <span class="rjf-pill"><i class="fa-solid fa-check"></i> All Makes & Models</span>
+        <span class="rjf-pill"><i class="fa-solid fa-check"></i> Diesel Trucks Welcome</span>
+        <span class="rjf-pill"><i class="fa-solid fa-check"></i> U-Haul Rentals On-Site</span>
+      </div>
+    </div>
+ 
+  </div>
 </section>
-
-<section class="section-padding bg-light">
-    <div class="container">
-        <div class="d-flex justify-content-between align-items-end mb-5">
-            <div>
-                <h2 class="mb-0">Our Work</h2>
-                <p class="text-muted">A glimpse inside the shop</p>
-            </div>
-            <a href="{{ site.baseurl }}/gallery" class="btn btn-outline-dark">View Full Gallery</a>
-        </div>
-        
-        <div class="row g-4">
-            {% if site.data.gallery %}
-                {% for item in site.data.gallery limit:6 %}
-                <div class="col-md-4">
-                    <div class="card h-100 border-0 shadow-sm">
-                        <img src="{{ site.baseurl }}/Pics/{{ item.image }}" class="card-img-top" alt="{{ item.alt }}" style="height: 250px; object-fit: cover;" >
-                    </div>
-                </div>
-           
-                {% endfor %}
-            {% else %}
-              
-            {% endif %}
-        </div>
+ 
+<!-- ── SERVICES ───────────────────────────────────────────── -->
+<section class="rjf-services">
+  <div class="rjf-services__inner">
+ 
+    <div class="rjf-services__head">
+      <div>
+        <p class="rjf-label">What We Do</p>
+        <h2 class="rjf-h2">Services</h2>
+      </div>
+      <a href="/services/" class="rjf-btn rjf-btn--ghost" style="font-size:0.8rem;">
+        View All Services <i class="fa-solid fa-arrow-right"></i>
+      </a>
     </div>
+ 
+    <div class="rjf-services__grid">
+ 
+      <a href="/services/transmission-repair/" class="rjf-svc rjf-svc--featured">
+        <div class="rjf-svc__icon"><i class="fa-solid fa-gears"></i></div>
+        <div class="rjf-svc__name">Transmission Repair & Rebuild</div>
+        <div class="rjf-svc__desc">Automatic, manual, and CVT — diagnosed accurately and rebuilt in-house. No middleman. No guessing.</div>
+        <span class="rjf-svc__arrow">Learn More <i class="fa-solid fa-arrow-right"></i></span>
+      </a>
+ 
+      <a href="/services/engine-repair/" class="rjf-svc">
+        <div class="rjf-svc__icon"><i class="fa-solid fa-screwdriver-wrench"></i></div>
+        <div class="rjf-svc__name">Engine Repair & Rebuild</div>
+        <div class="rjf-svc__desc">Head gaskets, timing belts, oil leaks, overheating — major engine work done right the first time.</div>
+        <span class="rjf-svc__arrow">Learn More <i class="fa-solid fa-arrow-right"></i></span>
+      </a>
+ 
+      <a href="/services/ac-installation-repair/" class="rjf-svc">
+        <div class="rjf-svc__icon"><i class="fa-solid fa-snowflake"></i></div>
+        <div class="rjf-svc__name">AC Repair & Service</div>
+        <div class="rjf-svc__desc">Full AC diagnosis before any repair. We find the leak and fix it — not just recharge and send you on your way.</div>
+        <span class="rjf-svc__arrow">Learn More <i class="fa-solid fa-arrow-right"></i></span>
+      </a>
+ 
+      <a href="/services/diesel-engines/" class="rjf-svc">
+        <div class="rjf-svc__icon"><i class="fa-solid fa-truck"></i></div>
+        <div class="rjf-svc__name">Diesel Engine Repair</div>
+        <div class="rjf-svc__desc">Power Stroke, Duramax, Cummins. Injectors, turbos, glow plugs, DPF — diesel work handled in-house.</div>
+        <span class="rjf-svc__arrow">Learn More <i class="fa-solid fa-arrow-right"></i></span>
+      </a>
+ 
+      <a href="/services/auto-brake-repair/" class="rjf-svc">
+        <div class="rjf-svc__icon"><i class="fa-solid fa-circle-stop"></i></div>
+        <div class="rjf-svc__name">Brake Repair</div>
+        <div class="rjf-svc__desc">Pads, rotors, calipers, fluid flush. We inspect the full system before recommending anything.</div>
+        <span class="rjf-svc__arrow">Learn More <i class="fa-solid fa-arrow-right"></i></span>
+      </a>
+ 
+      <a href="/services/auto-electrical-repair/" class="rjf-svc">
+        <div class="rjf-svc__icon"><i class="fa-solid fa-bolt"></i></div>
+        <div class="rjf-svc__name">Electrical & Diagnostics</div>
+        <div class="rjf-svc__desc">Alternators, starters, wiring, parasitic draws, check engine lights — traced to the actual cause before anything is replaced.</div>
+        <span class="rjf-svc__arrow">Learn More <i class="fa-solid fa-arrow-right"></i></span>
+      </a>
+ 
+    </div>
+  </div>
 </section>
-
-<section class="section-padding">
-    <div class="container">
-        <div class="d-flex justify-content-between align-items-end mb-5">
-            <div>
-                <h2 class="mb-0">What Our Customers Say</h2>
-                <p class="text-muted">Over 30+ happy customers</p>
-            </div>
-            <a href="{{ site.baseurl }}/reviews" class="btn btn-outline-primary">View All Reviews</a>
-        </div>
-        
-        <div class="row">
-            {% assign five_star_reviews = site.data.reviews | where: "stars", 5 | where_exp: "item", "item.text != ''" %}
-            {% for review in five_star_reviews limit:6 %}
-            <div class="col-md-4 mb-4">
-                <div class="card review-card h-100 bg-light p-4">
-                    <div class="card-body">
-                        <div class="stars mb-3">
-                            {% for i in (1..review.stars) %}
-                                <i class="fas fa-star"></i>
-                            {% endfor %}
-                        </div>
-                        <p class="card-text fst-italic">"{{ review.text }}"</p>
-                        <h6 class="card-subtitle mb-2 text-primary fw-bold">- {{ review.name }}</h6>
-                    </div>
-                </div>
-            </div>
-            {% endfor %}
-        </div>
+ 
+<!-- ── GALLERY ────────────────────────────────────────────── -->
+<section class="rjf-gallery-wrap">
+  <div class="rjf-gallery__head">
+    <div>
+      <p class="rjf-label">Our Work</p>
+      <h2 class="rjf-h2">Inside the Shop</h2>
     </div>
+    <a href="/gallery/" class="rjf-btn rjf-btn--ghost" style="font-size:0.8rem;">
+      Full Gallery <i class="fa-solid fa-arrow-right"></i>
+    </a>
+  </div>
+ 
+  <div class="rjf-gallery">
+    <div class="rjf-gallery__item">
+      <img src="/Pics/RJ30.webp" alt="Classic car being serviced at RJ Fox Automotive Eustis FL">
+    </div>
+    <div class="rjf-gallery__item">
+      <img src="/Pics/RJ33.webp" alt="GMC Denali on BendPak lift at RJ Fox Automotive">
+    </div>
+    <div class="rjf-gallery__item">
+      <img src="/Pics/RJ22.webp" alt="Rebuilt V8 engine on hoist at RJ Fox Automotive">
+    </div>
+    <div class="rjf-gallery__item">
+      <img src="/Pics/RJ10.webp" alt="Ford transmission opened for inspection at RJ Fox Automotive">
+    </div>
+    <div class="rjf-gallery__item">
+      <img src="/Pics/RJ26.webp" alt="Rebuilt engine on stand ready for install at RJ Fox Automotive">
+    </div>
+  </div>
 </section>
-
-<section id="contact" class="bg-dark-custom py-5">
-    <div class="container">
-        <div class="row">
-            <div class="col-lg-5 text-white mb-4">
-                <h2 class="text-warning mb-4">Visit Us</h2>
-                <div class="mb-4">
-                    <h5><i class="fas fa-map-marker-alt me-2 text-primary"></i> Address</h5>
-                    <p>{{ site.address }}</p>
-                </div>
-                <div class="mb-4">
-                    <h5><i class="fas fa-phone me-2 text-primary"></i> Phone</h5>
-                    <p><a href="tel:{{ site.phone }}" class="text-white text-decoration-none">{{ site.phone_display }}</a></p>
-                </div>
-                <div>
-                    <h5><i class="fas fa-clock me-2 text-primary"></i> Hours</h5>
-                    <ul class="list-unstyled">
-                        <li class="d-flex justify-content-between" style="max-width: 300px;"><span>Mon - Fri:</span> <span>8:00 AM – 6:00 PM</span></li>
-                        <li class="d-flex justify-content-between" style="max-width: 300px;"><span>Saturday:</span> <span>8:00 AM – 2:00 PM</span></li>
-                        <li class="d-flex justify-content-between text-muted" style="max-width: 300px;"><span>Sunday:</span> <span>Closed</span></li>
-                    </ul>
-                </div>
-            </div>
-            
-            <div class="col-lg-7">
-                <div class="ratio ratio-16x9 border border-4 border-secondary rounded">
-<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3495.1214762967224!2d-81.6943742!3d28.835243199999997!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x88e7bde6dc0c0e6f%3A0x32bd9bee3261a0ba!2sRJ%20Fox%20Automotive!5e0!3m2!1sen!2sus!4v1767663223288!5m2!1sen!2sus" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>                </div>
-            </div>
-        </div>
+ 
+<!-- ── PROCESS ───────────────────────────────────────────── -->
+<section class="rjf-process">
+  <div class="rjf-process__inner">
+    <div>
+      <p class="rjf-label" style="color: rgba(255,255,255,0.6);">How It Works</p>
+      <h2 class="rjf-h2" style="color:#fff;">No Surprises.<br>Ever.</h2>
+      <p style="font-family:'Open Sans',sans-serif; font-size:0.95rem; color:rgba(255,255,255,0.65); line-height:1.7; margin-top:16px;">
+        Every repair follows the same process. You always know where you stand before we spend a dollar of your money.
+      </p>
     </div>
+ 
+    <div class="rjf-process__steps">
+      <div class="rjf-step">
+        <span class="rjf-step__num">01</span>
+        <div class="rjf-step__title">Drop It Off</div>
+        <div class="rjf-step__desc">Call ahead or walk in. We schedule around your timeline and can arrange towing if needed.</div>
+      </div>
+      <div class="rjf-step">
+        <span class="rjf-step__num">02</span>
+        <div class="rjf-step__title">We Diagnose</div>
+        <div class="rjf-step__desc">Full diagnostic before anything is recommended. We find the actual cause — not the most obvious one.</div>
+      </div>
+      <div class="rjf-step">
+        <span class="rjf-step__num">03</span>
+        <div class="rjf-step__title">Written Estimate</div>
+        <div class="rjf-step__desc">You get a complete written estimate covering parts and labor. Nothing starts until you approve it.</div>
+      </div>
+      <div class="rjf-step">
+        <span class="rjf-step__num">04</span>
+        <div class="rjf-step__title">Fixed Right</div>
+        <div class="rjf-step__desc">The bill matches the estimate. We road-test before you pick up. We stand behind the work.</div>
+      </div>
+    </div>
+  </div>
+</section>
+ 
+<!-- ── REVIEWS ────────────────────────────────────────────── -->
+<section class="rjf-reviews-wrap">
+  <div class="rjf-reviews__inner">
+ 
+    <div class="rjf-reviews__head">
+      <div>
+        <p class="rjf-label">Customer Reviews</p>
+        <h2 class="rjf-h2">What Lake County<br>Drivers Say</h2>
+      </div>
+      <div class="rjf-reviews__rating">
+        <div class="rjf-reviews__stars">
+          <i class="fa-solid fa-star"></i>
+          <i class="fa-solid fa-star"></i>
+          <i class="fa-solid fa-star"></i>
+          <i class="fa-solid fa-star"></i>
+          <i class="fa-solid fa-star"></i>
+        </div>
+        <div class="rjf-reviews__count">Rated 5 stars · 30+ reviews</div>
+        <a href="/reviews/" style="color:var(--yellow); font-family:'Oswald',sans-serif; font-size:0.75rem; text-transform:uppercase; letter-spacing:0.1em; text-decoration:none; display:block; margin-top:6px;">
+          View All <i class="fa-solid fa-arrow-right"></i>
+        </a>
+      </div>
+    </div>
+ 
+    <div class="rjf-reviews__grid">
+ 
+      <div class="rjf-review">
+        <div class="rjf-review__stars">
+          <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+        </div>
+        <div class="rjf-review__text">"This man has been a true saint to myself and my family. My transmission went out and I couldn't find anybody affordable to help me fix it. He worked with me in every way possible and my car has been running beautifully ever since."</div>
+        <div class="rjf-review__name">— Mel, Eustis FL</div>
+      </div>
+ 
+      <div class="rjf-review">
+        <div class="rjf-review__stars">
+          <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+        </div>
+        <div class="rjf-review__text">"RJ not only completed repairs and communicated with me throughout the job but got it done before he said he would. All around fantastic experience and top class workmanship."</div>
+        <div class="rjf-review__name">— Eric Estell</div>
+      </div>
+ 
+      <div class="rjf-review">
+        <div class="rjf-review__stars">
+          <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+        </div>
+        <div class="rjf-review__text">"Rob and co from start to finish with all of the obstacles was top shelf. I highly recommend fox automotive for anyone that is tired of the BS mechanics. Integrity and quality work!"</div>
+        <div class="rjf-review__name">— Paul Pelky Jr</div>
+      </div>
+ 
+      <div class="rjf-review">
+        <div class="rjf-review__stars">
+          <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+        </div>
+        <div class="rjf-review__text">"This automotive workshop is fantastic, the work they do is first-class and fast. The owner knows his stuff and keeps you informed. Can not recommend this place enough."</div>
+        <div class="rjf-review__name">— Stefan Rogers</div>
+      </div>
+ 
+      <div class="rjf-review">
+        <div class="rjf-review__stars">
+          <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+        </div>
+        <div class="rjf-review__text">"Rob and his team are awesome to work with! Great Service, Great Price and Got the Job done right the first time!"</div>
+        <div class="rjf-review__name">— Steve Poe</div>
+      </div>
+ 
+      <div class="rjf-review">
+        <div class="rjf-review__stars">
+          <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+        </div>
+        <div class="rjf-review__text">"Mr Fox and his crew have regularly serviced my friend's car. The owner is very personable — he always treats everyone with respect and embodies enthusiasm & positivity."</div>
+        <div class="rjf-review__name">— KC Scott</div>
+      </div>
+ 
+    </div>
+ 
+  </div>
+</section>
+ 
+<!-- ── CONTACT / MAP ──────────────────────────────────────── -->
+<section class="rjf-contact-wrap">
+  <div class="rjf-contact__inner">
+ 
+    <div class="rjf-contact__info">
+      <div>
+        <p class="rjf-label">Find Us</p>
+        <h2 class="rjf-h2">Come See Us<br>in Eustis</h2>
+      </div>
+ 
+      <div class="rjf-contact__item">
+        <div class="rjf-contact__icon"><i class="fa-solid fa-map-pin"></i></div>
+        <div>
+          <div class="rjf-contact__label">Address</div>
+          <div class="rjf-contact__value">
+            <a href="https://maps.google.com/?q=801+David+Walker+Dr+Eustis+FL+32726" target="_blank" rel="noopener">
+              801 David Walker Dr, Eustis, FL 32726
+            </a>
+          </div>
+        </div>
+      </div>
+ 
+      <div class="rjf-contact__item">
+        <div class="rjf-contact__icon"><i class="fa-solid fa-phone"></i></div>
+        <div>
+          <div class="rjf-contact__label">Phone</div>
+          <div class="rjf-contact__value">
+            <a href="tel:+13522503210">(352) 250-3210</a>
+          </div>
+        </div>
+      </div>
+ 
+      <div class="rjf-contact__item">
+        <div class="rjf-contact__icon"><i class="fa-solid fa-clock"></i></div>
+        <div>
+          <div class="rjf-contact__label">Hours</div>
+          <div class="rjf-hours-grid">
+            <span class="day">Mon – Fri</span>
+            <span class="time">8:00 AM – 6:00 PM</span>
+            <span class="day">Saturday</span>
+            <span class="time">8:00 AM – 2:00 PM</span>
+            <span class="day">Sunday</span>
+            <span class="time closed">Closed</span>
+          </div>
+        </div>
+      </div>
+ 
+      <div>
+        <a href="/contact/" class="rjf-btn rjf-btn--yellow">
+          Schedule Service <i class="fa-solid fa-arrow-right"></i>
+        </a>
+      </div>
+    </div>
+ 
+    <div class="rjf-map">
+      <iframe
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3495.1214762967224!2d-81.6943742!3d28.835243199999997!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x88e7bde6dc0c0e6f%3A0x32bd9bee3261a0ba!2sRJ%20Fox%20Automotive!5e0!3m2!1sen!2sus!4v1767663223288!5m2!1sen!2sus"
+        allowfullscreen=""
+        loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade"
+        title="RJ Fox Automotive location">
+      </iframe>
+    </div>
+ 
+  </div>
+</section>
+ 
+<!-- ── BOTTOM CTA ─────────────────────────────────────────── -->
+<section class="rjf-cta-wrap">
+  <h2>Transmission Problem?<br>Call Rob.</h2>
+  <p>Written estimate. No pressure. Done right the first time.</p>
+  <div class="rjf-cta-wrap__btns">
+    <a href="tel:+13522503210" class="rjf-btn rjf-btn--dark">
+      <i class="fa-solid fa-phone"></i> (352) 250-3210
+    </a>
+    <a href="/contact/" class="rjf-btn rjf-btn--outline-dark">
+      Schedule Online
+    </a>
+    <a href="/services/" class="rjf-btn rjf-btn--outline-dark">
+      All Services
+    </a>
+  </div>
 </section>
