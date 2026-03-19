@@ -382,7 +382,7 @@ layout: default
   }
 </style>
 
-{% assign area   = site.data.service-areas | where: "slug", page.city_slug | first %}
+{% assign area   = site.data.service_areas | where: "slug", page.city_slug | first %}
 {% assign svc    = area.services | where: "slug", page.service_slug | first %}
 
 <!-- HERO -->
@@ -407,6 +407,7 @@ layout: default
     </div>
   </div>
 </section>
+
 
 <!-- TRUST BAR -->
 <div class="sa-trust">
