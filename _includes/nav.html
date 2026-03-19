@@ -91,9 +91,35 @@
                 </div>
             </li>
 
-            <li class="rjf-nav__item">
-                <a class="rjf-nav__link" href="{{ site.baseurl }}/service-areas/">Service Areas</a>
-            </li>
+           <!-- Service Areas Dropdown -->
+<li class="rjf-nav__item rjf-nav__item--drop">
+    <a class="rjf-nav__link rjf-nav__link--drop" href="{{ site.baseurl }}/service-areas/" aria-haspopup="true" aria-expanded="false">
+        Service Areas <svg class="rjf-chevron" viewBox="0 0 12 8" fill="none"><path d="M1 1.5l5 5 5-5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+    </a>
+    <div class="rjf-dropdown rjf-dropdown--sm" style="min-width: 220px;">
+        <div class="rjf-dropdown__col">
+            <p class="rjf-dropdown__label">Lake County, FL</p>
+            <a href="{{ site.baseurl }}/service-areas/eustis-fl/">
+                <i class="fa-solid fa-location-dot" style="font-size:11px; margin-right:6px; color:var(--nav-blue);"></i>Eustis, FL <span style="font-size:0.75rem; color:var(--nav-muted); margin-left:4px;">· Our shop</span>
+            </a>
+            <a href="{{ site.baseurl }}/service-areas/mount-dora-fl/">
+                <i class="fa-solid fa-location-dot" style="font-size:11px; margin-right:6px; color:var(--nav-blue);"></i>Mount Dora, FL
+            </a>
+            <a href="{{ site.baseurl }}/service-areas/tavares-fl/">
+                <i class="fa-solid fa-location-dot" style="font-size:11px; margin-right:6px; color:var(--nav-blue);"></i>Tavares, FL
+            </a>
+            <a href="{{ site.baseurl }}/service-areas/leesburg-fl/">
+                <i class="fa-solid fa-location-dot" style="font-size:11px; margin-right:6px; color:var(--nav-blue);"></i>Leesburg, FL
+            </a>
+            <a href="{{ site.baseurl }}/service-areas/clermont-fl/">
+                <i class="fa-solid fa-location-dot" style="font-size:11px; margin-right:6px; color:var(--nav-blue);"></i>Clermont, FL
+            </a>
+            <a href="{{ site.baseurl }}/service-areas/" style="margin-top:6px; padding-top:8px; border-top:1px solid var(--nav-border); font-weight:600; color:var(--nav-blue);">
+                All Service Areas →
+            </a>
+        </div>
+    </div>
+</li>
 
              <li class="rjf-nav__item">
                 <a class="rjf-nav__link" href="{{ site.baseurl }}/contact/">Contact</a>
