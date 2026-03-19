@@ -1477,3 +1477,495 @@
         - q: "Can I drop off a U-Haul at your location?"
           a: "Call us to confirm drop-off availability for your specific rental."
  
+- name: "Clermont, FL"
+  slug: "clermont-fl"
+  drive: "~30 min via US-27 North or SR-50 East to US-441"
+  route: "US-27 North to US-441 South, or SR-50 East to US-441 North, to David Walker Dr, Eustis"
+  landmarks: "downtown Clermont, Lake Minneola, Citrus Tower, US-27, SR-50, South Lake Trail"
+  review:
+    text: "Mr Fox and his crew have regularly serviced my friend's car for a while. The owner is very personable. He always treats everyone with respect and the dude embodies enthusiasm and positivity."
+    name: "KC Scott"
+  services:
+
+    - slug: transmission-repair
+      name: "Transmission Repair"
+      hero_sub: "Transmission repair for Clermont vehicles. Full diagnosis, written estimates, all makes and models. About 30 minutes from downtown via US-27 North."
+      body: |
+        <h2>Transmission Repair Near Clermont, FL</h2>
+        <p>RJ Fox Automotive is at 801 David Walker Dr in Eustis, about thirty minutes from Clermont via US-27 North to US-441. Clermont customers make the drive because we keep transmission work in-house and give straight answers before asking anyone to spend money.</p>
+        <p>Every job starts with a full system scan, a fluid inspection, and a road test to reproduce the symptom. We put a written estimate in front of you covering parts and labor before anything is disassembled. No surprises on the invoice.</p>
+        <h2>What We Repair</h2>
+        <p>Automatic, manual, and CVT transmissions on all makes and models. Solenoid replacement, valve body service, torque converter work, synchronizer and shift fork repair, complete rebuilds, fluid leaks, pan gaskets, and external seals. If your transmission is slipping, shifting hard, leaking, or throwing a code, we can tell you exactly what is going on.</p>
+      faq:
+        - q: "How far is RJ Fox Automotive from Clermont?"
+          a: "We are at 801 David Walker Dr in Eustis, about thirty minutes from downtown Clermont. Take US-27 North to US-441 South and turn right on David Walker Dr."
+        - q: "Do you rebuild transmissions in-house?"
+          a: "Yes. Most shops in the area send transmission jobs to an outside rebuilder. We do the work here, which means better quality control and no middleman markup on the price."
+        - q: "How do I know if my transmission needs repair or replacement?"
+          a: "That depends entirely on what the diagnosis reveals. We diagnose first and give you honest pricing on every option."
+        - q: "Do you provide a written estimate before starting?"
+          a: "Always. We diagnose the vehicle, write a complete estimate covering parts and labor, and go over it with you before any work begins."
+        - q: "Can you help arrange a tow from Clermont?"
+          a: "Yes. Call us and we can point you toward towing services that cover the Clermont area."
+
+    - slug: transmission-replacement
+      name: "Transmission Replacement"
+      hero_sub: "Full transmission replacement for Clermont vehicles when repair is not the right call. Remanufactured and rebuilt units. All makes and models."
+      body: |
+        <h2>Transmission Replacement Near Clermont, FL</h2>
+        <p>When a transmission has failed to the point where repair does not make economic sense, replacement is the right path. RJ Fox Automotive handles complete transmission replacements at our Eustis shop, about thirty minutes from Clermont via US-27 North. We source remanufactured and rebuilt units from suppliers we trust, install them with a proper fluid fill, road test the vehicle, and document the warranty before it leaves.</p>
+        <p>Not sure whether repair or replacement is the better call for your situation? We will put honest numbers on both options and let you decide without any pressure either way.</p>
+        <h2>Replacement vs. Rebuild</h2>
+        <p>A rebuild is the right move when the case and hard parts are sound and the failure is localized. A replacement makes more sense when the damage is widespread or when a quality remanufactured unit comes in competitive with the cost of a full in-house rebuild. We explain both clearly before you commit to anything.</p>
+      faq:
+        - q: "What is the difference between a remanufactured and a rebuilt transmission?"
+          a: "A remanufactured unit is fully disassembled and rebuilt to factory spec at a specialist facility with all wear items replaced. Both can be solid options. We stand behind what we install and will walk you through the warranty on whatever we source."
+        - q: "How long does a transmission replacement take?"
+          a: "Most replacements take one to three days depending on the vehicle and how quickly we can source the right unit."
+        - q: "Is a replacement transmission covered by a warranty?"
+          a: "Yes. We document the warranty that applies at the time of the repair so you know exactly what coverage you have."
+        - q: "How far is your shop from Clermont?"
+          a: "About thirty minutes via US-27 North to US-441 South from downtown Clermont."
+        - q: "Do you work on all vehicle makes?"
+          a: "Yes. Domestic, Asian, and European vehicles of all makes and model years."
+
+    - slug: transmission-maintenance
+      name: "Transmission Maintenance"
+      hero_sub: "Transmission fluid service, filter replacement, and inspection for Clermont vehicles. Preventive maintenance that pays for itself."
+      body: |
+        <h2>Transmission Maintenance Near Clermont, FL</h2>
+        <p>The transmissions that come in for expensive rebuilds are almost always the ones that never got serviced. Fluid that breaks down and accumulates metal particles does damage long before any symptom appears. RJ Fox Automotive performs transmission fluid services, filter replacements, and full inspections for all makes and models at our Eustis shop, about thirty minutes from Clermont via US-27 North.</p>
+        <p>We drain the old fluid and look at it before refilling. Dark, burnt-smelling fluid with metal particles tells us a different story than fluid that is just overdue. We drop the pan, clean it, replace the filter and gasket, refill to the correct manufacturer-specified fluid level, and check all external seals and cooler lines before the vehicle leaves.</p>
+      faq:
+        - q: "How often should I have my transmission serviced?"
+          a: "Every 30,000 to 60,000 miles for most automatic transmissions. If you tow, haul, or spend time in heavy traffic, the shorter end of that range is the right target."
+        - q: "What happens if I skip transmission maintenance?"
+          a: "Old fluid stops protecting the internal components. Metal particles recirculate and accelerate wear on solenoids, clutch packs, and valve body components. The damage accumulates silently until something fails."
+        - q: "Do you use the correct fluid for my vehicle?"
+          a: "Yes. We verify the manufacturer-specified fluid before every service. Using the wrong type causes real damage, especially in CVTs and late-model automatics."
+        - q: "How long does a transmission service take?"
+          a: "About an hour for most vehicles."
+        - q: "Is your shop easy to get to from Clermont?"
+          a: "Take US-27 North from Clermont to US-441 South toward Eustis, turn right on David Walker Dr. About thirty minutes."
+
+    - slug: transmission-flush
+      name: "Transmission Flush"
+      hero_sub: "Complete transmission fluid exchange for Clermont vehicles. Full system flush using the correct fluid for your make and model."
+      body: |
+        <h2>Transmission Flush Near Clermont, FL</h2>
+        <p>A drain-and-fill exchanges the fluid in the pan, which is about half of what is in the system. A flush gets all of it out, including what is sitting in the torque converter and cooler lines. RJ Fox Automotive performs transmission flushes for all makes and models at our Eustis shop, about thirty minutes from Clermont via US-27 North.</p>
+        <p>We look at the fluid condition before recommending a flush or a simpler drain-and-fill. For a vehicle on a regular service schedule a drain-and-fill is usually the right call. For a vehicle that has never been serviced or is significantly overdue, a flush gives you a cleaner starting point going forward.</p>
+      faq:
+        - q: "Is a flush better than a drain and fill?"
+          a: "It gets more of the old fluid out, but whether that matters depends on the vehicle's service history. We look at the fluid and tell you which service makes sense."
+        - q: "Is a flush safe for high-mileage transmissions?"
+          a: "We check the transmission condition before recommending one and will tell you upfront if we have any concerns."
+        - q: "Do you use the correct fluid type?"
+          a: "Yes. We verify the manufacturer-specified fluid for every vehicle before we start."
+        - q: "How long does it take?"
+          a: "About one to two hours depending on the vehicle."
+        - q: "How far is your shop from Clermont?"
+          a: "About thirty minutes via US-27 North to US-441 South from downtown Clermont."
+
+    - slug: automatic-transmission-service
+      name: "Automatic Transmission Service"
+      hero_sub: "Full automatic transmission service for Clermont vehicles. Fluid, filter, pan gasket, and complete inspection."
+      body: |
+        <h2>Automatic Transmission Service Near Clermont, FL</h2>
+        <p>Your automatic transmission handles hundreds of gear changes every time you drive. Clean fluid and a functioning filter are what keep it doing that reliably. RJ Fox Automotive provides complete automatic transmission service for all makes and models at our Eustis shop, about thirty minutes from Clermont via US-27 North.</p>
+        <p>We drain and inspect the fluid, pull and inspect the pan for debris, clean the pan, replace the filter and gasket, refill with the correct fluid for your specific vehicle, and road test before the vehicle leaves. If we find anything in the pan that indicates a deeper problem, we tell you before proceeding.</p>
+      faq:
+        - q: "How often should I service my automatic transmission in Florida?"
+          a: "Every 30,000 to 50,000 miles for most central Florida drivers. Heat accelerates fluid breakdown and qualifies most Florida driving as severe service."
+        - q: "My car shifts fine. Does it still need transmission service?"
+          a: "Yes. Fluid breaks down and accumulates contaminants well before the shift quality changes. Waiting for a symptom means the damage is already done."
+        - q: "Should I get a fluid change or a full flush?"
+          a: "We look at your fluid condition and service history and give you a straight recommendation."
+        - q: "How long does automatic transmission service take?"
+          a: "One to two hours including pan drop, filter replacement, and road test."
+        - q: "How far is your shop from Clermont?"
+          a: "About thirty minutes north on US-27 to US-441 South. Turn right on David Walker Dr in Eustis."
+
+    - slug: cvt-transmission-service
+      name: "CVT Transmission Service"
+      hero_sub: "CVT fluid exchange and diagnostics for Clermont vehicles. The right fluid and the right procedure, not a generic ATF swap."
+      body: |
+        <h2>CVT Transmission Service Near Clermont, FL</h2>
+        <p>CVTs are common in Clermont area vehicles including Nissan, Honda, Subaru, Toyota, and others. They need a specific fluid formulation that is not interchangeable with conventional ATF. Putting the wrong fluid in a CVT causes belt slip, shuddering, and accelerated wear. RJ Fox Automotive performs CVT fluid exchanges and diagnostics at our Eustis shop, about thirty minutes from Clermont via US-27 North.</p>
+        <p>CVT shudder between 25 and 45 mph on light acceleration is one of the most common symptoms we see, and it often responds well to a proper fluid exchange when caught before internal wear sets in. If yours has been doing that for a while, bring it in and we will look at where things stand.</p>
+      faq:
+        - q: "What makes CVT service different from regular transmission service?"
+          a: "CVTs use a belt or chain running between variable-diameter pulleys instead of fixed gears. The fluid is engineered specifically for that system. Standard ATF does not have the right friction characteristics and will damage the belt and pulleys over time."
+        - q: "My manufacturer says CVT fluid is lifetime. Should I still change it?"
+          a: "Lifetime fluid is designed to last through the warranty period. In real-world Florida heat and driving conditions, we recommend changing CVT fluid every 40,000 to 60,000 miles."
+        - q: "My car shudders on light acceleration. Could it be the CVT?"
+          a: "Yes. That shudder between 25 and 45 mph is a common early sign of degraded CVT fluid or belt wear. Catching it early gives you more options."
+        - q: "Do you service all CVT brands?"
+          a: "We service CVTs on Nissan, Honda, Subaru, Toyota, Mitsubishi, and most other makes with CVT-equipped vehicles."
+        - q: "How far is your shop from Clermont?"
+          a: "About thirty minutes via US-27 North to US-441 South from downtown Clermont. Turn right on David Walker Dr in Eustis."
+
+    - slug: clutch-repair
+      name: "Clutch Repair"
+      hero_sub: "Clutch replacement, flywheel resurfacing, and hydraulic clutch service for manual transmission vehicles near Clermont."
+      body: |
+        <h2>Clutch Repair Near Clermont, FL</h2>
+        <p>Every manual transmission vehicle needs clutch work eventually. RJ Fox Automotive handles the full range at our Eustis shop, about thirty minutes from Clermont via US-27 North.</p>
+        <p>We replace the disc, pressure plate, release bearing, and pilot bearing as a complete set. We inspect the flywheel every time and resurface or replace it before the new clutch goes in. If the hydraulic system is soft or leaking, we address the master and slave cylinders at the same time so you are not back in two months with a different half of the same problem.</p>
+      faq:
+        - q: "How do I know if my clutch needs to be replaced?"
+          a: "Slipping under load, the engagement point moving toward the top of the pedal, trouble getting into gear, a burning smell in traffic, or a chatter or shudder when letting the clutch out from a stop."
+        - q: "Do you resurface the flywheel when replacing the clutch?"
+          a: "Every time. A new clutch disc against a worn flywheel surface wears out faster than it should. We resurface or replace it as part of the job."
+        - q: "How long does a clutch replacement take?"
+          a: "One to two days depending on the vehicle."
+        - q: "My clutch pedal feels spongy. Is that a clutch problem?"
+          a: "On a hydraulic system, a spongy pedal usually points to the master or slave cylinder rather than the friction disc."
+        - q: "How far is your shop from Clermont?"
+          a: "About thirty minutes via US-27 North to US-441 South. Turn right on David Walker Dr in Eustis."
+
+    - slug: engine-repair
+      name: "Engine Repair"
+      hero_sub: "Head gaskets, timing belts, oil leaks, overheating, and major engine work for Clermont vehicles. Diagnosed accurately and fixed right the first time."
+      body: |
+        <h2>Engine Repair Near Clermont, FL</h2>
+        <p>Clermont customers make the drive to us for engine work because we diagnose before we recommend and we give straight answers about what a repair actually involves. RJ Fox Automotive handles major engine repair at our Eustis facility, about thirty minutes via US-27 North.</p>
+        <p>Head gasket replacement, timing belt and chain service, oil leak repair from valve cover to rear main seal, water pump replacement, intake manifold gaskets, and overheating diagnosis and repair. If your temperature gauge is climbing, do not keep driving. Call us and we will help you figure out how to get the vehicle to us without turning a fixable problem into a destroyed engine.</p>
+        <h2>If Your Engine Is Overheating</h2>
+        <p>Pull over and shut it off. An overheating engine warps cylinder heads fast. The repair cost goes up significantly the longer it runs hot. Call us from wherever you are.</p>
+      faq:
+        - q: "What are signs of a head gasket failure?"
+          a: "White smoke from the exhaust on a warm engine, coolant that keeps disappearing with no puddle under the car, a milky film on the oil cap or dipstick, repeated overheating, or bubbles visible in the coolant reservoir."
+        - q: "Do you replace timing belts?"
+          a: "Yes. On interference engines a broken timing belt is a catastrophic failure. We replace the water pump and tensioners at the same time since everything is already accessible."
+        - q: "Can you repair oil leaks?"
+          a: "Yes. We find the source and fix it properly."
+        - q: "Do you work on performance or modified vehicles?"
+          a: "Yes. Bring it in and we will take a look."
+        - q: "How far are you from Clermont?"
+          a: "About thirty minutes via US-27 North to US-441 South. Turn right on David Walker Dr in Eustis."
+
+    - slug: engine-rebuild
+      name: "Engine Rebuild"
+      hero_sub: "Complete engine rebuilds for Clermont vehicles when repair is not enough. Full teardown, machine work, and assembly to spec."
+      body: |
+        <h2>Engine Rebuild Near Clermont, FL</h2>
+        <p>When an engine is worn or damaged past what targeted repairs can address, a rebuild is the path back to factory specification. RJ Fox Automotive performs complete engine rebuilds at our Eustis shop, about thirty minutes from Clermont via US-27 North.</p>
+        <p>Complete teardown and inspection. Cylinders bored or honed to spec. Pistons, rings, and bearings replaced throughout. Machine work done by a qualified shop. Engine reassembled with correct torques and clearances at every step. We communicate throughout and call you before proceeding if the teardown reveals anything that changes the original estimate.</p>
+      faq:
+        - q: "When does a rebuild make more sense than engine replacement?"
+          a: "When the block and heads are structurally sound and the damage is from wear rather than catastrophic failure, a rebuild often makes more sense financially and gives you a fully documented repair."
+        - q: "How long does an engine rebuild take?"
+          a: "Typically one to two weeks from teardown to reinstallation, depending on parts availability and machine shop turnaround."
+        - q: "Is a rebuilt engine as good as a new one?"
+          a: "A properly rebuilt engine with quality parts and correct machine work performs like a new engine and can last just as long."
+        - q: "Do you rebuild diesel engines?"
+          a: "Yes. We rebuild gasoline and diesel engines including Power Stroke, Duramax, and Cummins units."
+        - q: "How far is your shop from Clermont?"
+          a: "About thirty minutes via US-27 North to US-441 South. Turn right on David Walker Dr in Eustis."
+
+    - slug: engine-diagnostics
+      name: "Engine Diagnostics"
+      hero_sub: "Advanced engine diagnostics for Clermont vehicles. We confirm the actual cause before anything gets replaced."
+      body: |
+        <h2>Engine Diagnostics Near Clermont, FL</h2>
+        <p>A scan tool gives you a code. A code tells you which system flagged a problem. Neither one tells you which part to replace. RJ Fox Automotive combines professional diagnostic equipment with hands-on testing at our Eustis shop, about thirty minutes from Clermont via US-27 North, to find the actual root cause before we write an estimate for anything.</p>
+        <p>Full fault code retrieval across all modules, freeze frame review, live data analysis, compression testing, fuel system testing, ignition system testing, and vacuum leak detection. You get a written explanation of what we found and a clear estimate before any repair work begins.</p>
+      faq:
+        - q: "Can you tell what is wrong just from the code?"
+          a: "The code tells us which circuit or system triggered a fault. It does not tell us which component failed or why. We test to find the actual cause."
+        - q: "Another shop gave me a parts list. Can you verify their diagnosis?"
+          a: "Yes. We run our own independent diagnosis and give you our honest read on what the vehicle actually needs."
+        - q: "How much does a diagnostic cost?"
+          a: "We charge a diagnostic fee which is applied toward the repair if you have the work done with us."
+        - q: "How long does a diagnostic take?"
+          a: "Straightforward faults take about an hour. Complex or intermittent problems can take longer."
+        - q: "How far are you from Clermont?"
+          a: "About thirty minutes via US-27 North to US-441 South. Turn right on David Walker Dr in Eustis."
+
+    - slug: automotive-diagnostics
+      name: "Automotive Diagnostics"
+      hero_sub: "Full-vehicle system scans for Clermont drivers. Every module on the vehicle checked, not just the engine."
+      body: |
+        <h2>Automotive Diagnostics Near Clermont, FL</h2>
+        <p>When a warning light comes on, it could be the engine, the transmission, the ABS system, the airbag module, or any number of other systems. A generic code reader only talks to one of them. RJ Fox Automotive performs full-vehicle diagnostic scans at our Eustis shop, about thirty minutes from Clermont via US-27 North, covering every module on the vehicle.</p>
+        <p>We retrieve fault codes from every system, review live data, and do the hands-on testing needed to confirm what is actually causing the fault before we recommend anything. You get a written summary of every system we scanned and what we found.</p>
+      faq:
+        - q: "What is the difference between engine diagnostics and full-vehicle diagnostics?"
+          a: "Engine diagnostics focuses on the powertrain. Full-vehicle diagnostics covers every control module on the vehicle including the transmission, ABS, airbags, TPMS, body control module, and more."
+        - q: "My airbag light is on. Can you diagnose it?"
+          a: "Yes. SRS faults require a scanner that communicates with the airbag module specifically. We read those codes as part of a full-vehicle scan."
+        - q: "Can you reset warning lights after a repair?"
+          a: "Yes. Once the underlying problem is confirmed repaired, we clear the codes and verify the lights stay off."
+        - q: "Do warning lights always mean something is broken?"
+          a: "Not always. Some warning lights are triggered by sensor faults, software issues, or conditions that have since resolved. The data tells us which we are dealing with."
+        - q: "How do I get to your shop from Clermont?"
+          a: "Take US-27 North from Clermont to US-441 South toward Eustis. Turn right on David Walker Dr and we are on the right. About thirty minutes."
+
+    - slug: check-engine-light
+      name: "Check Engine Light"
+      hero_sub: "Check engine light diagnosis for Clermont vehicles. The actual cause, not just the code. Written estimate before any repair."
+      body: |
+        <h2>Check Engine Light Near Clermont, FL</h2>
+        <p>The check engine light tells you a fault was detected. It does not tell you what to replace. RJ Fox Automotive diagnoses check engine lights for all vehicle makes and models at our Eustis shop, about thirty minutes from Clermont via US-27 North.</p>
+        <p>We pull the codes and the freeze frame data, run live data analysis on the affected systems, and do whatever hands-on testing the fault requires to confirm the root cause. A catalytic converter efficiency code, for example, could be a bad converter, a misfiring cylinder that damaged it, or an oxygen sensor giving a false reading. We find out which before we recommend anything.</p>
+        <h2>Steady Light vs. Flashing Light</h2>
+        <p>Steady means a fault is stored. Flashing means the engine is actively misfiring badly enough to damage the catalytic converter right now. If it is flashing, reduce speed and get it looked at as soon as possible.</p>
+      faq:
+        - q: "Can I drive with the check engine light on?"
+          a: "If it is steady and the vehicle is running normally, you can drive it to the shop. If it is flashing, reduce speed and get it seen right away."
+        - q: "The light came on but the car seems fine. Should I still come in?"
+          a: "Yes. A lot of faults cause no drivability symptoms in the early stages but lead to progressively more expensive damage if ignored."
+        - q: "Will my car pass emissions with the check engine light on?"
+          a: "No. It is an automatic fail for Florida emissions testing."
+        - q: "How much does it cost to diagnose a check engine light?"
+          a: "We charge a diagnostic fee which is applied toward the repair if you have the work done with us."
+        - q: "How far is your shop from Clermont?"
+          a: "About thirty minutes via US-27 North to US-441 South. Turn right on David Walker Dr in Eustis."
+
+    - slug: ac-installation-repair
+      name: "AC Installation and Repair"
+      hero_sub: "AC repair and installation for Clermont vehicles. Full system diagnosis before any repair is recommended."
+      body: |
+        <h2>AC Installation and Repair Near Clermont, FL</h2>
+        <p>A working AC is not optional in central Florida and the Clermont area summers are no different. RJ Fox Automotive diagnoses and repairs the full AC system for all vehicle makes and models at our Eustis shop, about thirty minutes from Clermont via US-27 North.</p>
+        <p>We inspect refrigerant pressure, the compressor, condenser, evaporator, expansion valve, and all hoses and fittings before we recommend anything. We do not add refrigerant to a leaking system. We find the leak, repair it, recharge to manufacturer specification, and verify vent temperatures before the vehicle leaves.</p>
+      faq:
+        - q: "My AC blows warm air. What could cause that?"
+          a: "Low refrigerant from a leak, a failed compressor, a damaged condenser, a faulty expansion valve, or an electrical fault in the control system."
+        - q: "Can you just recharge my AC?"
+          a: "We recharge systems, but only after verifying there is no active leak. Recharging a leaking system buys you a few weeks at most."
+        - q: "How long does AC repair take?"
+          a: "A recharge after a minor leak repair is usually same-day. Component replacements take longer depending on what is involved."
+        - q: "Do you work on all vehicle makes?"
+          a: "Yes. Domestic, Asian, and European vehicles of all makes and model years."
+        - q: "How far is your shop from Clermont?"
+          a: "About thirty minutes via US-27 North to US-441 South from downtown Clermont. Turn right on David Walker Dr in Eustis."
+
+    - slug: auto-ac-recharge
+      name: "Auto AC Recharge"
+      hero_sub: "AC refrigerant recharge for Clermont vehicles. Leak check before refilling. Charged to manufacturer spec."
+      body: |
+        <h2>Auto AC Recharge Near Clermont, FL</h2>
+        <p>If your system is low on refrigerant, something let it out. Refrigerant does not get used up in normal operation. RJ Fox Automotive performs AC recharges at our Eustis shop, about thirty minutes from Clermont via US-27 North, and we find and fix the leak before we put any refrigerant back in.</p>
+        <p>Pressure test, visual inspection, electronic leak detection and UV dye where needed, leak repair, full recovery of remaining refrigerant, recharge to the manufacturer-specified weight, and a vent temperature check to confirm the system is performing correctly before you leave.</p>
+      faq:
+        - q: "Why do you check for leaks before recharging?"
+          a: "Because if the refrigerant is low, it leaked somewhere. Recharging without fixing the leak means you are in the same situation in a few weeks and have paid twice."
+        - q: "How long does an AC recharge take?"
+          a: "About an hour if the leak is straightforward. Larger repairs take longer and we will tell you upfront."
+        - q: "What type of refrigerant do you use?"
+          a: "We use the refrigerant specified for your vehicle. R-134a for most vehicles through the mid-2010s, R-1234yf for newer models."
+        - q: "Will a recharge fix my AC completely?"
+          a: "If low refrigerant is the only issue, yes. If a major component has failed, we will tell you that before we start."
+        - q: "How do I get to your shop from Clermont?"
+          a: "Take US-27 North from Clermont to US-441 South. Turn right on David Walker Dr in Eustis. About thirty minutes."
+
+    - slug: auto-ac-replacement
+      name: "Auto AC Replacement"
+      hero_sub: "Full AC component replacement for Clermont vehicles. Compressor, condenser, evaporator, done completely so it lasts."
+      body: |
+        <h2>Auto AC Replacement Near Clermont, FL</h2>
+        <p>When an AC component has failed beyond repair, replacement done correctly is what keeps you from being back in the same situation six months later. RJ Fox Automotive performs complete AC component replacements for all makes and models at our Eustis shop, about thirty minutes from Clermont via US-27 North.</p>
+        <p>When we replace a compressor, we also flush the system, replace the receiver-drier, and replace the orifice tube or expansion valve. Metal debris from a failed compressor circulates through the entire system. Skipping those steps puts debris straight into the new part. We do not skip them.</p>
+      faq:
+        - q: "How do you know the compressor needs replacing vs. repair?"
+          a: "We test output, listen for bearing noise and internal damage, and check the clutch. A compressor that is not building pressure or making grinding sounds has failed internally."
+        - q: "Do you replace the receiver-drier when replacing the compressor?"
+          a: "Yes, always. It is part of a complete compressor replacement, not an upsell."
+        - q: "How long does an AC replacement take?"
+          a: "Compressor replacements take a full day. Condenser replacements can often be done same-day. Evaporator replacements are typically two days."
+        - q: "Do you warranty the replacement parts?"
+          a: "Yes. Parts and labor are both warranted. We go over the specific terms when we review the estimate."
+        - q: "How far is your shop from Clermont?"
+          a: "About thirty minutes via US-27 North to US-441 South from downtown. Turn right on David Walker Dr in Eustis."
+
+    - slug: auto-electrical-repair
+      name: "Auto Electrical Repair"
+      hero_sub: "Auto electrical repair for Clermont vehicles. Alternators, starters, wiring, parasitic draws, and full electrical system diagnosis."
+      body: |
+        <h2>Auto Electrical Repair Near Clermont, FL</h2>
+        <p>Electrical problems are among the hardest to diagnose without the right equipment and a systematic approach. RJ Fox Automotive traces faults to their actual source at our Eustis shop, about thirty minutes from Clermont via US-27 North, before recommending anything.</p>
+        <p>Alternator and starter replacement, battery cable and terminal service, wiring harness repair, parasitic draw testing, ground fault diagnosis, relay and fuse diagnosis. We test before we replace. Guessing at electrical repairs and replacing parts one at a time is an expensive way to fix a car.</p>
+      faq:
+        - q: "My car stalls randomly and the battery tests fine. What could it be?"
+          a: "Random stalling with a good battery often points to a crankshaft or camshaft position sensor, a fuel delivery issue, or an ignition system fault."
+        - q: "Can electrical problems cause transmission shifting issues?"
+          a: "Yes. Transmission solenoids, speed sensors, and range sensors are all electrical. A wiring fault or failed sensor produces erratic shifting that looks like a mechanical problem."
+        - q: "Do you repair wiring or just replace modules?"
+          a: "We repair wiring. Most electrical problems are a damaged wire or a bad ground. Repairing it is faster and less expensive than replacing a module that is actually fine."
+        - q: "Multiple warning lights came on at the same time. What does that mean?"
+          a: "Multiple unrelated lights at once usually points to a single voltage or ground fault affecting multiple modules, not separate failures in each system."
+        - q: "How far is your shop from Clermont?"
+          a: "About thirty minutes via US-27 North to US-441 South from downtown Clermont. Turn right on David Walker Dr in Eustis."
+
+    - slug: battery-testing-replacement
+      name: "Battery Testing and Replacement"
+      hero_sub: "Battery testing and replacement for Clermont vehicles. Charging system inspection included every time."
+      body: |
+        <h2>Battery Testing and Replacement Near Clermont, FL</h2>
+        <p>Heat is harder on batteries than cold, and central Florida heat is relentless. Most batteries in this area last three to five years. RJ Fox Automotive performs battery testing and replacement for all makes and models at our Eustis shop, about thirty minutes from Clermont via US-27 North.</p>
+        <p>We load-test the battery under actual starting demand, test the alternator output and full charging system at the same time, and inspect the terminals and cables. If the alternator is undercharging, a new battery is a temporary fix. We check everything before recommending anything.</p>
+      faq:
+        - q: "How do I know if my battery is failing?"
+          a: "Slow or sluggish cranking, a clicking sound when you turn the key, the battery warning light, or electrical accessories behaving erratically all point to a battery or charging system issue."
+        - q: "Do I need to replace the battery or just charge it?"
+          a: "A battery that fails a load test needs replacement. We test before we recommend."
+        - q: "What size battery does my vehicle need?"
+          a: "Group size, cold cranking amps, and reserve capacity vary by vehicle. We look up the correct specification before ordering."
+        - q: "Do you replace batteries in European vehicles?"
+          a: "Yes. Many European vehicles require battery registration after replacement to recalibrate the charging system. We perform this where required."
+        - q: "How far is your shop from Clermont?"
+          a: "About thirty minutes via US-27 North to US-441 South. Turn right on David Walker Dr in Eustis."
+
+    - slug: diesel-engines
+      name: "Diesel Engine Repair"
+      hero_sub: "Diesel engine repair for Clermont trucks and vehicles. Injectors, turbos, glow plugs, DPF, and full diesel diagnostics."
+      body: |
+        <h2>Diesel Engine Repair Near Clermont, FL</h2>
+        <p>RJ Fox Automotive handles diesel engine repair in-house at our Eustis shop, about thirty minutes from Clermont via US-27 North. We service Ford Power Stroke, GM Duramax, Ram Cummins, and diesel-powered imports.</p>
+        <p>Fuel system diagnosis, injector testing and replacement, glow plug replacement, turbocharger inspection and repair, EGR system service, DPF cleaning and replacement, diesel oil and filter service, and full diesel diagnostics. If your diesel is down on power, smoking under load, hard to start, or throwing codes, we will find the actual cause before recommending any parts.</p>
+      faq:
+        - q: "My diesel is losing power and smoking. What could cause that?"
+          a: "Power loss with smoke points to injector wear, a boost leak, a failing turbocharger, a clogged DPF, or EGR system restrictions. We diagnose the specific cause first."
+        - q: "How often should I change oil on my diesel truck?"
+          a: "Most modern diesel trucks can go 7,500 to 10,000 miles under highway conditions with the correct full synthetic oil. Trucks that tow regularly or idle frequently should be closer to 5,000 to 7,500."
+        - q: "Do you service DPF systems?"
+          a: "Yes. We clean, diagnose, and replace diesel particulate filters."
+        - q: "Do you work on all diesel truck brands?"
+          a: "Yes. Ford Power Stroke, GM Duramax, Ram Cummins, and diesel-powered imports."
+        - q: "How do I get to your shop from Clermont?"
+          a: "Take US-27 North from Clermont to US-441 South toward Eustis. Turn right on David Walker Dr. About thirty minutes."
+
+    - slug: auto-brake-repair
+      name: "Auto Brake Repair"
+      hero_sub: "Brake repair for Clermont vehicles. Pads, rotors, calipers, brake fluid, and full brake system inspection."
+      body: |
+        <h2>Auto Brake Repair Near Clermont, FL</h2>
+        <p>RJ Fox Automotive performs full brake system repair for all vehicle makes and models at our Eustis shop, about thirty minutes from Clermont via US-27 North.</p>
+        <p>We inspect the full system before recommending anything. Brake pad replacement, rotor resurfacing and replacement, caliper service and replacement, brake hose replacement, master cylinder service, brake fluid flush, ABS diagnosis, and parking brake adjustment. Grinding brakes mean metal on metal and every mile makes the repair more expensive. If you are hearing that, bring it in.</p>
+      faq:
+        - q: "How do I know when my brakes need service?"
+          a: "Squealing when braking means the pads are getting thin. Grinding means metal on metal. Pulsation through the pedal means warped rotors. Pulling to one side under braking often means a sticking caliper."
+        - q: "Do I need to replace rotors with the pads?"
+          a: "Depends on rotor thickness and surface condition. We measure and tell you honestly."
+        - q: "How long do brake pads last?"
+          a: "Between 25,000 and 70,000 miles depending on driving style, vehicle weight, and how much city driving is involved."
+        - q: "What does a brake fluid flush do?"
+          a: "Brake fluid absorbs moisture over time. That lowers its boiling point and promotes corrosion inside the system. A flush replaces the old degraded fluid with fresh fluid."
+        - q: "How far is your shop from Clermont?"
+          a: "About thirty minutes via US-27 North to US-441 South. Turn right on David Walker Dr in Eustis."
+
+    - slug: steering-suspension-repair
+      name: "Steering and Suspension Repair"
+      hero_sub: "Steering and suspension repair for Clermont vehicles. Shocks, struts, tie rods, control arms, and alignment-related repairs."
+      body: |
+        <h2>Steering and Suspension Repair Near Clermont, FL</h2>
+        <p>RJ Fox Automotive handles steering and suspension repairs for all vehicle makes and models at our Eustis shop, about thirty minutes from Clermont via US-27 North.</p>
+        <p>Shocks and struts, inner and outer tie rods, ball joints, control arms and bushings, sway bar links and bushings, power steering pumps and racks, electric power steering systems, and wheel bearings. We inspect the full suspension before recommending anything and align after any repair that changes wheel geometry.</p>
+      faq:
+        - q: "My steering wheel vibrates at highway speed. What could cause that?"
+          a: "Most commonly tire balance or a bent wheel, but worn tie rod ends, loose wheel bearings, and failed strut mounts can all produce similar symptoms."
+        - q: "How do I know if my shocks or struts are worn?"
+          a: "Excessive body roll in corners, hard braking nosedive, bouncing after a bump that takes more than one cycle to settle, and cupping or scalloping on the tire tread."
+        - q: "Can I drive with a worn tie rod?"
+          a: "A worn tie rod is a safety concern. Separation means sudden loss of steering. Get it looked at before that happens."
+        - q: "Do you align after suspension work?"
+          a: "Yes. Any repair that changes wheel geometry requires an alignment afterward."
+        - q: "How far is your shop from Clermont?"
+          a: "About thirty minutes via US-27 North to US-441 South. Turn right on David Walker Dr in Eustis."
+
+    - slug: wheel-alignment
+      name: "Wheel Alignment"
+      hero_sub: "Precision wheel alignment for Clermont vehicles. Fix the pull, stop the uneven wear, restore the steering feel."
+      body: |
+        <h2>Wheel Alignment Near Clermont, FL</h2>
+        <p>RJ Fox Automotive performs precision wheel alignments for all vehicle makes and models at our Eustis shop, about thirty minutes from Clermont via US-27 North.</p>
+        <p>We measure all four wheels against manufacturer specifications, correct toe, camber, and caster where adjustable, and record the before and after numbers. We inspect the suspension before aligning. Putting a vehicle on the alignment rack with worn ball joints or tie rod ends produces a result that will not hold and leaves a safety problem unaddressed.</p>
+      faq:
+        - q: "How often should I have my alignment checked?"
+          a: "Once a year is a reasonable baseline for most vehicles. Any time after a hard suspension impact, and after any steering or suspension repair."
+        - q: "My car pulls to one side. Is that always alignment?"
+          a: "Pulling is usually alignment, but uneven tire pressure, a sticking caliper, or internal tire damage can all cause pulling that does not respond to alignment adjustment. We check the basics first."
+        - q: "Does alignment affect tire life?"
+          a: "Yes. Incorrect toe causes rapid edge wear that can cut tire life in half."
+        - q: "Can you align all-wheel-drive vehicles?"
+          a: "Yes. We perform four-wheel alignments on front-wheel-drive, rear-wheel-drive, and all-wheel-drive vehicles."
+        - q: "How far is your shop from Clermont?"
+          a: "About thirty minutes via US-27 North to US-441 South from downtown. Turn right on David Walker Dr in Eustis."
+
+    - slug: adas-calibration
+      name: "ADAS Calibration"
+      hero_sub: "ADAS camera and sensor calibration for Clermont vehicles after windshield replacement, alignment, or collision repair."
+      body: |
+        <h2>ADAS Calibration Near Clermont, FL</h2>
+        <p>Driver assistance features like automatic emergency braking and lane departure warning rely on cameras and sensors mounted at precise angles. Move those angles even slightly and the systems stop working correctly. RJ Fox Automotive performs ADAS calibration for all vehicle makes and models at our Eustis shop, about thirty minutes from Clermont via US-27 North.</p>
+        <p>Any windshield replacement, wheel alignment, suspension repair that changes ride height, or front-end collision repair can require recalibration. We perform static and dynamic procedures to manufacturer specification for your specific year, make, and model.</p>
+      faq:
+        - q: "Does every windshield replacement require ADAS calibration?"
+          a: "Only vehicles with a forward-facing camera mounted to or behind the windshield. Most vehicles built after 2018 with automatic emergency braking fall into that category. We can confirm when you call."
+        - q: "My lane assist turned off after my alignment. Is that related?"
+          a: "Yes. Alignment changes the geometry the camera uses as a reference. Calibration corrects the camera angle for the new geometry."
+        - q: "Can I drive the car if ADAS systems are uncalibrated?"
+          a: "You can drive it, but the safety features may not perform correctly. Automatic braking and lane departure warning can give false alerts or fail to activate when you actually need them."
+        - q: "How long does ADAS calibration take?"
+          a: "Static calibration is one to two hours. Dynamic calibration requires a road drive and may take longer."
+        - q: "How far is your shop from Clermont?"
+          a: "About thirty minutes via US-27 North to US-441 South. Turn right on David Walker Dr in Eustis."
+
+    - slug: general-repairs-maintenance
+      name: "General Repairs and Maintenance"
+      hero_sub: "Oil changes, fluid services, belts, hoses, and routine maintenance for Clermont vehicles. All makes and models."
+      body: |
+        <h2>General Repairs and Maintenance Near Clermont, FL</h2>
+        <p>Keeping up with routine maintenance is the most reliable way to avoid expensive repairs. RJ Fox Automotive handles all routine maintenance services for every make and model at our Eustis shop, about thirty minutes from Clermont via US-27 North.</p>
+        <p>Oil and filter changes, coolant service, brake fluid flush, power steering fluid service, spark plug replacement, air filter and cabin filter replacement, belt inspection and replacement, hose inspection, and multi-point vehicle inspections. We go through the vehicle while we are in there and let you know what we find without padding the ticket with work that is not needed.</p>
+      faq:
+        - q: "How often should I change my oil?"
+          a: "Most modern vehicles on full synthetic oil can go 7,500 to 10,000 miles. If you do a lot of short trips or drive in stop-and-go traffic, closer to 5,000 is more appropriate for Florida conditions."
+        - q: "What is a multi-point inspection?"
+          a: "A systematic check of all major vehicle systems: brakes, tires, steering, suspension, fluids, belts, hoses, and lighting."
+        - q: "Do you service European vehicles?"
+          a: "Yes. BMW, Mercedes-Benz, Audi, Volkswagen, Volvo, and other European makes."
+        - q: "Can I bring my vehicle in without an appointment?"
+          a: "We prefer appointments but do our best to accommodate walk-ins. Call ahead and we will let you know what the schedule looks like."
+        - q: "How far is your shop from Clermont?"
+          a: "About thirty minutes via US-27 North to US-441 South from downtown Clermont. Turn right on David Walker Dr in Eustis."
+
+    - slug: auto-exhaust-system-repair
+      name: "Auto Exhaust System Repair"
+      hero_sub: "Exhaust repair for Clermont vehicles. Mufflers, catalytic converters, pipes, and full system inspection."
+      body: |
+        <h2>Auto Exhaust System Repair Near Clermont, FL</h2>
+        <p>RJ Fox Automotive handles exhaust system repairs for all vehicle makes and models at our Eustis shop, about thirty minutes from Clermont via US-27 North.</p>
+        <p>Muffler replacement, exhaust pipe repair and replacement, catalytic converter diagnosis and replacement, oxygen sensor replacement, exhaust manifold repair, flex pipe replacement, and hanger service. When a P0420 or P0430 code comes in, we diagnose the upstream cause before recommending a converter. A misfiring cylinder that destroyed the converter needs to be fixed first or the new one will fail too.</p>
+      faq:
+        - q: "My car is louder than it used to be. Is that an exhaust problem?"
+          a: "Increased exhaust noise usually means a hole in a pipe, a failed muffler, or a cracked exhaust manifold."
+        - q: "Can a bad catalytic converter cause a check engine light?"
+          a: "Yes. P0420 and P0430 are converter efficiency codes. We find the root cause before recommending replacement."
+        - q: "Is it safe to drive with an exhaust leak?"
+          a: "A leak that allows exhaust into the cabin is a carbon monoxide risk. If you smell exhaust inside the vehicle with the windows up, get it looked at promptly."
+        - q: "Do you weld exhaust repairs or use clamps?"
+          a: "We use whatever method is appropriate for the specific repair."
+        - q: "How far is your shop from Clermont?"
+          a: "About thirty minutes via US-27 North to US-441 South. Turn right on David Walker Dr in Eustis."
+
+    - slug: u-haul-services
+      name: "U-Haul Services"
+      hero_sub: "Authorized U-Haul truck and trailer rentals for Clermont residents. Located in Eustis, about 30 minutes away via US-27 North."
+      body: |
+        <h2>U-Haul Rentals Near Clermont, FL</h2>
+        <p>RJ Fox Automotive is an authorized U-Haul dealer located at 801 David Walker Dr in Eustis, about thirty minutes from Clermont via US-27 North to US-441 South. We offer truck and trailer rentals for local moves, long-distance moves, and hauling jobs of all sizes.</p>
+        <p>Call us to check availability and reserve your rental. We recommend calling ahead, especially on weekends and during peak moving season.</p>
+      faq:
+        - q: "What U-Haul vehicles do you have available?"
+          a: "We carry a selection of U-Haul trucks and trailers. Call us to check current availability for your move date."
+        - q: "Do I need to reserve in advance?"
+          a: "We recommend calling ahead, especially on weekends and during busy moving seasons."
+        - q: "How far are you from Clermont?"
+          a: "About thirty minutes via US-27 North to US-441 South. Turn right on David Walker Dr in Eustis and we are on the right."
+        - q: "What are your hours?"
+          a: "Monday through Friday 8am to 6pm, Saturday 8am to 2pm, closed Sunday."
+        - q: "Can I drop off a U-Haul at your location?"
+          a: "Call us to confirm drop-off availability for your specific rental."
