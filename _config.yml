@@ -139,7 +139,7 @@ paginate:      6
 paginate_path: "/blog/page:num/"
 
 # ── SERVICE AREAS (used in footer / service pages) ────────────
-service_areas:
+service_area_names:
   - "Eustis, FL"
   - "Mount Dora, FL"
   - "Tavares, FL"
