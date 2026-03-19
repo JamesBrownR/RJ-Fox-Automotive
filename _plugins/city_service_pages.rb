@@ -34,7 +34,7 @@ module RJFox
 
       unless areas.is_a?(Array)
         Jekyll.logger.warn "CityServicePages:",
-          "_data/service-areas.yml not found or not an array — no pages generated."
+          "_data/service_areas.yml not found or not an array — no pages generated."
         return
       end
 
