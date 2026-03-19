@@ -490,3 +490,989 @@
           a: "Monday through Friday 8am to 6pm, Saturday 8am to 2pm, closed Sunday."
         - q: "Can I drop off a U-Haul at your location?"
           a: "Call us to confirm drop-off availability for your specific rental."
+          
+- name: "Tavares, FL"
+  slug: "tavares-fl"
+  drive: "~10 min via US-441 or SR-19"
+  route: "US-441 South or SR-19 South to David Walker Dr, Eustis"
+  landmarks: "downtown Tavares, Lake Dora, Seaplane City, Lake County courthouse, US-441"
+  review:
+    text: "RJ not only completed repairs and communicated with me throughout the job but got it done before he said he would. All around fantastic experience and top class workmanship."
+    name: "Eric Estell"
+  services:
+
+    - slug: transmission-repair
+      name: "Transmission Repair"
+      hero_sub: "Transmission repair for Tavares vehicles. Accurate diagnosis, honest estimates, all makes and models. About 10 minutes from downtown on US-441 or SR-19."
+      body: |
+        <h2>Transmission Repair Near Tavares, FL</h2>
+        <p>RJ Fox Automotive is at 801 David Walker Dr in Eustis, about ten minutes from downtown Tavares via US-441 or SR-19 South. We handle the full range of transmission repairs for every make and model, from slipping automatics on daily drivers to manual gearboxes on older trucks.</p>
+        <p>We diagnose before we recommend anything. That means a full system scan, a fluid inspection, a road test to reproduce the symptoms, and a written estimate covering parts and labor before any teardown begins. You know exactly what you are paying for before we touch it.</p>
+        <h2>What We Repair</h2>
+        <p>We handle automatic transmissions, manual transmissions, CVTs, and dual-clutch units. Common repairs include solenoid replacement, valve body service, torque converter replacement, shift fork and synchronizer repair, and complete rebuilds when internal wear has gone too far for a targeted repair. We also handle fluid leaks, pan gaskets, and external seals.</p>
+      faq:
+        - q: "How far is RJ Fox Automotive from Tavares?"
+          a: "We are at 801 David Walker Dr in Eustis, about ten minutes from downtown Tavares via US-441 South or SR-19 South. Turn onto David Walker Dr and we are on the right."
+        - q: "Do you rebuild transmissions in-house?"
+          a: "Yes. Most shops in the area send transmission jobs to an outside rebuilder. We do the work here, which means better quality control and no middleman markup."
+        - q: "How do I know if my transmission needs repair or replacement?"
+          a: "That depends entirely on what the diagnosis reveals. We diagnose first and give you all your options with honest pricing on each."
+        - q: "Do you provide a written estimate before starting?"
+          a: "Always. We diagnose the vehicle, write a complete estimate covering parts and labor, and go over it with you before any work begins."
+        - q: "Can you help arrange a tow from Tavares?"
+          a: "Yes. Call us and we can point you toward towing services that cover the Tavares area."
+
+    - slug: transmission-replacement
+      name: "Transmission Replacement"
+      hero_sub: "Full transmission replacement for Tavares vehicles when repair is not the right call. Remanufactured and rebuilt units. All makes and models."
+      body: |
+        <h2>Transmission Replacement Near Tavares, FL</h2>
+        <p>When a transmission has failed internally to the point where repair is not cost-effective, replacement is the right call. RJ Fox Automotive performs complete transmission replacements for all makes and models at our Eustis shop, about ten minutes from Tavares via US-441 or SR-19 South.</p>
+        <p>We install remanufactured and rebuilt units from suppliers we trust. Every replacement includes a proper fluid fill to manufacturer specification, a road test before delivery, and clear documentation of what was installed and what warranty applies.</p>
+        <h2>Replacement vs. Rebuild</h2>
+        <p>We will tell you honestly which option makes more sense for your vehicle. A rebuild is appropriate when the transmission case and hard parts are in good condition. A replacement makes more sense when multiple internal components have failed or when the cost of a complete rebuild approaches the cost of a quality replacement unit.</p>
+      faq:
+        - q: "What is the difference between a remanufactured and a rebuilt transmission?"
+          a: "A remanufactured unit is rebuilt to original specifications in a controlled facility with all wear items replaced. Both can be quality options. We use suppliers whose units we trust and will tell you what warranty comes with each."
+        - q: "How long does a transmission replacement take?"
+          a: "Most transmission replacements take one to three days depending on the vehicle and parts availability."
+        - q: "Is a replacement transmission covered by a warranty?"
+          a: "Yes. We will document exactly what warranty applies to your replacement at the time of the repair."
+        - q: "How far is your shop from Tavares?"
+          a: "About ten minutes via US-441 or SR-19 South from downtown Tavares."
+        - q: "Do you work on all vehicle makes?"
+          a: "Yes. Domestic, Asian, and European vehicles of all makes and model years."
+
+    - slug: transmission-maintenance
+      name: "Transmission Maintenance"
+      hero_sub: "Transmission fluid service, filter replacement, and inspection for Tavares vehicles. Preventive maintenance that keeps your transmission running longer."
+      body: |
+        <h2>Transmission Maintenance Near Tavares, FL</h2>
+        <p>Regular transmission maintenance is one of the most overlooked services on any vehicle, and one of the most cost-effective things you can do to avoid a major repair later. RJ Fox Automotive performs transmission fluid services, filter replacements, and full transmission inspections for all vehicle makes and models at our Eustis shop, a short drive from Tavares on US-441 or SR-19 South.</p>
+        <p>A full transmission service includes draining the old fluid, dropping the pan, replacing the filter and pan gasket, cleaning the pan, and refilling with the correct fluid to manufacturer specification. We inspect the pan for metal debris or clutch material that would indicate internal wear, and we check external seals and the transmission cooler lines for leaks.</p>
+      faq:
+        - q: "How often should I have my transmission serviced?"
+          a: "Most manufacturers recommend every 30,000 to 60,000 miles for automatic transmissions. If you tow frequently or drive in heavy traffic, sooner is better."
+        - q: "What happens if I skip transmission maintenance?"
+          a: "Old fluid loses its ability to lubricate and cool internal components. Metal particles accumulate and recirculate, accelerating wear on solenoids, clutch packs, and valve body components."
+        - q: "Do you use the correct fluid for my vehicle?"
+          a: "Yes. We use the manufacturer-specified fluid for your specific vehicle, which matters especially for modern automatics and CVTs."
+        - q: "How long does a transmission service take?"
+          a: "A standard transmission fluid and filter service takes about an hour for most vehicles."
+        - q: "Is your shop easy to get to from Tavares?"
+          a: "Yes. Take US-441 South or SR-19 South from Tavares, turn onto David Walker Dr in Eustis, and we are on the right. About ten minutes."
+
+    - slug: transmission-flush
+      name: "Transmission Flush"
+      hero_sub: "Complete transmission fluid exchange for Tavares vehicles. Full system flush using the correct fluid for your make and model."
+      body: |
+        <h2>Transmission Flush Near Tavares, FL</h2>
+        <p>A transmission flush exchanges all of the fluid in the system, including what remains in the torque converter and cooler lines, rather than just what drains from the pan. RJ Fox Automotive performs transmission flushes for all vehicle makes and models at our Eustis location, about ten minutes from Tavares via US-441 or SR-19.</p>
+        <p>For vehicles with high mileage or fluid that has been neglected, a flush combined with a filter replacement gives the transmission a fresh start. We use the manufacturer-specified fluid for every vehicle and check the fluid before recommending a flush versus a standard drain-and-fill.</p>
+      faq:
+        - q: "Is a flush better than a drain and fill?"
+          a: "A drain and fill replaces about 40 to 50 percent of the fluid. A flush replaces close to 100 percent. For maintained vehicles a drain and fill is usually sufficient. For neglected fluid a flush gets everything out."
+        - q: "Is a flush safe for high-mileage transmissions?"
+          a: "We assess the transmission condition before recommending a flush and will be honest with you about any concerns before proceeding."
+        - q: "Do you use the correct fluid type?"
+          a: "Yes. We use manufacturer-specified fluid for every vehicle."
+        - q: "How long does it take?"
+          a: "About one to two hours depending on the vehicle."
+        - q: "How far is your shop from Tavares?"
+          a: "About ten minutes via US-441 or SR-19 South from downtown Tavares."
+
+    - slug: automatic-transmission-service
+      name: "Automatic Transmission Service"
+      hero_sub: "Full automatic transmission service for Tavares vehicles. Fluid, filter, pan gasket, and complete inspection."
+      body: |
+        <h2>Automatic Transmission Service Near Tavares, FL</h2>
+        <p>The automatic transmission is one of the most mechanically complex systems on your vehicle. At RJ Fox Automotive we provide complete automatic transmission service for all makes and models at our Eustis shop, about ten minutes from Tavares via US-441 or SR-19 South.</p>
+        <p>A proper automatic transmission service includes draining the fluid and inspecting it for color, smell, and metal contamination, removing the transmission pan and inspecting it for debris, cleaning the pan thoroughly, replacing the transmission filter, replacing the pan gasket, refilling with the correct fluid type and quantity specified for your vehicle, and road testing to verify shift quality.</p>
+      faq:
+        - q: "How often should I service my automatic transmission in Florida?"
+          a: "Every 30,000 to 50,000 miles is our general recommendation for central Florida driving conditions. Heat and stop-and-go traffic both accelerate fluid breakdown."
+        - q: "My car shifts fine. Does it still need transmission service?"
+          a: "Yes. Fluid degrades gradually and the damage accumulates well before you notice any change in shift quality."
+        - q: "Should I get a fluid change or a full flush?"
+          a: "It depends on your service history and fluid condition. We look at your fluid and give you a straight recommendation."
+        - q: "How long does automatic transmission service take?"
+          a: "A complete service including pan drop, filter replacement, and road test typically takes one to two hours."
+        - q: "How far is your shop from Tavares?"
+          a: "About ten minutes via US-441 or SR-19 South. Turn onto David Walker Dr in Eustis."
+
+    - slug: cvt-transmission-service
+      name: "CVT Transmission Service"
+      hero_sub: "CVT fluid exchange and diagnostics for Tavares vehicles. Continuously variable transmissions require specific fluid and service procedures."
+      body: |
+        <h2>CVT Transmission Service Near Tavares, FL</h2>
+        <p>Continuously variable transmissions are found in a wide range of vehicles common in the Tavares area, including Honda, Nissan, Subaru, Toyota, and many others. CVTs require a specific fluid formulation and service procedure that is different from a conventional automatic. RJ Fox Automotive performs CVT fluid exchanges and diagnostics at our Eustis shop, about ten minutes from Tavares on US-441 or SR-19 South.</p>
+        <p>If your CVT-equipped vehicle is shuddering between 25 and 45 mph, hesitating on acceleration, making a whining or humming noise at highway speed, or showing a transmission warning light, bring it in. CVT problems caught early are often resolved with a fluid exchange.</p>
+      faq:
+        - q: "What makes CVT service different from regular transmission service?"
+          a: "CVTs use a belt or chain running between two variable-diameter pulleys instead of fixed gear ratios. The fluid is formulated specifically for this design. Using standard ATF in a CVT will damage it."
+        - q: "My manufacturer says CVT fluid is lifetime. Should I still change it?"
+          a: "In real-world use, especially in Florida heat with stop-and-go driving, most technicians recommend changing CVT fluid every 40,000 to 60,000 miles."
+        - q: "My car shudders on light acceleration. Could it be the CVT?"
+          a: "Yes. A shudder between 25 and 45 mph on light acceleration is a common symptom of degraded CVT fluid or belt slip."
+        - q: "Do you service all CVT brands?"
+          a: "We service CVTs on Honda, Nissan, Subaru, Toyota, Mitsubishi, and most other makes with CVT-equipped vehicles."
+        - q: "How far is your shop from Tavares?"
+          a: "About ten minutes via US-441 or SR-19 South from downtown Tavares. Turn onto David Walker Dr in Eustis."
+
+    - slug: clutch-repair
+      name: "Clutch Repair"
+      hero_sub: "Clutch replacement, flywheel resurfacing, and hydraulic clutch service for manual transmission vehicles near Tavares."
+      body: |
+        <h2>Clutch Repair Near Tavares, FL</h2>
+        <p>Manual transmission vehicles require clutch service at some point in their life. RJ Fox Automotive handles the full range of clutch repairs at our Eustis shop, roughly ten minutes from Tavares on US-441 or SR-19 South.</p>
+        <p>A complete clutch job includes the clutch disc, pressure plate, release bearing, and pilot bearing. We always resurface or replace the flywheel at the same time. If the hydraulic system is involved, we inspect the master and slave cylinders and replace them if they show signs of leakage or wear.</p>
+      faq:
+        - q: "How do I know if my clutch needs to be replaced?"
+          a: "Common signs include the clutch slipping under load, the engagement point feeling very high near the top of the pedal travel, difficulty shifting into gear, a burning smell after driving in traffic, or a chattering sensation when releasing the pedal."
+        - q: "Do you resurface the flywheel when replacing the clutch?"
+          a: "We resurface or replace the flywheel every time. Installing a new clutch on a worn flywheel leads to premature failure."
+        - q: "How long does a clutch replacement take?"
+          a: "Most clutch jobs take one to two days depending on the vehicle."
+        - q: "My clutch pedal feels spongy. Is that a clutch problem?"
+          a: "A spongy pedal on a hydraulic clutch system usually points to the master or slave cylinder rather than the clutch disc itself."
+        - q: "How far is your shop from Tavares?"
+          a: "About ten minutes via US-441 or SR-19 South from downtown Tavares. Turn onto David Walker Dr in Eustis."
+
+    - slug: engine-repair
+      name: "Engine Repair"
+      hero_sub: "Head gaskets, timing belts, oil leaks, overheating, and major engine work for Tavares vehicles. Diagnosed accurately and repaired right the first time."
+      body: |
+        <h2>Engine Repair Near Tavares, FL</h2>
+        <p>Engine problems do not get cheaper with time. RJ Fox Automotive handles major engine repair at our Eustis facility, about ten minutes from Tavares on US-441 or SR-19 South. We work on all makes and models.</p>
+        <p>Common engine repairs we handle include head gasket replacement, timing belt and chain service, valve cover gasket and oil leak repair, water pump replacement, intake manifold gaskets, and overheating diagnosis and repair.</p>
+        <h2>If Your Engine Is Overheating</h2>
+        <p>Pull over. Do not continue driving an overheating engine. Overheating is how head gaskets fail and how cylinder heads warp. Call us from wherever you are and we can help you figure out how to get the vehicle to us safely.</p>
+      faq:
+        - q: "What are signs of a head gasket failure?"
+          a: "White exhaust smoke on a warm engine, coolant loss with no puddle under the car, milky oil on the dipstick or cap, the engine running hot, or bubbles in the coolant reservoir."
+        - q: "Do you replace timing belts?"
+          a: "Yes. Timing belt replacement is one of the most important maintenance services on interference engines. We replace the water pump and tensioners at the same time."
+        - q: "Can you repair oil leaks?"
+          a: "Yes. We diagnose the source of oil leaks and repair them properly."
+        - q: "Do you work on older vehicles?"
+          a: "Yes. We see a fair number of older and higher mileage vehicles from the Tavares area."
+        - q: "How far are you from Tavares?"
+          a: "About ten minutes via US-441 or SR-19 South. Turn onto David Walker Dr in Eustis."
+
+    - slug: engine-rebuild
+      name: "Engine Rebuild"
+      hero_sub: "Complete engine rebuilds for Tavares vehicles when repair is no longer the right path. In-house machine work and assembly."
+      body: |
+        <h2>Engine Rebuild Near Tavares, FL</h2>
+        <p>When an engine has reached the end of its repairable life, a rebuild brings it back to manufacturer specification. RJ Fox Automotive performs complete engine rebuilds at our Eustis shop, about ten minutes from Tavares via US-441 or SR-19 South.</p>
+        <p>A complete engine rebuild involves full disassembly, cleaning, and measurement of all internal components. Cylinders are bored or honed, pistons and rings are replaced, bearings are replaced throughout, and all seals and gaskets are renewed.</p>
+      faq:
+        - q: "When does a rebuild make more sense than an engine replacement?"
+          a: "When the block and heads are in good condition and the failure is due to wear rather than catastrophic damage, a rebuild is often the better value."
+        - q: "How long does an engine rebuild take?"
+          a: "A full rebuild typically takes one to two weeks depending on parts availability and machine work required."
+        - q: "Is a rebuilt engine as good as a new one?"
+          a: "A properly executed rebuild restores the engine to manufacturer specification. The quality depends entirely on the parts used and the precision of the machine work."
+        - q: "Do you rebuild diesel engines?"
+          a: "Yes. We rebuild gasoline and diesel engines including Power Stroke, Duramax, and Cummins units."
+        - q: "How far is your shop from Tavares?"
+          a: "About ten minutes via US-441 or SR-19 South. Turn onto David Walker Dr in Eustis."
+
+    - slug: engine-diagnostics
+      name: "Engine Diagnostics"
+      hero_sub: "Advanced engine diagnostics for Tavares vehicles. We find the actual cause before recommending any repair."
+      body: |
+        <h2>Engine Diagnostics Near Tavares, FL</h2>
+        <p>A check engine light or a symptom you cannot quite describe is not enough information to start replacing parts. RJ Fox Automotive uses professional-grade diagnostic equipment at our Eustis shop, about ten minutes from Tavares via US-441 or SR-19 South.</p>
+        <p>We scan all fault codes across every module, review freeze frame data, and perform the hands-on testing needed to confirm the root cause. Beyond code retrieval, we perform live data analysis, compression testing, fuel pressure and injector testing, ignition system testing, and vacuum leak detection.</p>
+      faq:
+        - q: "Can you tell what is wrong just from the code?"
+          a: "The code tells us which system triggered a fault. It does not identify the specific component. We test to find the actual cause."
+        - q: "Another shop gave me a list of parts. Can you verify their diagnosis?"
+          a: "Yes. We perform our own independent diagnosis and give you our assessment."
+        - q: "How much does a diagnostic cost?"
+          a: "We charge a diagnostic fee which is applied toward the repair if you have the work done with us."
+        - q: "How long does a diagnostic take?"
+          a: "Basic diagnostics take about an hour. More complex symptoms can take longer."
+        - q: "How far are you from Tavares?"
+          a: "About ten minutes via US-441 or SR-19 South. Turn onto David Walker Dr in Eustis."
+
+    - slug: automotive-diagnostics
+      name: "Automotive Diagnostics"
+      hero_sub: "Full-vehicle system scans for Tavares drivers. Engine, transmission, ABS, airbags, TPMS, and every module on the vehicle."
+      body: |
+        <h2>Automotive Diagnostics Near Tavares, FL</h2>
+        <p>Modern vehicles run multiple interconnected computer systems. When something goes wrong, identifying which system is involved requires more than a basic code reader. RJ Fox Automotive performs full-vehicle diagnostic scans at our Eustis shop, about ten minutes from Tavares on US-441 or SR-19 South.</p>
+        <p>We scan every module on the vehicle, not just the engine. A warning light on your dashboard could originate in any of a dozen or more systems. We pull all fault codes from all modules, analyze the data, and then do the hands-on testing needed to confirm the root cause.</p>
+      faq:
+        - q: "What is the difference between engine diagnostics and full-vehicle diagnostics?"
+          a: "Engine diagnostics focuses on the powertrain. Full-vehicle diagnostics scans every control module on the vehicle including ABS, airbags, TPMS, body control, and more."
+        - q: "My airbag light is on. Can you diagnose it?"
+          a: "Yes. Airbag and SRS faults require a scanner that can communicate with the airbag module. We read and diagnose SRS codes as part of a full-vehicle scan."
+        - q: "Can you reset warning lights after a repair?"
+          a: "Yes. After confirming the underlying problem is repaired, we clear fault codes and verify the lights do not return."
+        - q: "Do warning lights always mean something is broken?"
+          a: "Not always. Some warning lights are triggered by sensor malfunctions or software issues rather than a failed component."
+        - q: "How do I get to your shop from Tavares?"
+          a: "Take US-441 South or SR-19 South toward Eustis. Turn onto David Walker Dr and we are on the right. About ten minutes from downtown Tavares."
+
+    - slug: check-engine-light
+      name: "Check Engine Light"
+      hero_sub: "Check engine light diagnosis for Tavares vehicles. We find the actual cause, not just the code. Written estimate before any repair."
+      body: |
+        <h2>Check Engine Light Near Tavares, FL</h2>
+        <p>A check engine light is your vehicle telling you that something in its monitoring systems has detected a fault. It does not tell you what needs to be replaced. RJ Fox Automotive diagnoses check engine lights for all vehicle makes and models at our Eustis shop, about ten minutes from Tavares via US-441 or SR-19 South.</p>
+        <p>We read the fault codes, analyze the freeze frame data, and perform the hands-on testing needed to confirm the root cause before we recommend a single part.</p>
+        <h2>Steady Light vs. Flashing Light</h2>
+        <p>A steady check engine light means a fault has been detected and stored. A flashing check engine light means the engine is experiencing an active misfire severe enough to damage the catalytic converter. If your check engine light is flashing, reduce speed and get the vehicle to a shop as soon as possible.</p>
+      faq:
+        - q: "Can I drive with the check engine light on?"
+          a: "If the light is steady and the vehicle is running normally, you can drive it to the shop. If the light is flashing, reduce speed and get it looked at right away."
+        - q: "A parts store scanned my car and told me what to replace. Is that accurate?"
+          a: "Parts stores read codes and recommend the parts most commonly associated with those codes. That is not a diagnosis. We test to confirm the actual cause."
+        - q: "Will my car pass emissions with the check engine light on?"
+          a: "No. A check engine light is an automatic fail for Florida emissions testing."
+        - q: "How much does it cost to diagnose a check engine light?"
+          a: "We charge a diagnostic fee which is applied toward the repair if you have the work done with us."
+        - q: "How far is your shop from Tavares?"
+          a: "About ten minutes via US-441 or SR-19 South. Turn onto David Walker Dr in Eustis."
+
+    - slug: ac-installation-repair
+      name: "AC Installation and Repair"
+      hero_sub: "AC repair and installation for Tavares vehicles. Full system diagnosis, honest estimates, and verified vent temperatures before you leave."
+      body: |
+        <h2>AC Installation and Repair Near Tavares, FL</h2>
+        <p>Central Florida heat is relentless. RJ Fox Automotive diagnoses and repairs the full AC system for all vehicle makes and models at our Eustis shop, about ten minutes from Tavares on US-441 or SR-19 South.</p>
+        <p>Every AC diagnosis at our shop includes a full system inspection before we recommend any repair. We check refrigerant level and pressure, inspect the compressor, condenser, evaporator, expansion valve, and all hoses and fittings for leaks. We do not recharge leaking systems without finding and fixing the leak first.</p>
+      faq:
+        - q: "My AC blows warm air. What could cause that?"
+          a: "Warm air can be caused by low refrigerant from a leak, a failed compressor, a clogged condenser, a faulty expansion valve, or electrical issues in the control system."
+        - q: "Can you just recharge my AC?"
+          a: "We recharge AC systems, but we do not recharge a system that has a leak without finding and repairing the leak first."
+        - q: "How long does AC repair take?"
+          a: "It depends on the repair. A recharge with no leaks takes about an hour. Component replacements take longer."
+        - q: "Do you work on all vehicle makes?"
+          a: "Yes. Domestic, Asian, and European vehicles of all makes and model years."
+        - q: "How far is your shop from Tavares?"
+          a: "About ten minutes via US-441 or SR-19 South from downtown Tavares. Turn onto David Walker Dr in Eustis."
+
+    - slug: auto-ac-recharge
+      name: "Auto AC Recharge"
+      hero_sub: "AC refrigerant recharge for Tavares vehicles. Leak check before refilling. Manufacturer-specified refrigerant."
+      body: |
+        <h2>Auto AC Recharge Near Tavares, FL</h2>
+        <p>If your AC is not blowing as cold as it used to, low refrigerant is one possible cause. RJ Fox Automotive performs AC recharges at our Eustis shop, about ten minutes from Tavares via US-441 or SR-19 South. We check for leaks before refilling.</p>
+        <p>Refrigerant does not wear out or get consumed. If your system is low, it leaked out somewhere. We locate the source of the leak first, repair it, and then recharge to the manufacturer-specified amount. We verify vent temperatures after recharging to confirm the system is working correctly.</p>
+      faq:
+        - q: "Why do you check for leaks before recharging?"
+          a: "Because refrigerant does not get used up. Low refrigerant means a leak. Recharging without fixing the leak wastes money and repeats the problem."
+        - q: "How long does an AC recharge take?"
+          a: "About an hour if there are no leaks and the system just needs to be recharged."
+        - q: "What type of refrigerant do you use?"
+          a: "We use the refrigerant specified for your vehicle. R-134a is standard on most vehicles through the mid-2010s. Newer vehicles use R-1234yf."
+        - q: "Will a recharge fix my AC completely?"
+          a: "If low refrigerant is the only issue, yes. If there are other problems such as a failing compressor, a recharge alone will not fix them."
+        - q: "How do I get to your shop from Tavares?"
+          a: "Take US-441 South or SR-19 South from downtown Tavares. Turn onto David Walker Dr in Eustis. About ten minutes."
+
+    - slug: auto-ac-replacement
+      name: "Auto AC Replacement"
+      hero_sub: "Full AC component replacement for Tavares vehicles. Compressor, condenser, evaporator, and complete system rebuilds."
+      body: |
+        <h2>Auto AC Replacement Near Tavares, FL</h2>
+        <p>When an AC component has failed beyond repair, replacement is the correct solution. RJ Fox Automotive performs complete AC component replacements for all makes and models at our Eustis shop, about ten minutes from Tavares on US-441 or SR-19 South.</p>
+        <p>We replace compressors, condensers, evaporators, expansion valves, and receiver-driers using quality parts and the correct refrigerant for your vehicle. Every replacement includes flushing the system where debris may be present, evacuating to remove moisture, recharging to specification, and verifying vent temperatures.</p>
+      faq:
+        - q: "How do you know the compressor needs to be replaced vs. repaired?"
+          a: "We test compressor output, listen for internal noises, and check the clutch operation. A compressor that is not building pressure or is making grinding sounds has failed internally and requires replacement."
+        - q: "Do you replace the receiver-drier when replacing the compressor?"
+          a: "Yes. Any time the AC system is opened for a major repair, replacing the receiver-drier is standard practice."
+        - q: "How long does an AC replacement take?"
+          a: "Compressor replacements typically take a full day. Condenser replacements can often be done same-day. Evaporator replacements may require two days."
+        - q: "Do you warranty the replacement parts?"
+          a: "Yes. Parts and labor are both warranted."
+        - q: "How far is your shop from Tavares?"
+          a: "About ten minutes via US-441 or SR-19 South from downtown. Turn onto David Walker Dr in Eustis."
+
+    - slug: auto-electrical-repair
+      name: "Auto Electrical Repair"
+      hero_sub: "Auto electrical repair for Tavares vehicles. Alternators, starters, wiring, and full electrical system diagnosis."
+      body: |
+        <h2>Auto Electrical Repair Near Tavares, FL</h2>
+        <p>Electrical problems are among the most frustrating issues a vehicle can develop. RJ Fox Automotive uses professional diagnostic equipment at our Eustis shop, about ten minutes from Tavares via US-441 or SR-19 South, to trace electrical faults to their actual source before recommending any repair.</p>
+        <p>Common electrical repairs include alternator and starter replacement, battery cable and terminal service, wiring harness repair, ground fault diagnosis, relay and fuse diagnosis, and electrical faults causing secondary problems in other systems.</p>
+      faq:
+        - q: "My car stalls randomly and the battery tests fine. What could it be?"
+          a: "Random stalling with a good battery often points to a failing crankshaft or camshaft position sensor, an ignition module, or a fuel delivery problem."
+        - q: "Can electrical problems cause transmission shifting issues?"
+          a: "Yes. Transmission solenoids, speed sensors, and range sensors are all electrical components. A wiring fault or failed sensor can cause erratic shifting."
+        - q: "Do you repair wiring or just replace modules and parts?"
+          a: "We repair wiring. Many electrical problems are caused by a damaged wire or a bad ground that can be repaired rather than replacing an expensive module."
+        - q: "My car has multiple warning lights on. Is that an electrical problem?"
+          a: "Multiple warning lights can stem from a single electrical fault such as a bad ground affecting multiple systems."
+        - q: "How far is your shop from Tavares?"
+          a: "About ten minutes via US-441 or SR-19 South from downtown Tavares. Turn onto David Walker Dr in Eustis."
+
+    - slug: battery-testing-replacement
+      name: "Battery Testing and Replacement"
+      hero_sub: "Battery testing and replacement for Tavares vehicles. Full charging system inspection included with every battery service."
+      body: |
+        <h2>Battery Testing and Replacement Near Tavares, FL</h2>
+        <p>A failing battery can leave you stranded anywhere. RJ Fox Automotive performs battery testing and replacement for all makes and models at our Eustis shop, about ten minutes from Tavares on US-441 or SR-19 South.</p>
+        <p>Florida heat is hard on batteries. Most batteries in central Florida last three to five years. We load-test the battery under the current draw a starter requires, and we test the alternator and charging system at the same time to make sure a bad alternator is not what killed your battery.</p>
+      faq:
+        - q: "How do I know if my battery is failing?"
+          a: "Slow cranking when starting, a clicking sound when you turn the key, a battery warning light, or headlights that dim at idle all point to a battery or charging system issue."
+        - q: "Do I need to replace the battery or just charge it?"
+          a: "A battery that has failed a load test needs replacement. We test before we recommend."
+        - q: "What size battery does my vehicle need?"
+          a: "Battery group size and cold cranking amps vary by vehicle. We look up the correct battery for your specific year, make, and model."
+        - q: "Do you replace batteries in European vehicles?"
+          a: "Yes. European vehicles often require battery registration after replacement. We perform this procedure where required."
+        - q: "How far is your shop from Tavares?"
+          a: "About ten minutes via US-441 or SR-19 South. Turn onto David Walker Dr in Eustis."
+
+    - slug: diesel-engines
+      name: "Diesel Engine Repair"
+      hero_sub: "Diesel engine repair for Tavares trucks and vehicles. Injectors, turbos, glow plugs, DPF, and full diesel diagnostics."
+      body: |
+        <h2>Diesel Engine Repair Near Tavares, FL</h2>
+        <p>RJ Fox Automotive handles diesel engine repair in-house at our Eustis shop, about ten minutes via US-441 or SR-19 South. We service Ford Power Stroke, GM Duramax, and Ram Cummins diesel engines along with diesel-powered imports and light trucks.</p>
+        <p>Diesel services we perform include fuel system diagnosis, injector testing and replacement, glow plug replacement, turbocharger inspection and repair, EGR system service, DPF cleaning and replacement, diesel-specific oil and filter service, and full diesel diagnostics.</p>
+      faq:
+        - q: "My diesel is losing power and smoking. What could cause that?"
+          a: "Power loss with smoke can indicate injector wear, a boost leak, a failing turbocharger, a clogged DPF, or EGR system problems. We diagnose the specific cause before recommending any repair."
+        - q: "How often should diesel injectors be serviced?"
+          a: "Diesel injectors do not have a fixed service interval but benefit from using quality fuel and keeping up with oil changes."
+        - q: "Do you service DPF systems?"
+          a: "Yes. We clean, diagnose, and replace diesel particulate filters."
+        - q: "Do you work on all diesel truck brands?"
+          a: "Yes. Ford Power Stroke, GM Duramax, Ram Cummins, and diesel-powered imports."
+        - q: "How do I get to your shop from Tavares?"
+          a: "Take US-441 South or SR-19 South toward Eustis. Turn onto David Walker Dr. About ten minutes from downtown Tavares."
+
+    - slug: auto-brake-repair
+      name: "Auto Brake Repair"
+      hero_sub: "Brake repair for Tavares vehicles. Pads, rotors, calipers, brake fluid, and full brake system inspection. All makes and models."
+      body: |
+        <h2>Auto Brake Repair Near Tavares, FL</h2>
+        <p>RJ Fox Automotive performs full brake system repair for all vehicle makes and models at our Eustis shop, about ten minutes from Tavares via US-441 or SR-19 South.</p>
+        <p>We inspect the full brake system and replace only what needs replacing. Brake pad replacement, rotor resurfacing and replacement, caliper replacement, brake hose replacement, master cylinder service, brake fluid flush, ABS system diagnosis, and parking brake adjustment are all services we perform.</p>
+      faq:
+        - q: "How do I know when my brakes need service?"
+          a: "Squealing when braking usually means the pads are getting thin. Grinding means metal-on-metal contact. Pulsation through the pedal usually means warped rotors. Pulling to one side can indicate a sticking caliper."
+        - q: "Do I need to replace rotors with the pads?"
+          a: "It depends on rotor thickness and condition. We measure and tell you honestly."
+        - q: "How long do brake pads last?"
+          a: "Brake pad life varies widely. Most pads last between 25,000 and 70,000 miles depending on driving style and conditions."
+        - q: "What does a brake fluid flush do?"
+          a: "Brake fluid absorbs moisture over time which lowers its boiling point and promotes corrosion. A flush replaces the old fluid with fresh fluid."
+        - q: "How far is your shop from Tavares?"
+          a: "About ten minutes via US-441 or SR-19 South. Turn onto David Walker Dr in Eustis."
+
+    - slug: steering-suspension-repair
+      name: "Steering and Suspension Repair"
+      hero_sub: "Steering and suspension repair for Tavares vehicles. Shocks, struts, tie rods, control arms, and alignment-related repairs."
+      body: |
+        <h2>Steering and Suspension Repair Near Tavares, FL</h2>
+        <p>RJ Fox Automotive handles steering and suspension repairs for all vehicle makes and models at our Eustis shop, about ten minutes from Tavares on US-441 or SR-19 South.</p>
+        <p>We repair shocks and struts, tie rod ends and inner tie rods, ball joints, control arms and bushings, sway bar end links and bushings, power steering pumps and racks, electric power steering systems, and wheel bearings. After any steering or suspension repair that affects wheel position, we perform a wheel alignment.</p>
+      faq:
+        - q: "My steering wheel vibrates at highway speed. What could cause that?"
+          a: "Vibration at highway speed is most often related to tire balance or a bent wheel, but it can also indicate worn tie rod ends, loose wheel bearings, or worn strut mounts."
+        - q: "How do I know if my shocks or struts are worn?"
+          a: "Signs include excessive body roll in turns, nose dive when braking, bouncing after bumps that takes more than one cycle to settle, and uneven tire wear."
+        - q: "Can I drive with a worn tie rod?"
+          a: "A worn tie rod is a safety concern. A failed tie rod means loss of steering control. Do not delay the repair."
+        - q: "Do you do wheel alignments after suspension work?"
+          a: "Yes. Any suspension or steering repair that changes wheel geometry requires a wheel alignment."
+        - q: "How far is your shop from Tavares?"
+          a: "About ten minutes via US-441 or SR-19 South. Turn onto David Walker Dr in Eustis."
+
+    - slug: wheel-alignment
+      name: "Wheel Alignment"
+      hero_sub: "Precision wheel alignment for Tavares vehicles. Correct pulling, uneven tire wear, and steering drift with a proper four-wheel alignment."
+      body: |
+        <h2>Wheel Alignment Near Tavares, FL</h2>
+        <p>RJ Fox Automotive performs precision wheel alignments for all vehicle makes and models at our Eustis shop, about ten minutes from Tavares via US-441 or SR-19 South.</p>
+        <p>We perform four-wheel alignments using alignment equipment that measures all four wheels simultaneously and compares them to manufacturer specifications. We correct toe, camber, and caster where adjustable and document the before-and-after measurements for your records.</p>
+      faq:
+        - q: "How often should I have my alignment checked?"
+          a: "Every 12,000 to 15,000 miles or once a year, and any time after significant suspension impact or steering and suspension repairs."
+        - q: "My car pulls to the right. Is that an alignment problem?"
+          a: "Pulling to one side can be caused by alignment, but it can also be caused by uneven tire pressure, a sticking brake caliper, or a worn tire. We check all factors before recommending alignment."
+        - q: "Does alignment affect tire life?"
+          a: "Yes. Misaligned toe angles especially will cause rapid tire wear on the inner or outer edge of the tread."
+        - q: "Can you align all-wheel-drive vehicles?"
+          a: "Yes. We perform four-wheel alignments on front-wheel-drive, rear-wheel-drive, and all-wheel-drive vehicles."
+        - q: "How far is your shop from Tavares?"
+          a: "About ten minutes via US-441 or SR-19 South from downtown. Turn onto David Walker Dr in Eustis."
+
+    - slug: adas-calibration
+      name: "ADAS Calibration"
+      hero_sub: "ADAS camera and sensor calibration for Tavares vehicles after windshield replacement, suspension work, or collision repair."
+      body: |
+        <h2>ADAS Calibration Near Tavares, FL</h2>
+        <p>Advanced driver assistance systems rely on cameras and sensors that must be precisely aimed to work correctly. After a windshield replacement, a wheel alignment, a suspension repair, or any collision repair, ADAS components must be recalibrated. RJ Fox Automotive performs ADAS calibration for all vehicle makes and models at our Eustis shop, about ten minutes from Tavares on US-441 or SR-19 South.</p>
+        <p>We perform static and dynamic calibration procedures as required by the vehicle manufacturer. Static calibration uses targets placed at specific distances in front of the vehicle. Dynamic calibration requires a drive under specified conditions.</p>
+      faq:
+        - q: "Does every windshield replacement require ADAS calibration?"
+          a: "If the vehicle has a camera mounted to the windshield or behind it, yes. Most vehicles built after 2018 with automatic emergency braking have a forward-facing camera that requires calibration after windshield replacement."
+        - q: "My lane assist turned off after my alignment. Is that related?"
+          a: "Yes. A wheel alignment changes the vehicle's geometry, which shifts the camera's reference angle. Calibration restores the camera to the correct position."
+        - q: "Can I drive the car if ADAS systems are uncalibrated?"
+          a: "You can drive it, but the ADAS features may not work correctly. Automatic emergency braking and lane departure warning may trigger false alerts or fail to trigger when needed."
+        - q: "How long does ADAS calibration take?"
+          a: "Static calibration takes one to two hours. Dynamic calibration requires a road drive and may take longer."
+        - q: "How far is your shop from Tavares?"
+          a: "About ten minutes via US-441 or SR-19 South. Turn onto David Walker Dr in Eustis."
+
+    - slug: general-repairs-maintenance
+      name: "General Repairs and Maintenance"
+      hero_sub: "Oil changes, fluid services, belts, hoses, and routine maintenance for Tavares vehicles. All makes and models."
+      body: |
+        <h2>General Repairs and Maintenance Near Tavares, FL</h2>
+        <p>Keeping up with routine maintenance is the most reliable way to avoid expensive repairs later. RJ Fox Automotive handles all routine maintenance services for every make and model at our Eustis shop, about ten minutes from Tavares via US-441 or SR-19 South.</p>
+        <p>Services we perform include oil and filter changes, coolant system service, brake fluid flush, power steering fluid service, spark plug replacement, air filter and cabin filter replacement, belt inspection and replacement, hose inspection, and multi-point vehicle inspections.</p>
+      faq:
+        - q: "How often should I change my oil?"
+          a: "It depends on the vehicle and the oil type. Most modern vehicles using full synthetic oil can go 7,500 to 10,000 miles between changes. We follow your manufacturer's recommendation."
+        - q: "What is a multi-point inspection?"
+          a: "A systematic check of all major vehicle systems including brakes, tires, steering, suspension, fluids, belts, hoses, and lighting."
+        - q: "Do you service European vehicles?"
+          a: "Yes. We service all European makes including BMW, Mercedes-Benz, Audi, Volkswagen, and Volvo."
+        - q: "Can I bring my vehicle in without an appointment?"
+          a: "We prefer appointments but do our best to accommodate walk-ins. Call ahead and we will let you know what the schedule looks like."
+        - q: "How far is your shop from Tavares?"
+          a: "About ten minutes via US-441 or SR-19 South from downtown Tavares. Turn onto David Walker Dr in Eustis."
+
+    - slug: auto-exhaust-system-repair
+      name: "Auto Exhaust System Repair"
+      hero_sub: "Exhaust repair for Tavares vehicles. Mufflers, catalytic converters, pipes, and full system inspection."
+      body: |
+        <h2>Auto Exhaust System Repair Near Tavares, FL</h2>
+        <p>RJ Fox Automotive handles exhaust system repairs for all vehicle makes and models at our Eustis shop, about ten minutes from Tavares on US-441 or SR-19 South.</p>
+        <p>Services include muffler replacement, exhaust pipe repair and replacement, catalytic converter diagnosis and replacement, oxygen sensor replacement, exhaust manifold repair, flex pipe replacement, and hangers. We also diagnose exhaust-related check engine lights including P0420 and P0430 catalytic converter efficiency codes.</p>
+      faq:
+        - q: "My car is louder than usual. Is that an exhaust problem?"
+          a: "Increased exhaust noise usually means a hole or separation in the exhaust pipe, a failed muffler, or a cracked exhaust manifold."
+        - q: "Can a bad catalytic converter cause a check engine light?"
+          a: "Yes. P0420 and P0430 codes indicate catalytic converter efficiency below threshold. We diagnose the root cause before recommending converter replacement."
+        - q: "Is it safe to drive with an exhaust leak?"
+          a: "An exhaust leak that allows carbon monoxide to enter the cabin is a safety hazard. If you smell exhaust inside the vehicle, have it inspected promptly."
+        - q: "Do you weld exhaust repairs or use clamps?"
+          a: "We use the appropriate repair method for the situation."
+        - q: "How far is your shop from Tavares?"
+          a: "About ten minutes via US-441 or SR-19 South. Turn onto David Walker Dr in Eustis."
+
+    - slug: u-haul-services
+      name: "U-Haul Services"
+      hero_sub: "Authorized U-Haul truck and trailer rentals for Tavares residents. Located in Eustis, about 10 minutes away on US-441 or SR-19 South."
+      body: |
+        <h2>U-Haul Rentals Near Tavares, FL</h2>
+        <p>RJ Fox Automotive is an authorized U-Haul dealer located at 801 David Walker Dr in Eustis, about ten minutes from Tavares via US-441 or SR-19 South. We offer truck and trailer rentals for local moves, long-distance moves, and hauling needs.</p>
+        <p>Whether you are moving within the Tavares area, heading to another city, or just need to haul something that will not fit in your vehicle, stop by or call us to check availability and reserve your rental.</p>
+      faq:
+        - q: "What U-Haul vehicles do you have available?"
+          a: "We carry a selection of U-Haul trucks and trailers. Call us to check current availability for your move date."
+        - q: "Do I need to reserve in advance?"
+          a: "We recommend calling ahead to reserve, especially during busy moving seasons."
+        - q: "How far are you from Tavares?"
+          a: "About ten minutes via US-441 or SR-19 South from downtown Tavares. Turn onto David Walker Dr in Eustis and we are on the right."
+        - q: "What are your hours?"
+          a: "Monday through Friday 8am to 6pm, Saturday 8am to 2pm, closed Sunday."
+        - q: "Can I drop off a U-Haul at your location?"
+          a: "Call us to confirm drop-off availability for your specific rental."
+
+- name: "Leesburg, FL"
+  slug: "leesburg-fl"
+  drive: "~15 min via US-441 South"
+  route: "US-441 South to David Walker Dr, Eustis"
+  landmarks: "downtown Leesburg, Lake Harris, Venetian Gardens, US-441, Lake County Fairgrounds"
+  review:
+    text: "Rob and co from start to finish with all of the obstacles was top shelf. I highly recommend fox automotive for anyone that is tired of the bs mechanics. Integrity and quality work!"
+    name: "Paul Pelky Jr"
+  services:
+
+    - slug: transmission-repair
+      name: "Transmission Repair"
+      hero_sub: "Transmission repair for Leesburg vehicles. Full diagnosis, written estimates, all makes and models. About 15 minutes from downtown on US-441 South."
+      body: |
+        <h2>Transmission Repair Near Leesburg, FL</h2>
+        <p>RJ Fox Automotive is at 801 David Walker Dr in Eustis, about fifteen minutes from downtown Leesburg on US-441 South. We handle automatic, manual, and CVT transmissions on every make and model, and we keep all the work in-house instead of farming it out to a rebuilder.</p>
+        <p>Before we recommend anything, we run a full system scan, check the fluid condition, road test the vehicle to reproduce the symptom, and put a written estimate in front of you covering parts and labor. Nothing gets touched until you sign off on it.</p>
+        <h2>What We Repair</h2>
+        <p>Solenoid replacement, valve body service, torque converter replacement, synchronizer and shift fork repair, complete rebuilds, fluid leaks, pan gaskets, and external seals. If the transmission is slipping, shifting hard, leaking, or throwing a code, bring it in and we will tell you exactly what is going on.</p>
+      faq:
+        - q: "How far is RJ Fox Automotive from Leesburg?"
+          a: "We are at 801 David Walker Dr in Eustis, about fifteen minutes from downtown Leesburg via US-441 South. Turn right on David Walker Dr and we are on the right side of the road."
+        - q: "Do you rebuild transmissions in-house?"
+          a: "Yes. Most shops in the area send transmission jobs to an outside rebuilder. We do the work here, which means better quality control and no middleman markup."
+        - q: "How do I know if my transmission needs repair or replacement?"
+          a: "That depends entirely on what the diagnosis reveals. We diagnose first and give you all your options with honest pricing on each."
+        - q: "Do you provide a written estimate before starting?"
+          a: "Always. We diagnose the vehicle, write a complete estimate covering parts and labor, and go over it with you before any work begins."
+        - q: "Can you help arrange a tow from Leesburg?"
+          a: "Yes. Call us and we can point you toward towing services that cover the Leesburg area."
+
+    - slug: transmission-replacement
+      name: "Transmission Replacement"
+      hero_sub: "Full transmission replacement for Leesburg vehicles when repair is not the right call. Remanufactured and rebuilt units. All makes and models."
+      body: |
+        <h2>Transmission Replacement Near Leesburg, FL</h2>
+        <p>Some transmissions are too far gone to repair economically. When that is the situation, RJ Fox Automotive handles complete transmission replacements at our Eustis shop, about fifteen minutes from Leesburg on US-441 South. We source remanufactured and rebuilt units from suppliers we trust and install them with a proper fluid fill, a road test, and clear warranty documentation.</p>
+        <p>If you are not sure whether repair or replacement makes more sense, we will give you honest numbers on both options before you commit to anything.</p>
+        <h2>Replacement vs. Rebuild</h2>
+        <p>A rebuild makes sense when the case and hard parts are in good shape and the damage is localized. Replacement makes more sense when the internal damage is widespread or when a quality remanufactured unit comes in at a competitive price compared to a full teardown and rebuild. We lay out both options clearly and let you decide.</p>
+      faq:
+        - q: "What is the difference between a remanufactured and a rebuilt transmission?"
+          a: "A remanufactured unit is disassembled and rebuilt to original specifications at a specialist facility with all wear items replaced. Both can be quality options. We use suppliers whose units we trust and will tell you the warranty terms upfront."
+        - q: "How long does a transmission replacement take?"
+          a: "Most replacements take one to three days depending on the vehicle and parts availability."
+        - q: "Is a replacement transmission covered by a warranty?"
+          a: "Yes. We document exactly what warranty applies at the time of the repair."
+        - q: "How far is your shop from Leesburg?"
+          a: "About fifteen minutes south on US-441 from downtown Leesburg."
+        - q: "Do you work on all vehicle makes?"
+          a: "Yes. Domestic, Asian, and European vehicles of all makes and model years."
+
+    - slug: transmission-maintenance
+      name: "Transmission Maintenance"
+      hero_sub: "Transmission fluid service, filter replacement, and inspection for Leesburg vehicles. The cheapest insurance you can buy for your transmission."
+      body: |
+        <h2>Transmission Maintenance Near Leesburg, FL</h2>
+        <p>Most of the transmission failures we see trace back to fluid that was never changed or changed too late. RJ Fox Automotive performs transmission fluid services, filter replacements, and full inspections for all makes and models at our Eustis shop, about fifteen minutes from Leesburg on US-441 South.</p>
+        <p>Every service includes draining the old fluid and inspecting it, dropping and cleaning the pan, replacing the filter and pan gasket, refilling with the correct manufacturer-specified fluid, and checking for external leaks at the seals and cooler lines. We road test before the vehicle leaves.</p>
+      faq:
+        - q: "How often should I have my transmission serviced?"
+          a: "Every 30,000 to 60,000 miles for most automatic transmissions. If you tow regularly or spend a lot of time in stop-and-go traffic, aim for the shorter end of that range."
+        - q: "What happens if I skip transmission maintenance?"
+          a: "Old fluid loses its ability to lubricate and cool the internal components. Metal particles accumulate and recirculate, wearing out solenoids, clutch packs, and valve body components faster than they should."
+        - q: "Do you use the correct fluid for my vehicle?"
+          a: "Yes. Fluid specifications vary significantly between makes and models, and using the wrong type causes real damage. We verify the correct spec before every service."
+        - q: "How long does a transmission service take?"
+          a: "A standard fluid and filter service takes about an hour for most vehicles."
+        - q: "Is your shop easy to get to from Leesburg?"
+          a: "Yes. Head south on US-441 from Leesburg, turn right on David Walker Dr in Eustis, and we are on the right side of the road. About fifteen minutes."
+
+    - slug: transmission-flush
+      name: "Transmission Flush"
+      hero_sub: "Complete transmission fluid exchange for Leesburg vehicles. Full system flush using the correct fluid for your make and model."
+      body: |
+        <h2>Transmission Flush Near Leesburg, FL</h2>
+        <p>A standard drain-and-fill gets the fluid out of the pan, which is roughly half the total fluid in the system. A flush exchanges all of it, including what sits in the torque converter and cooler lines. RJ Fox Automotive performs transmission flushes for all makes and models at our Eustis shop, about fifteen minutes from Leesburg on US-441 South.</p>
+        <p>We inspect the fluid before recommending a flush versus a simple drain-and-fill. For vehicles that are well maintained and on a regular service schedule, a drain-and-fill is usually fine. For vehicles that are overdue or have never been serviced, a flush gets a more complete result.</p>
+      faq:
+        - q: "Is a flush better than a drain and fill?"
+          a: "A drain and fill replaces about 40 to 50 percent of the fluid. A flush replaces close to 100 percent. Which one is right depends on the vehicle's service history and the condition of the fluid."
+        - q: "Is a flush safe for high-mileage transmissions?"
+          a: "We assess the transmission condition before recommending one. If we have concerns, we will tell you before proceeding."
+        - q: "Do you use the correct fluid type?"
+          a: "Yes. We verify the manufacturer-specified fluid for every vehicle before the service."
+        - q: "How long does it take?"
+          a: "About one to two hours depending on the vehicle."
+        - q: "How far is your shop from Leesburg?"
+          a: "About fifteen minutes south on US-441 from downtown Leesburg."
+
+    - slug: automatic-transmission-service
+      name: "Automatic Transmission Service"
+      hero_sub: "Full automatic transmission service for Leesburg vehicles. Fluid, filter, pan gasket, and complete inspection."
+      body: |
+        <h2>Automatic Transmission Service Near Leesburg, FL</h2>
+        <p>The automatic transmission handles every gear change on every drive and does it without you thinking about it once. Keeping the fluid clean and the filter replaced is what keeps it working that way. RJ Fox Automotive provides complete automatic transmission service for all makes and models at our Eustis shop, about fifteen minutes from Leesburg on US-441 South.</p>
+        <p>Every service includes draining the fluid and inspecting it for color, smell, and metal contamination, removing and inspecting the pan for debris, cleaning the pan, replacing the filter and gasket, refilling with the correct fluid, and road testing to confirm shift quality before the vehicle leaves.</p>
+      faq:
+        - q: "How often should I service my automatic transmission in Florida?"
+          a: "Every 30,000 to 50,000 miles is our recommendation for central Florida. The heat here accelerates fluid breakdown and qualifies as severe service by most manufacturers' definitions."
+        - q: "My car shifts fine. Does it still need transmission service?"
+          a: "Yes. Fluid degrades well before you feel any change in shift quality. By the time shifting feels different, the damage has usually been accumulating for a while."
+        - q: "Should I get a fluid change or a full flush?"
+          a: "It depends on your service history and fluid condition. We look at the fluid and give you a straight recommendation."
+        - q: "How long does automatic transmission service take?"
+          a: "A complete service including pan drop, filter replacement, and road test typically takes one to two hours."
+        - q: "How far is your shop from Leesburg?"
+          a: "About fifteen minutes south on US-441. Turn right on David Walker Dr in Eustis."
+
+    - slug: cvt-transmission-service
+      name: "CVT Transmission Service"
+      hero_sub: "CVT fluid exchange and diagnostics for Leesburg vehicles. Continuously variable transmissions require the right fluid and the right procedure."
+      body: |
+        <h2>CVT Transmission Service Near Leesburg, FL</h2>
+        <p>CVTs are in a wide range of vehicles on the road in the Leesburg area, including Nissan, Honda, Subaru, Toyota, and others. They are smooth and fuel efficient, but they require a specific fluid formulation and service procedure. Using conventional ATF in a CVT causes real damage. RJ Fox Automotive performs CVT fluid exchanges and diagnostics at our Eustis shop, about fifteen minutes from Leesburg on US-441 South.</p>
+        <p>If your vehicle is shuddering on light acceleration, hesitating when you press the gas, whining at highway speed, or throwing a transmission warning light, bring it in. CVT shudder caught early often responds well to a fluid exchange. Left alone it gets worse.</p>
+      faq:
+        - q: "What makes CVT service different from regular transmission service?"
+          a: "CVTs use a belt or chain between two variable-diameter pulleys instead of fixed gears. The fluid is engineered specifically for that design. Standard ATF does not provide the right friction characteristics and will damage the belt and pulleys."
+        - q: "My manufacturer says CVT fluid is lifetime. Should I still change it?"
+          a: "Lifetime fluid means it is designed to outlast the warranty period. In real-world use, especially in Florida heat, we recommend changing CVT fluid every 40,000 to 60,000 miles."
+        - q: "My car shudders on light acceleration. Could it be the CVT?"
+          a: "Yes. A shudder between 25 and 45 mph on light throttle is a common early symptom of degraded CVT fluid or belt slip."
+        - q: "Do you service all CVT brands?"
+          a: "We service CVTs on Honda, Nissan, Subaru, Toyota, Mitsubishi, and most other makes."
+        - q: "How far is your shop from Leesburg?"
+          a: "About fifteen minutes south on US-441 from downtown Leesburg. Turn right on David Walker Dr in Eustis."
+
+    - slug: clutch-repair
+      name: "Clutch Repair"
+      hero_sub: "Clutch replacement, flywheel resurfacing, and hydraulic clutch service for manual transmission vehicles near Leesburg."
+      body: |
+        <h2>Clutch Repair Near Leesburg, FL</h2>
+        <p>Manual transmission vehicles need clutch work at some point. RJ Fox Automotive handles the full range of clutch repairs at our Eustis shop, about fifteen minutes from Leesburg on US-441 South.</p>
+        <p>A complete clutch job at our shop covers the clutch disc, pressure plate, release bearing, and pilot bearing. We inspect and resurface or replace the flywheel every time. If the hydraulic system has issues, we check the master and slave cylinders and replace them where needed.</p>
+      faq:
+        - q: "How do I know if my clutch needs to be replaced?"
+          a: "The clutch slipping under load, the engagement point moving toward the top of the pedal travel, difficulty getting into gear, a burning smell after driving in traffic, or a shudder when releasing the clutch from a stop."
+        - q: "Do you resurface the flywheel when replacing the clutch?"
+          a: "Every time. Installing new friction material against a worn or glazed flywheel surface leads to premature failure."
+        - q: "How long does a clutch replacement take?"
+          a: "Most clutch jobs take one to two days depending on the vehicle."
+        - q: "My clutch pedal feels spongy. Is that a clutch problem?"
+          a: "On a hydraulic clutch system, a spongy pedal usually points to the master or slave cylinder rather than the disc itself."
+        - q: "How far is your shop from Leesburg?"
+          a: "About fifteen minutes south on US-441 from downtown Leesburg. Turn right on David Walker Dr in Eustis."
+
+    - slug: engine-repair
+      name: "Engine Repair"
+      hero_sub: "Head gaskets, timing belts, oil leaks, overheating, and major engine work for Leesburg vehicles. Diagnosed accurately and fixed right the first time."
+      body: |
+        <h2>Engine Repair Near Leesburg, FL</h2>
+        <p>Engine problems get more expensive the longer they sit. RJ Fox Automotive handles major engine repair at our Eustis facility, about fifteen minutes from Leesburg on US-441 South, on all makes and models.</p>
+        <p>We handle head gasket replacement, timing belt and chain service, oil leaks at any location from the valve cover down to the rear main seal, water pump replacement, intake manifold gaskets, and overheating diagnosis and repair. If your engine is running hot, pull over before you drive it further. That is how head gaskets fail.</p>
+        <h2>If Your Engine Is Overheating</h2>
+        <p>Do not keep driving. Continued operation of an overheating engine warps cylinder heads and blows head gaskets. Call us from wherever you are and we will help you figure out the safest way to get the vehicle to us.</p>
+      faq:
+        - q: "What are signs of a head gasket failure?"
+          a: "White exhaust smoke on a fully warmed engine, coolant disappearing with no visible puddle, milky residue on the oil cap or dipstick, repeated overheating, or bubbles in the coolant reservoir."
+        - q: "Do you replace timing belts?"
+          a: "Yes. Timing belt replacement is critical on interference engines. We replace the water pump and tensioners at the same time since they are already accessible."
+        - q: "Can you repair oil leaks?"
+          a: "Yes. We find the source and repair it properly rather than just cleaning it up and sending you on your way."
+        - q: "Do you work on older vehicles?"
+          a: "Yes. We see a fair number of older trucks and work vehicles from the Leesburg area."
+        - q: "How far are you from Leesburg?"
+          a: "About fifteen minutes south on US-441 from downtown. Turn right on David Walker Dr in Eustis."
+
+    - slug: engine-rebuild
+      name: "Engine Rebuild"
+      hero_sub: "Complete engine rebuilds for Leesburg vehicles when repair is no longer the right path. In-house machine work and assembly."
+      body: |
+        <h2>Engine Rebuild Near Leesburg, FL</h2>
+        <p>When an engine has worn or failed past the point where targeted repairs make sense, a rebuild is the path to restoring it to factory specification. RJ Fox Automotive performs complete engine rebuilds at our Eustis shop, about fifteen minutes from Leesburg via US-441 South.</p>
+        <p>Full teardown, cleaning, and measurement of all internal components. Cylinders bored or honed to spec. Pistons, rings, and bearings replaced throughout. All seals and gaskets renewed. Machine work is handled by a qualified shop and the engine is reassembled with correct torques and clearances at every step.</p>
+      faq:
+        - q: "When does a rebuild make more sense than engine replacement?"
+          a: "When the block and heads are structurally sound and the failure is from wear rather than catastrophic damage, a rebuild is often the better value and gives you a known quantity."
+        - q: "How long does an engine rebuild take?"
+          a: "Typically one to two weeks from teardown to reinstallation, depending on parts availability and machine shop turnaround."
+        - q: "Is a rebuilt engine as good as a new one?"
+          a: "A properly rebuilt engine using quality parts and correct machine work performs like a new engine and can last just as long."
+        - q: "Do you rebuild diesel engines?"
+          a: "Yes. We rebuild gasoline and diesel engines including Power Stroke, Duramax, and Cummins units."
+        - q: "How far is your shop from Leesburg?"
+          a: "About fifteen minutes south on US-441. Turn right on David Walker Dr in Eustis."
+
+    - slug: engine-diagnostics
+      name: "Engine Diagnostics"
+      hero_sub: "Advanced engine diagnostics for Leesburg vehicles. We find the actual cause before recommending any repair."
+      body: |
+        <h2>Engine Diagnostics Near Leesburg, FL</h2>
+        <p>Plugging in a scan tool gives you a starting point, not an answer. RJ Fox Automotive uses professional-grade diagnostic equipment at our Eustis shop, about fifteen minutes from Leesburg via US-441 South, combined with hands-on testing to confirm what is actually wrong before anything gets replaced.</p>
+        <p>We pull all stored and pending fault codes, review freeze frame data, run live data analysis, perform compression testing where indicated, test fuel delivery and injector operation, check the ignition system, and do vacuum leak detection. You get a clear explanation of what we found and a written estimate before we start any repair.</p>
+      faq:
+        - q: "Can you tell what is wrong just from the code?"
+          a: "The code identifies which system flagged a problem. It does not tell us which specific component failed or why. We test to confirm the actual cause."
+        - q: "Another shop gave me a list of parts. Can you verify their diagnosis?"
+          a: "Yes. We perform our own independent diagnosis and give you our honest assessment of what the vehicle actually needs."
+        - q: "How much does a diagnostic cost?"
+          a: "We charge a diagnostic fee which is applied toward the repair if you have the work done with us."
+        - q: "How long does a diagnostic take?"
+          a: "Straightforward faults take about an hour. More complex or intermittent problems can take longer."
+        - q: "How far are you from Leesburg?"
+          a: "About fifteen minutes south on US-441 from downtown. Turn right on David Walker Dr in Eustis."
+
+    - slug: automotive-diagnostics
+      name: "Automotive Diagnostics"
+      hero_sub: "Full-vehicle system scans for Leesburg drivers. Engine, transmission, ABS, airbags, TPMS, and every module on the vehicle."
+      body: |
+        <h2>Automotive Diagnostics Near Leesburg, FL</h2>
+        <p>A basic code reader from the parts store reads engine codes from one module. Professional diagnostic equipment reads every module on the vehicle, accesses manufacturer-specific codes a generic reader cannot see, and displays live data across multiple systems at once. RJ Fox Automotive performs full-vehicle diagnostic scans at our Eustis shop, about fifteen minutes from Leesburg on US-441 South.</p>
+        <p>When a warning light comes on, we scan everything, not just the engine. The fault could originate in the transmission, ABS, airbag system, body control module, or anywhere else on the vehicle. We find where it is actually coming from, confirm the root cause with additional testing, and give you a written summary before recommending anything.</p>
+      faq:
+        - q: "What is the difference between engine diagnostics and full-vehicle diagnostics?"
+          a: "Engine diagnostics focuses on the powertrain. Full-vehicle diagnostics scans every control module on the vehicle including ABS, airbags, TPMS, body control, and more."
+        - q: "My airbag light is on. Can you diagnose it?"
+          a: "Yes. SRS faults require a scanner that communicates with the airbag module. We read and diagnose those codes as part of a full-vehicle scan."
+        - q: "Can you reset warning lights after a repair?"
+          a: "Yes. After confirming the problem is resolved, we clear fault codes and verify the lights do not come back."
+        - q: "Do warning lights always mean something is broken?"
+          a: "Not always. Some are triggered by sensor malfunctions, software issues, or conditions that have since resolved. The codes and live data tell us which situation we are dealing with."
+        - q: "How do I get to your shop from Leesburg?"
+          a: "Head south on US-441 from downtown Leesburg. Turn right on David Walker Dr in Eustis and we are on the right side of the road. About fifteen minutes."
+
+    - slug: check-engine-light
+      name: "Check Engine Light"
+      hero_sub: "Check engine light diagnosis for Leesburg vehicles. We find the actual cause, not just the code. Written estimate before any repair."
+      body: |
+        <h2>Check Engine Light Near Leesburg, FL</h2>
+        <p>The check engine light tells you something in the monitoring system flagged a fault. It does not tell you what to replace. RJ Fox Automotive diagnoses check engine lights for all vehicle makes and models at our Eustis shop, about fifteen minutes from Leesburg via US-441 South.</p>
+        <p>We pull the codes and the freeze frame data, run live data analysis, and do whatever hands-on testing the fault calls for before we put a recommendation in front of you. A P0420 could be a bad converter, an upstream misfire that damaged it, or an oxygen sensor reading incorrectly. We find out which before recommending anything.</p>
+        <h2>Steady Light vs. Flashing Light</h2>
+        <p>A steady check engine light means a fault has been stored. A flashing check engine light means the engine has an active misfire severe enough to damage the catalytic converter. If it is flashing, back off the throttle and get it to a shop quickly.</p>
+      faq:
+        - q: "Can I drive with the check engine light on?"
+          a: "If it is steady and the vehicle is running normally, you can drive it to the shop. If it is flashing, reduce speed and get it looked at right away."
+        - q: "A parts store scanned my car and told me what to replace. Is that accurate?"
+          a: "Parts stores give you the code and suggest the parts most commonly associated with it. That is not the same as a diagnosis. We test to confirm the actual cause."
+        - q: "Will my car pass emissions with the check engine light on?"
+          a: "No. An illuminated check engine light is an automatic fail for Florida emissions testing."
+        - q: "How much does it cost to diagnose a check engine light?"
+          a: "We charge a diagnostic fee which is applied toward the repair if you have the work done with us."
+        - q: "How far is your shop from Leesburg?"
+          a: "About fifteen minutes south on US-441. Turn right on David Walker Dr in Eustis."
+
+    - slug: ac-installation-repair
+      name: "AC Installation and Repair"
+      hero_sub: "AC repair and installation for Leesburg vehicles. Full system diagnosis, honest estimates, and verified vent temperatures before you leave."
+      body: |
+        <h2>AC Installation and Repair Near Leesburg, FL</h2>
+        <p>Summer in central Florida is long and there is no getting around it. RJ Fox Automotive diagnoses and repairs the full AC system for all vehicle makes and models at our Eustis shop, about fifteen minutes from Leesburg on US-441 South.</p>
+        <p>We check refrigerant pressure, inspect the compressor, condenser, evaporator, expansion valve, and all lines and fittings before recommending any repair. We do not add refrigerant to a leaking system and call it fixed. We find the leak, repair it, and verify vent temperatures after the recharge.</p>
+      faq:
+        - q: "My AC blows warm air. What could cause that?"
+          a: "Warm air can come from low refrigerant due to a leak, a failed compressor, a damaged condenser, a faulty expansion valve, or an electrical fault in the control system."
+        - q: "Can you just recharge my AC?"
+          a: "We recharge AC systems, but not before finding and fixing a leak if one exists. Recharging a leaking system just means the refrigerant is gone again in a few weeks."
+        - q: "How long does AC repair take?"
+          a: "A recharge after a minor leak repair can be done the same day. Component replacements take longer depending on what needs to be replaced."
+        - q: "Do you work on all vehicle makes?"
+          a: "Yes. Domestic, Asian, and European vehicles of all makes and model years."
+        - q: "How far is your shop from Leesburg?"
+          a: "About fifteen minutes south on US-441 from downtown Leesburg. Turn right on David Walker Dr in Eustis."
+
+    - slug: auto-ac-recharge
+      name: "Auto AC Recharge"
+      hero_sub: "AC refrigerant recharge for Leesburg vehicles. Leak check before refilling. Charged to manufacturer specification, not just until the gauges look right."
+      body: |
+        <h2>Auto AC Recharge Near Leesburg, FL</h2>
+        <p>Refrigerant does not get consumed in normal operation. If your system is low, it has a leak. RJ Fox Automotive performs AC recharges at our Eustis shop, about fifteen minutes from Leesburg via US-441 South, and we find the leak before we refill anything.</p>
+        <p>We pressure test the system, inspect accessible components for leak points, use electronic detection and UV dye where needed, repair the leak, recover the remaining refrigerant, and recharge to the manufacturer-specified weight. We check vent temperatures after to confirm the system is back to full capacity.</p>
+      faq:
+        - q: "Why do you check for leaks before recharging?"
+          a: "Because refrigerant does not wear out. If the level is low, it leaked out. Adding more without fixing the leak means you are back in the same situation in a few weeks."
+        - q: "How long does an AC recharge take?"
+          a: "About an hour if the leak is minor and the repair is straightforward. Larger repairs take longer."
+        - q: "What type of refrigerant do you use?"
+          a: "We use the refrigerant specified for your vehicle. R-134a for most vehicles through the mid-2010s, R-1234yf for newer models."
+        - q: "Will a recharge fix my AC completely?"
+          a: "If refrigerant loss is the only issue, yes. If a major component has failed, the recharge alone will not fix it and we will tell you that."
+        - q: "How do I get to your shop from Leesburg?"
+          a: "Head south on US-441 from Leesburg. Turn right on David Walker Dr in Eustis. About fifteen minutes."
+
+    - slug: auto-ac-replacement
+      name: "Auto AC Replacement"
+      hero_sub: "Full AC component replacement for Leesburg vehicles. Compressor, condenser, evaporator, and complete system rebuilds."
+      body: |
+        <h2>Auto AC Replacement Near Leesburg, FL</h2>
+        <p>When an AC component is too far gone to repair, replacement is the right call. RJ Fox Automotive performs complete AC component replacements for all makes and models at our Eustis shop, about fifteen minutes from Leesburg on US-441 South.</p>
+        <p>Compressor, condenser, evaporator, expansion valve, receiver-drier. We use quality parts, flush the system when debris is present, evacuate properly before recharging, fill to manufacturer-specified refrigerant weight, and verify vent temperatures before the vehicle leaves. Every step matters and we do not skip any of them.</p>
+      faq:
+        - q: "How do you know the compressor needs replacing vs. repair?"
+          a: "We test output pressure, listen for bearing noise and internal damage, and check clutch operation. A compressor that is not building pressure or making grinding sounds has failed and needs replacement."
+        - q: "Do you replace the receiver-drier when replacing the compressor?"
+          a: "Yes. Any time the system is opened for a major repair, the receiver-drier gets replaced. It is a standard part of the job."
+        - q: "How long does an AC replacement take?"
+          a: "Compressor replacements typically take one full day. Condenser replacements can often be done same-day. Evaporator replacements are two days on most vehicles."
+        - q: "Do you warranty the replacement parts?"
+          a: "Yes. Parts and labor are both warranted. We will go over the specific terms when we review the estimate with you."
+        - q: "How far is your shop from Leesburg?"
+          a: "About fifteen minutes south on US-441 from downtown. Turn right on David Walker Dr in Eustis."
+
+    - slug: auto-electrical-repair
+      name: "Auto Electrical Repair"
+      hero_sub: "Auto electrical repair for Leesburg vehicles. Alternators, starters, wiring, and full electrical system diagnosis."
+      body: |
+        <h2>Auto Electrical Repair Near Leesburg, FL</h2>
+        <p>Electrical faults are frustrating because they are often intermittent and hard to pin down without the right equipment and approach. RJ Fox Automotive traces electrical problems to their actual source at our Eustis shop, about fifteen minutes from Leesburg on US-441 South, before recommending any repair.</p>
+        <p>Alternator and starter replacement, battery cable and terminal service, wiring harness repair, ground fault diagnosis, parasitic draw testing, relay and fuse diagnosis. We test before we replace. A new alternator installed into a vehicle with a parasitic draw just ends up with a dead battery again.</p>
+      faq:
+        - q: "My car stalls randomly and the battery tests fine. What could it be?"
+          a: "Random stalling with a good battery often points to a failing crankshaft or camshaft position sensor, a fuel delivery problem, or an ignition module issue."
+        - q: "Can electrical problems cause transmission shifting issues?"
+          a: "Yes. Transmission solenoids, speed sensors, and range sensors are electrical components. A wiring fault or failed sensor causes erratic shifting that looks like a mechanical transmission problem."
+        - q: "Do you repair wiring or just replace modules?"
+          a: "We repair wiring. A lot of electrical problems are a damaged wire or a bad ground, not a failed module. Repairing the wire is faster and cheaper than replacing a module that is actually fine."
+        - q: "Multiple warning lights came on at the same time. What does that mean?"
+          a: "Multiple unrelated warning lights appearing at once usually points to a voltage or ground issue affecting multiple modules simultaneously, not separate failures in each system."
+        - q: "How far is your shop from Leesburg?"
+          a: "About fifteen minutes south on US-441 from downtown Leesburg. Turn right on David Walker Dr in Eustis."
+
+    - slug: battery-testing-replacement
+      name: "Battery Testing and Replacement"
+      hero_sub: "Battery testing and replacement for Leesburg vehicles. Full charging system inspection included with every battery service."
+      body: |
+        <h2>Battery Testing and Replacement Near Leesburg, FL</h2>
+        <p>Florida heat kills batteries faster than the cold does. Most batteries in central Florida last three to five years. RJ Fox Automotive performs battery testing and replacement for all makes and models at our Eustis shop, about fifteen minutes from Leesburg on US-441 South.</p>
+        <p>We load-test the battery under real starting current demand, check the alternator output and charging system at the same time, and inspect the terminals and cables. If the alternator is not charging properly, a new battery is just a temporary fix. We check the whole picture before recommending anything.</p>
+      faq:
+        - q: "How do I know if my battery is failing?"
+          a: "Slow or labored cranking, a clicking sound without cranking, the battery warning light, or electrical accessories behaving strangely all point to a battery or charging system problem."
+        - q: "Do I need to replace the battery or just charge it?"
+          a: "A battery that fails a load test needs replacement. Charging a failed battery gives you a short window before it fails again. We test before we recommend."
+        - q: "What size battery does my vehicle need?"
+          a: "Battery size, group number, and cold cranking amps vary by vehicle. We look up the correct spec for your year, make, and model before ordering anything."
+        - q: "Do you replace batteries in European vehicles?"
+          a: "Yes. Many European vehicles require battery registration after replacement to recalibrate the charging system. We perform this procedure where required."
+        - q: "How far is your shop from Leesburg?"
+          a: "About fifteen minutes south on US-441. Turn right on David Walker Dr in Eustis."
+
+    - slug: diesel-engines
+      name: "Diesel Engine Repair"
+      hero_sub: "Diesel engine repair for Leesburg trucks and vehicles. Injectors, turbos, glow plugs, DPF, and full diesel diagnostics."
+      body: |
+        <h2>Diesel Engine Repair Near Leesburg, FL</h2>
+        <p>Leesburg has a strong working truck population and we see a steady flow of diesel vehicles from the area. RJ Fox Automotive handles diesel engine repair in-house at our Eustis shop, about fifteen minutes via US-441 South. We service Ford Power Stroke, GM Duramax, Ram Cummins, and diesel-powered imports.</p>
+        <p>Fuel system diagnosis, injector testing and replacement, glow plug replacement, turbocharger inspection and repair, EGR system service, DPF cleaning and replacement, diesel oil and filter service, and full diesel diagnostics. If your diesel is losing power, smoking under load, or throwing codes, call us before you assume the worst.</p>
+      faq:
+        - q: "My diesel is losing power and smoking. What could cause that?"
+          a: "Power loss with smoke points to injector wear, a boost leak, a failing turbocharger, a restricted DPF, or EGR system buildup. We diagnose the specific cause before recommending any repair."
+        - q: "How often should I change oil on my diesel truck?"
+          a: "It depends on the engine, oil spec, and how the truck is used. Most modern diesel trucks can go 7,500 to 10,000 miles under light conditions. Trucks that tow regularly or idle a lot should be closer to 5,000 to 7,500."
+        - q: "Do you service DPF systems?"
+          a: "Yes. We clean, diagnose, and replace diesel particulate filters."
+        - q: "Do you work on all diesel truck brands?"
+          a: "Yes. Ford Power Stroke, GM Duramax, Ram Cummins, and diesel-powered imports."
+        - q: "How do I get to your shop from Leesburg?"
+          a: "Head south on US-441 from Leesburg. Turn right on David Walker Dr in Eustis. About fifteen minutes."
+
+    - slug: auto-brake-repair
+      name: "Auto Brake Repair"
+      hero_sub: "Brake repair for Leesburg vehicles. Pads, rotors, calipers, brake fluid, and full brake system inspection. All makes and models."
+      body: |
+        <h2>Auto Brake Repair Near Leesburg, FL</h2>
+        <p>RJ Fox Automotive performs full brake system repair for all vehicle makes and models at our Eustis shop, about fifteen minutes from Leesburg via US-441 South.</p>
+        <p>We inspect the full system before we recommend anything. Brake pad replacement, rotor resurfacing and replacement, caliper service and replacement, brake hose replacement, master cylinder service, brake fluid flush, ABS system diagnosis, and parking brake adjustment. If it is grinding, we need to see it before it gets any worse.</p>
+      faq:
+        - q: "How do I know when my brakes need service?"
+          a: "Squealing when braking means the pads are getting thin. Grinding means metal on metal and needs immediate attention. Pulsation through the pedal usually means warped rotors. Pulling to one side under braking can mean a sticking caliper."
+        - q: "Do I need to replace rotors with the pads?"
+          a: "It depends on rotor thickness and surface condition. We measure and give you an honest answer."
+        - q: "How long do brake pads last?"
+          a: "Anywhere from 25,000 to 70,000 miles depending on driving style, vehicle weight, and conditions."
+        - q: "What does a brake fluid flush do?"
+          a: "Brake fluid absorbs moisture over time, which lowers its boiling point and promotes corrosion in the system. A flush replaces degraded fluid with fresh fluid."
+        - q: "How far is your shop from Leesburg?"
+          a: "About fifteen minutes south on US-441. Turn right on David Walker Dr in Eustis."
+
+    - slug: steering-suspension-repair
+      name: "Steering and Suspension Repair"
+      hero_sub: "Steering and suspension repair for Leesburg vehicles. Shocks, struts, tie rods, control arms, and alignment-related repairs."
+      body: |
+        <h2>Steering and Suspension Repair Near Leesburg, FL</h2>
+        <p>RJ Fox Automotive handles steering and suspension repairs for all vehicle makes and models at our Eustis shop, about fifteen minutes from Leesburg on US-441 South.</p>
+        <p>Shocks and struts, tie rod ends and inner tie rods, ball joints, control arms and bushings, sway bar links and bushings, power steering pumps and racks, electric power steering systems, and wheel bearings. We inspect the full suspension before recommending anything and align after any repair that affects wheel geometry.</p>
+      faq:
+        - q: "My steering wheel vibrates at highway speed. What could cause that?"
+          a: "Highway vibration most often comes from tire balance or a bent wheel, but worn tie rod ends, loose wheel bearings, and worn strut mounts can all cause similar symptoms."
+        - q: "How do I know if my shocks or struts are worn?"
+          a: "Excessive body roll in corners, the nose diving hard under braking, bouncing that takes more than one cycle to settle after a bump, and cupping or scalloping on the tire tread."
+        - q: "Can I drive with a worn tie rod?"
+          a: "A worn tie rod is a real safety issue. A tie rod that separates means sudden loss of steering control. Get it looked at."
+        - q: "Do you do wheel alignments after suspension work?"
+          a: "Yes. Any repair that changes wheel geometry requires an alignment afterward."
+        - q: "How far is your shop from Leesburg?"
+          a: "About fifteen minutes south on US-441. Turn right on David Walker Dr in Eustis."
+
+    - slug: wheel-alignment
+      name: "Wheel Alignment"
+      hero_sub: "Precision wheel alignment for Leesburg vehicles. Correct pulling, uneven tire wear, and steering that will not hold a straight line."
+      body: |
+        <h2>Wheel Alignment Near Leesburg, FL</h2>
+        <p>RJ Fox Automotive performs precision wheel alignments for all vehicle makes and models at our Eustis shop, about fifteen minutes from Leesburg via US-441 South.</p>
+        <p>We measure all four wheels against manufacturer specifications, correct toe, camber, and caster where adjustable, and document the before and after readings. We also inspect the suspension before aligning. Aligning a vehicle with worn tie rods or ball joints produces an alignment that will not hold and hides a safety problem.</p>
+      faq:
+        - q: "How often should I have my alignment checked?"
+          a: "Once a year is a reasonable baseline, and any time after a significant suspension impact or after steering and suspension repairs."
+        - q: "My car pulls to one side. Is that always an alignment problem?"
+          a: "Pulling is most often alignment, but uneven tire pressure, a sticking caliper, or a tire with internal damage can all cause pulling too. We check the obvious causes before going to the alignment rack."
+        - q: "Does alignment affect tire life?"
+          a: "Yes, significantly. Incorrect toe especially causes rapid edge wear that shortens tire life considerably."
+        - q: "Can you align all-wheel-drive vehicles?"
+          a: "Yes. We perform four-wheel alignments on front-wheel-drive, rear-wheel-drive, and all-wheel-drive vehicles."
+        - q: "How far is your shop from Leesburg?"
+          a: "About fifteen minutes south on US-441 from downtown. Turn right on David Walker Dr in Eustis."
+
+    - slug: adas-calibration
+      name: "ADAS Calibration"
+      hero_sub: "ADAS camera and sensor calibration for Leesburg vehicles after windshield replacement, suspension work, or collision repair."
+      body: |
+        <h2>ADAS Calibration Near Leesburg, FL</h2>
+        <p>After a windshield replacement, a wheel alignment, a front-end collision repair, or any suspension work that changes ride height, the cameras and sensors that run your vehicle's driver assistance features need to be recalibrated. RJ Fox Automotive performs ADAS calibration for all vehicle makes and models at our Eustis shop, about fifteen minutes from Leesburg on US-441 South.</p>
+        <p>We perform static and dynamic calibration as required by the manufacturer for your specific year, make, and model. Skipping calibration after the work that requires it means lane departure warning, automatic emergency braking, and adaptive cruise control may not work correctly or may trigger at the wrong times.</p>
+      faq:
+        - q: "Does every windshield replacement require ADAS calibration?"
+          a: "Only if the vehicle has a forward-facing camera mounted to or behind the windshield. Most vehicles built after 2018 with automatic emergency braking do. We can confirm when you call."
+        - q: "My lane assist turned off after my alignment. Is that related?"
+          a: "Yes. An alignment changes suspension geometry, which shifts the angle at which the camera sees the road. Calibration corrects it."
+        - q: "Can I drive the car if ADAS systems are uncalibrated?"
+          a: "You can, but the safety features may not function as intended. Automatic emergency braking and lane departure warning can give false alerts or fail to activate when needed."
+        - q: "How long does ADAS calibration take?"
+          a: "Static calibration takes one to two hours. Dynamic calibration requires a road drive and may take longer."
+        - q: "How far is your shop from Leesburg?"
+          a: "About fifteen minutes south on US-441. Turn right on David Walker Dr in Eustis."
+
+    - slug: general-repairs-maintenance
+      name: "General Repairs and Maintenance"
+      hero_sub: "Oil changes, fluid services, belts, hoses, and routine maintenance for Leesburg vehicles. All makes and models."
+      body: |
+        <h2>General Repairs and Maintenance Near Leesburg, FL</h2>
+        <p>Routine maintenance is the least expensive way to keep a vehicle on the road. RJ Fox Automotive handles all routine maintenance services for every make and model at our Eustis shop, about fifteen minutes from Leesburg on US-441 South.</p>
+        <p>Oil and filter changes, coolant service, brake fluid flush, power steering fluid service, spark plug replacement, air filter and cabin filter replacement, belt inspection and replacement, hose inspection, and multi-point vehicle inspections. We check over the vehicle while we are in there and let you know what we find.</p>
+      faq:
+        - q: "How often should I change my oil?"
+          a: "Most modern vehicles on full synthetic can go 7,500 to 10,000 miles. Florida heat and short trip patterns push that closer to 5,000 for many drivers here. We follow your manufacturer's recommendation and adjust based on how you drive."
+        - q: "What is a multi-point inspection?"
+          a: "A systematic check of all major vehicle systems: brakes, tires, steering, suspension, fluids, belts, hoses, and lighting."
+        - q: "Do you service European vehicles?"
+          a: "Yes. We service all European makes including BMW, Mercedes-Benz, Audi, Volkswagen, and Volvo."
+        - q: "Can I bring my vehicle in without an appointment?"
+          a: "We prefer appointments but do our best to accommodate walk-ins. Call ahead and we will let you know what the day looks like."
+        - q: "How far is your shop from Leesburg?"
+          a: "About fifteen minutes south on US-441 from downtown Leesburg. Turn right on David Walker Dr in Eustis."
+
+    - slug: auto-exhaust-system-repair
+      name: "Auto Exhaust System Repair"
+      hero_sub: "Exhaust repair for Leesburg vehicles. Mufflers, catalytic converters, pipes, and full system inspection."
+      body: |
+        <h2>Auto Exhaust System Repair Near Leesburg, FL</h2>
+        <p>RJ Fox Automotive handles exhaust system repairs for all vehicle makes and models at our Eustis shop, about fifteen minutes from Leesburg on US-441 South.</p>
+        <p>Muffler replacement, exhaust pipe repair and replacement, catalytic converter diagnosis and replacement, oxygen sensor replacement, exhaust manifold repair, flex pipe replacement, and exhaust hanger service. If you are getting a P0420 or P0430 code, we diagnose the root cause before recommending a converter replacement, because a bad converter is often the result of something else that needs to be fixed first.</p>
+      faq:
+        - q: "My car is louder than usual. Is that an exhaust problem?"
+          a: "Increased exhaust noise usually points to a hole or separation in a pipe, a failed muffler, or a cracked exhaust manifold."
+        - q: "Can a bad catalytic converter cause a check engine light?"
+          a: "Yes. P0420 and P0430 are catalytic converter efficiency codes. We find the root cause before replacing the converter."
+        - q: "Is it safe to drive with an exhaust leak?"
+          a: "A leak that routes exhaust gases into the cabin is a carbon monoxide hazard. If you smell exhaust inside the vehicle with the windows up, have it looked at promptly."
+        - q: "Do you weld exhaust repairs or use clamps?"
+          a: "We use whatever method is appropriate for the repair."
+        - q: "How far is your shop from Leesburg?"
+          a: "About fifteen minutes south on US-441. Turn right on David Walker Dr in Eustis."
+
+    - slug: u-haul-services
+      name: "U-Haul Services"
+      hero_sub: "Authorized U-Haul truck and trailer rentals for Leesburg residents. Located in Eustis, about 15 minutes away on US-441 South."
+      body: |
+        <h2>U-Haul Rentals Near Leesburg, FL</h2>
+        <p>RJ Fox Automotive is an authorized U-Haul dealer located at 801 David Walker Dr in Eustis, about fifteen minutes from Leesburg via US-441 South. We offer truck and trailer rentals for local moves, long-distance moves, and anything you need to haul that will not fit in your vehicle.</p>
+        <p>Call us to check availability and reserve your rental. Walk-ins are welcome but calling ahead ensures we have what you need on the day you need it.</p>
+      faq:
+        - q: "What U-Haul vehicles do you have available?"
+          a: "We carry a selection of U-Haul trucks and trailers. Call us to check current availability for your move date."
+        - q: "Do I need to reserve in advance?"
+          a: "We recommend calling ahead, especially on weekends and during busy moving seasons."
+        - q: "How far are you from Leesburg?"
+          a: "About fifteen minutes south on US-441 from downtown Leesburg. Turn right on David Walker Dr in Eustis and we are on the right."
+        - q: "What are your hours?"
+          a: "Monday through Friday 8am to 6pm, Saturday 8am to 2pm, closed Sunday."
+        - q: "Can I drop off a U-Haul at your location?"
+          a: "Call us to confirm drop-off availability for your specific rental."
