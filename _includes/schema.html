@@ -1,1 +1,291 @@
+{% comment %}
+  ============================================================
+  RJ Fox Automotive — Structured Data / JSON-LD
+  Included in _layouts/default.html inside <head>
 
+  Outputs:
+    1. LocalBusiness (AutoRepair) — every page
+    2. WebSite — homepage only
+    3. Service — layout: services
+    4. BlogPosting — layout: blog
+    5. FAQPage — layout: default AND page.url contains /faqs/
+    6. BreadcrumbList — all non-homepage pages
+    7. AutomotiveBusiness w/ areaServed — layout: areas / service-areas
+  ============================================================
+{% endcomment %}
+
+{% assign base_url = site.url | append: site.baseurl %}
+
+{%- comment -%} ── 1. LocalBusiness (AutoRepair) — every page ── {%- endcomment -%}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": ["AutoRepair", "LocalBusiness"],
+  "@id": "{{ base_url }}/#business",
+  "name": "RJ Fox Automotive",
+  "legalName": "RJ Fox Automotive",
+  "description": "Transmission repair specialists in Eustis, FL. Rob Fox has been fixing cars in Lake County for 40+ years. Honest diagnosis, written estimates, all makes and models.",
+  "url": "{{ base_url }}/",
+  "logo": {
+    "@type": "ImageObject",
+    "url": "https://github.com/JamesBrownR/RJ-Fox-Automotive/blob/f43797043476d4e7f9e3dad95907353c061a1f0d/Pics/RJLogo.jpg?raw=true",
+    "width": 300,
+    "height": 300
+  },
+  "image": [
+    "{{ base_url }}/Pics/Hero.webp",
+    "{{ base_url }}/Pics/RJ9.webp",
+    "{{ base_url }}/Pics/RJ30.webp",
+    "{{ base_url }}/Pics/RJ33.webp"
+  ],
+  "telephone": "+13522503210",
+  "email": "contact@rjfoxauto.com",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "801 David Walker Dr",
+    "addressLocality": "Eustis",
+    "addressRegion": "FL",
+    "postalCode": "32726",
+    "addressCountry": "US"
+  },
+  "geo": {
+    "@type": "GeoCoordinates",
+    "latitude": 28.835243,
+    "longitude": -81.694374
+  },
+  "hasMap": "https://maps.google.com/?q=801+David+Walker+Dr+Eustis+FL+32726",
+  "openingHoursSpecification": [
+    {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday"],
+      "opens": "08:00",
+      "closes": "18:00"
+    },
+    {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": "Saturday",
+      "opens": "08:00",
+      "closes": "14:00"
+    }
+  ],
+  "priceRange": "$$",
+  "currenciesAccepted": "USD",
+  "paymentAccepted": "Cash, Credit Card, Debit Card",
+  "areaServed": [
+    { "@type": "City", "name": "Eustis", "addressRegion": "FL" },
+    { "@type": "City", "name": "Mount Dora", "addressRegion": "FL" },
+    { "@type": "City", "name": "Tavares", "addressRegion": "FL" },
+    { "@type": "City", "name": "Leesburg", "addressRegion": "FL" },
+    { "@type": "City", "name": "Clermont", "addressRegion": "FL" }
+  ],
+  "aggregateRating": {
+    "@type": "AggregateRating",
+    "ratingValue": "5.0",
+    "bestRating": "5",
+    "worstRating": "1",
+    "ratingCount": "30"
+  },
+  "sameAs": [
+    "https://www.facebook.com/rjfoxautomotive",
+    "https://maps.google.com/?cid=3220248014748328122"
+  ]
+}
+</script>
+
+{% comment %} ── 2. WebSite — homepage only ── {% endcomment %}
+{% if page.url == "/" or page.url == "/index.html" %}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "@id": "{{ base_url }}/#website",
+  "url": "{{ base_url }}/",
+  "name": "RJ Fox Automotive",
+  "description": "Transmission repair specialists in Eustis, FL serving Lake County. Honest pricing, all makes and models.",
+  "publisher": {
+    "@id": "{{ base_url }}/#business"
+  },
+  "inLanguage": "en-US"
+}
+</script>
+{% endif %}
+
+{% comment %} ── 3. Service schema — layout: services ── {% endcomment %}
+{% if page.layout == "services" %}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "name": "{{ page.h1 | default: page.title | strip_html | escape }}",
+  "serviceType": "{{ page.h1 | default: page.title | strip_html | escape }}",
+  "description": "{{ page.hero_sub | default: page.meta_description | strip_html | escape }}",
+  "url": "{{ base_url }}{{ page.url }}",
+  "provider": {
+    "@id": "{{ base_url }}/#business"
+  },
+  "areaServed": [
+    { "@type": "City", "name": "Eustis", "addressRegion": "FL" },
+    { "@type": "City", "name": "Mount Dora", "addressRegion": "FL" },
+    { "@type": "City", "name": "Tavares", "addressRegion": "FL" },
+    { "@type": "City", "name": "Leesburg", "addressRegion": "FL" },
+    { "@type": "City", "name": "Clermont", "addressRegion": "FL" }
+  ],
+  "availableChannel": {
+    "@type": "ServiceChannel",
+    "serviceUrl": "{{ base_url }}/contact/",
+    "servicePhone": "+13522503210",
+    "availableLanguage": "English"
+  }
+}
+</script>
+{% endif %}
+
+{% comment %} ── 4. BlogPosting schema — layout: blog ── {% endcomment %}
+{% if page.layout == "blog" %}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "{{ page.title | strip_html | escape }}",
+  "description": "{{ page.excerpt | default: page.description | strip_html | escape }}",
+  "url": "{{ base_url }}{{ page.url }}",
+  "datePublished": "{{ page.date | date_to_xmlschema }}",
+  "dateModified": "{{ page.last_modified_at | default: page.date | date_to_xmlschema }}",
+  "inLanguage": "en-US",
+  {% if page.image %}
+  "image": {
+    "@type": "ImageObject",
+    "url": "{{ base_url }}/{{ page.image }}"
+  },
+  {% endif %}
+  "author": {
+    "@type": "Person",
+    "name": "{{ page.author | default: 'Rob Fox' }}",
+    "jobTitle": "Owner, RJ Fox Automotive",
+    "url": "{{ base_url }}/about-us/"
+  },
+  "publisher": {
+    "@id": "{{ base_url }}/#business"
+  },
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "{{ base_url }}{{ page.url }}"
+  }
+}
+</script>
+{% endif %}
+
+{% comment %} ── 5. FAQPage schema — /faqs/ page ── {% endcomment %}
+{% if page.url contains "faqs" %}
+{% comment %} FAQPage schema is already inline in faqs/index.html — skip to avoid duplicate {% endcomment %}
+{% endif %}
+
+{% comment %} ── 6. Service-area page schemas (layout: areas or service-areas) ── {% endcomment %}
+{% if page.layout == "areas" or page.layout == "service-areas" %}
+{% assign city_name = page.city | default: page.title %}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": ["AutoRepair", "LocalBusiness"],
+  "@id": "{{ base_url }}{{ page.url }}#business-{{ page.city_slug }}",
+  "name": "RJ Fox Automotive",
+  "description": "Transmission repair and auto service near {{ city_name }}. RJ Fox Automotive in Eustis, FL serves {{ city_name }} with honest estimates and expert repairs on all makes and models.",
+  "url": "{{ base_url }}{{ page.url }}",
+  "telephone": "+13522503210",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "801 David Walker Dr",
+    "addressLocality": "Eustis",
+    "addressRegion": "FL",
+    "postalCode": "32726",
+    "addressCountry": "US"
+  },
+  "areaServed": {
+    "@type": "City",
+    "name": "{{ city_name | remove: ', FL' | remove: ',FL' | strip }}",
+    "addressRegion": "FL"
+  },
+  "parentOrganization": {
+    "@id": "{{ base_url }}/#business"
+  },
+  "openingHoursSpecification": [
+    {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday"],
+      "opens": "08:00",
+      "closes": "18:00"
+    },
+    {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": "Saturday",
+      "opens": "08:00",
+      "closes": "14:00"
+    }
+  ],
+  "aggregateRating": {
+    "@type": "AggregateRating",
+    "ratingValue": "5.0",
+    "bestRating": "5",
+    "worstRating": "1",
+    "ratingCount": "30"
+  }
+}
+</script>
+{% endif %}
+
+{% comment %} ── 7. Service-areas layout (generated city+service pages) ── {% endcomment %}
+{% if page.layout == "service-areas" and page.service_slug %}
+{% assign areas_data = site.data.service_areas | where: "slug", page.city_slug | first %}
+{% assign svc_data = areas_data.services | where: "slug", page.service_slug | first %}
+{% if svc_data %}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "name": "{{ svc_data.name | escape }} near {{ page.city | default: areas_data.name | escape }}",
+  "serviceType": "{{ svc_data.name | escape }}",
+  "description": "{{ svc_data.hero_sub | strip_html | escape }}",
+  "url": "{{ base_url }}{{ page.url }}",
+  "provider": {
+    "@id": "{{ base_url }}/#business"
+  },
+  "areaServed": {
+    "@type": "City",
+    "name": "{{ page.city | default: areas_data.name | remove: ', FL' | strip | escape }}",
+    "addressRegion": "FL"
+  }
+}
+</script>
+{% endif %}
+{% endif %}
+
+{% comment %} ── 8. BreadcrumbList — all non-homepage pages ── {% endcomment %}
+{% unless page.url == "/" or page.url == "/index.html" %}
+{% assign crumb_url = page.url | remove: "index.html" %}
+{% assign crumb_parts = crumb_url | split: "/" | compact %}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "{{ base_url }}/"
+    }{% assign crumb_path = "" %}{% for part in crumb_parts %}{% unless forloop.last %}{% assign crumb_path = crumb_path | append: "/" | append: part %}{% assign crumb_label = part | replace: "-", " " | replace: "fl", "FL" | capitalize %}
+    ,{
+      "@type": "ListItem",
+      "position": {{ forloop.index | plus: 1 }},
+      "name": "{{ crumb_label }}",
+      "item": "{{ base_url }}{{ crumb_path }}/"
+    }{% endunless %}{% endfor %}
+    ,{
+      "@type": "ListItem",
+      "position": {{ crumb_parts.size | plus: 1 }},
+      "name": "{{ page.title | strip_html | truncatewords: 8 | escape }}"
+    }
+  ]
+}
+</script>
+{% endunless %}
