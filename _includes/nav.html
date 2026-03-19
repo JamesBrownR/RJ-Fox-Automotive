@@ -1,26 +1,658 @@
-<nav class="navbar navbar-expand-lg navbar-light bg-white sticky-top shadow-sm">
-    <div class="container">
-        <a class="navbar-brand" href="/">
-            RJ FOX <span style="color: var(--primary-blue);">AUTOMOTIVE</span>
+<nav class="rjf-nav" id="rjfNav">
+    <div class="rjf-nav__inner">
+
+        <!-- Logo -->
+        <a class="rjf-nav__logo" href="{{ site.baseurl }}/">
+            <span class="rjf-nav__logo-rj">RJ FOX</span>
+            <span class="rjf-nav__logo-auto">AUTOMOTIVE</span>
         </a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
-            <ul class="navbar-nav align-items-center">
-                <li class="nav-item"><a class="nav-link" href="{{ site.baseurl }}/">Home</a></li>
-                <li class="nav-item"><a class="nav-link" href="{{ site.baseurl }}/services">Services</a></li>
-                   <li class="nav-item"><a class="nav-link" href="{{ site.baseurl }}/reviews">Reviews</a></li>
-                <li class="nav-item"><a class="nav-link" href="{{ site.baseurl }}/gallery">Gallery</a></li>
-                <li class="nav-item"><a class="nav-link" href="{{ site.baseurl }}/blog">Blog</a></li>
-                   <li class="nav-item"><a class="nav-link" href="{{ site.baseurl }}/contact">Contact</a></li>
-                <li class="nav-item">
-                    <a class="btn btn-primary ms-3" href="tel:{{ site.phone }}">
-                        <i class="fas fa-phone-alt me-2"></i> {{ site.phone_display }}
-                    </a>
-                </li>
-            </ul>
+
+        <!-- Desktop Links -->
+        <ul class="rjf-nav__links" id="rjfLinks">
+
+            <li class="rjf-nav__item">
+                <a class="rjf-nav__link" href="{{ site.baseurl }}/">Home</a>
+            </li>
+
+            <!-- Services Dropdown -->
+            <li class="rjf-nav__item rjf-nav__item--drop">
+                <a class="rjf-nav__link rjf-nav__link--drop" href="{{ site.baseurl }}/services/" aria-haspopup="true" aria-expanded="false">
+                    Services <svg class="rjf-chevron" viewBox="0 0 12 8" fill="none"><path d="M1 1.5l5 5 5-5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                </a>
+                <div class="rjf-dropdown">
+                    <div class="rjf-dropdown__grid">
+                        <div class="rjf-dropdown__col">
+                            <p class="rjf-dropdown__label">Transmission</p>
+                            <a href="{{ site.baseurl }}/services/transmission-repair/">Transmission Repair</a>
+                            <a href="{{ site.baseurl }}/services/transmission-replacement/">Transmission Replacement</a>
+                            <a href="{{ site.baseurl }}/services/transmission-maintenance/">Transmission Maintenance</a>
+                            <a href="{{ site.baseurl }}/services/transmission-flush/">Transmission Flush</a>
+                            <a href="{{ site.baseurl }}/services/cvt-transmission-service/">CVT Service</a>
+                            <a href="{{ site.baseurl }}/services/clutch-repair/">Clutch Repair</a>
+                        </div>
+                        <div class="rjf-dropdown__col">
+                            <p class="rjf-dropdown__label">Engine &amp; Diagnostics</p>
+                            <a href="{{ site.baseurl }}/services/engine-repair/">Engine Repair</a>
+                            <a href="{{ site.baseurl }}/services/engine-rebuild/">Engine Rebuild</a>
+                            <a href="{{ site.baseurl }}/services/engine-diagnostics/">Engine Diagnostics</a>
+                            <a href="{{ site.baseurl }}/services/check-engine-light/">Check Engine Light</a>
+                            <a href="{{ site.baseurl }}/services/diesel-engines/">Diesel Engines</a>
+                        </div>
+                        <div class="rjf-dropdown__col">
+                            <p class="rjf-dropdown__label">AC &amp; Electrical</p>
+                            <a href="{{ site.baseurl }}/services/ac-installation-repair/">AC Repair</a>
+                            <a href="{{ site.baseurl }}/services/auto-ac-recharge/">AC Recharge</a>
+                            <a href="{{ site.baseurl }}/services/auto-electrical-repair/">Electrical Repair</a>
+                            <a href="{{ site.baseurl }}/services/battery-testing-replacement/">Battery Service</a>
+                            <p class="rjf-dropdown__label" style="margin-top:14px;">Brakes &amp; Suspension</p>
+                            <a href="{{ site.baseurl }}/services/auto-brake-repair/">Brake Repair</a>
+                            <a href="{{ site.baseurl }}/services/steering-suspension-repair/">Steering &amp; Suspension</a>
+                            <a href="{{ site.baseurl }}/services/wheel-alignment/">Wheel Alignment</a>
+                        </div>
+                        <div class="rjf-dropdown__col rjf-dropdown__col--cta">
+                            <p class="rjf-dropdown__label">More</p>
+                            <a href="{{ site.baseurl }}/services/general-repairs-maintenance/">General Maintenance</a>
+                            <a href="{{ site.baseurl }}/services/adas-calibration/">ADAS Calibration</a>
+                            <a href="{{ site.baseurl }}/services/auto-exhaust-system-repair/">Exhaust Repair</a>
+                            <div class="rjf-dropdown__promo">
+                                <span class="rjf-dropdown__promo-tag">All Makes &amp; Models</span>
+                                <p>Written estimates before any work begins. No surprises.</p>
+                                <a href="{{ site.baseurl }}/services/" class="rjf-dropdown__promo-btn">View All Services →</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </li>
+
+            <li class="rjf-nav__item">
+                <a class="rjf-nav__link" href="{{ site.baseurl }}/service-areas/">Service Areas</a>
+            </li>
+
+            <li class="rjf-nav__item">
+                <a class="rjf-nav__link" href="{{ site.baseurl }}/reviews/">Reviews</a>
+            </li>
+
+            <li class="rjf-nav__item">
+                <a class="rjf-nav__link" href="{{ site.baseurl }}/gallery/">Gallery</a>
+            </li>
+
+            <!-- About Dropdown -->
+            <li class="rjf-nav__item rjf-nav__item--drop">
+                <a class="rjf-nav__link rjf-nav__link--drop" href="{{ site.baseurl }}/about-us/" aria-haspopup="true" aria-expanded="false">
+                    About <svg class="rjf-chevron" viewBox="0 0 12 8" fill="none"><path d="M1 1.5l5 5 5-5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                </a>
+                <div class="rjf-dropdown rjf-dropdown--sm">
+                    <div class="rjf-dropdown__col">
+                        <a href="{{ site.baseurl }}/about-us/">About Us</a>
+                        <a href="{{ site.baseurl }}/blog/">Blog</a>
+                        <a href="{{ site.baseurl }}/faqs/">FAQs</a>
+                        <a href="{{ site.baseurl }}/contact/">Contact</a>
+                    </div>
+                </div>
+            </li>
+
+        </ul>
+
+        <!-- CTA + Hamburger -->
+        <div class="rjf-nav__actions">
+            <a href="tel:{{ site.phone }}" class="rjf-nav__cta">
+                <svg viewBox="0 0 20 20" fill="currentColor"><path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z"/></svg>
+                {{ site.phone_display }}
+            </a>
+            <button class="rjf-nav__burger" id="rjfBurger" aria-label="Toggle menu" aria-expanded="false">
+                <span></span><span></span><span></span>
+            </button>
         </div>
+
     </div>
 </nav>
 
+<style>
+/* ── VARIABLES ───────────────────────────────────────────── */
+:root {
+    --nav-h: 68px;
+    --nav-bg: #fff;
+    --nav-bg-scroll: rgba(255,255,255,0.97);
+    --nav-blue: #004aad;
+    --nav-blue-dk: #003380;
+    --nav-yellow: #ffc107;
+    --nav-text: #1a1a1a;
+    --nav-muted: #555;
+    --nav-border: #e8eaed;
+    --nav-radius: 10px;
+    --nav-shadow: 0 2px 20px rgba(0,0,0,0.08);
+    --nav-drop-shadow: 0 16px 48px rgba(0,0,0,0.14);
+    --nav-font: 'Oswald', sans-serif;
+    --nav-body: 'Open Sans', sans-serif;
+}
+
+/* ── BASE ────────────────────────────────────────────────── */
+.rjf-nav {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    background: var(--nav-bg);
+    border-bottom: 1px solid var(--nav-border);
+    transition: box-shadow 0.25s, background 0.25s;
+    height: var(--nav-h);
+    display: flex;
+    align-items: center;
+}
+
+.rjf-nav.is-scrolled {
+    background: var(--nav-bg-scroll);
+    box-shadow: var(--nav-shadow);
+    backdrop-filter: blur(8px);
+}
+
+.rjf-nav__inner {
+    width: 100%;
+    max-width: 1240px;
+    margin: 0 auto;
+    padding: 0 24px;
+    display: flex;
+    align-items: center;
+    gap: 0;
+}
+
+/* ── LOGO ────────────────────────────────────────────────── */
+.rjf-nav__logo {
+    text-decoration: none;
+    display: flex;
+    flex-direction: column;
+    line-height: 1;
+    margin-right: 36px;
+    flex-shrink: 0;
+}
+
+.rjf-nav__logo-rj {
+    font-family: var(--nav-font);
+    font-size: 1.45rem;
+    font-weight: 700;
+    letter-spacing: 0.04em;
+    color: var(--nav-text);
+    text-transform: uppercase;
+}
+
+.rjf-nav__logo-auto {
+    font-family: var(--nav-font);
+    font-size: 0.6rem;
+    font-weight: 500;
+    letter-spacing: 0.22em;
+    color: var(--nav-blue);
+    text-transform: uppercase;
+    margin-top: 1px;
+}
+
+/* ── LINKS ───────────────────────────────────────────────── */
+.rjf-nav__links {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    gap: 2px;
+    flex: 1;
+}
+
+.rjf-nav__item {
+    position: relative;
+}
+
+.rjf-nav__link {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    padding: 8px 13px;
+    font-family: var(--nav-font);
+    font-size: 0.82rem;
+    font-weight: 500;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--nav-muted);
+    text-decoration: none;
+    border-radius: 6px;
+    transition: color 0.18s, background 0.18s;
+    white-space: nowrap;
+}
+
+.rjf-nav__link:hover,
+.rjf-nav__item--drop:hover > .rjf-nav__link {
+    color: var(--nav-blue);
+    background: rgba(0, 74, 173, 0.06);
+}
+
+.rjf-chevron {
+    width: 10px;
+    height: 7px;
+    transition: transform 0.2s;
+    flex-shrink: 0;
+    opacity: 0.5;
+}
+
+.rjf-nav__item--drop:hover .rjf-chevron {
+    transform: rotate(180deg);
+    opacity: 1;
+}
+
+/* ── DROPDOWN ────────────────────────────────────────────── */
+.rjf-dropdown {
+    display: none;
+    position: absolute;
+    top: calc(100% + 10px);
+    left: 50%;
+    transform: translateX(-50%);
+    background: #fff;
+    border: 1px solid var(--nav-border);
+    border-radius: var(--nav-radius);
+    box-shadow: var(--nav-drop-shadow);
+    padding: 24px;
+    min-width: 680px;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.18s, transform 0.18s;
+    transform: translateX(-50%) translateY(-6px);
+}
+
+/* Small dropdown (About) */
+.rjf-dropdown--sm {
+    min-width: 180px;
+    left: 0;
+    transform: translateY(-6px);
+}
+.rjf-dropdown--sm.is-open,
+.rjf-nav__item--drop:hover .rjf-dropdown--sm {
+    transform: translateY(0);
+}
+
+.rjf-nav__item--drop:hover .rjf-dropdown {
+    display: flex;
+    opacity: 1;
+    pointer-events: auto;
+    transform: translateX(-50%) translateY(0);
+}
+
+.rjf-nav__item--drop:hover .rjf-dropdown--sm {
+    display: flex;
+    opacity: 1;
+    pointer-events: auto;
+}
+
+/* Arrow pointer */
+.rjf-dropdown::before {
+    content: '';
+    position: absolute;
+    top: -6px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 12px;
+    height: 12px;
+    background: #fff;
+    border-top: 1px solid var(--nav-border);
+    border-left: 1px solid var(--nav-border);
+    transform: translateX(-50%) rotate(45deg);
+}
+
+.rjf-dropdown--sm::before {
+    left: 28px;
+}
+
+.rjf-dropdown__grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 0 24px;
+    width: 100%;
+}
+
+.rjf-dropdown__col {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+}
+
+.rjf-dropdown__label {
+    font-family: var(--nav-font);
+    font-size: 0.65rem;
+    font-weight: 700;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--nav-blue);
+    margin: 0 0 8px;
+    padding-bottom: 6px;
+    border-bottom: 1px solid var(--nav-border);
+}
+
+.rjf-dropdown__col a {
+    font-family: var(--nav-body);
+    font-size: 0.82rem;
+    color: var(--nav-muted);
+    text-decoration: none;
+    padding: 5px 6px;
+    border-radius: 5px;
+    transition: color 0.15s, background 0.15s;
+    white-space: nowrap;
+}
+
+.rjf-dropdown__col a:hover {
+    color: var(--nav-blue);
+    background: rgba(0,74,173,0.06);
+}
+
+/* Promo block inside dropdown */
+.rjf-dropdown__promo {
+    margin-top: 16px;
+    padding: 14px;
+    background: #f5f7fb;
+    border-radius: 8px;
+    border: 1px solid var(--nav-border);
+}
+
+.rjf-dropdown__promo-tag {
+    display: inline-block;
+    font-family: var(--nav-font);
+    font-size: 0.6rem;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--nav-blue);
+    background: rgba(0,74,173,0.08);
+    padding: 3px 8px;
+    border-radius: 20px;
+    margin-bottom: 6px;
+}
+
+.rjf-dropdown__promo p {
+    font-family: var(--nav-body);
+    font-size: 0.75rem;
+    color: #666;
+    line-height: 1.5;
+    margin: 0 0 10px;
+}
+
+.rjf-dropdown__promo-btn {
+    display: inline-block;
+    font-family: var(--nav-font);
+    font-size: 0.72rem;
+    font-weight: 700;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: var(--nav-blue);
+    text-decoration: none;
+    transition: gap 0.15s;
+}
+.rjf-dropdown__promo-btn:hover { text-decoration: underline; }
+
+/* ── ACTIONS ─────────────────────────────────────────────── */
+.rjf-nav__actions {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-left: auto;
+    flex-shrink: 0;
+}
+
+.rjf-nav__cta {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 9px 18px;
+    background: var(--nav-blue);
+    color: #fff;
+    font-family: var(--nav-font);
+    font-size: 0.82rem;
+    font-weight: 600;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    text-decoration: none;
+    border-radius: 6px;
+    transition: background 0.18s;
+    white-space: nowrap;
+}
+
+.rjf-nav__cta svg {
+    width: 14px;
+    height: 14px;
+    flex-shrink: 0;
+}
+
+.rjf-nav__cta:hover {
+    background: var(--nav-blue-dk);
+    color: #fff;
+}
+
+/* ── HAMBURGER ───────────────────────────────────────────── */
+.rjf-nav__burger {
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    gap: 5px;
+    width: 40px;
+    height: 40px;
+    background: none;
+    border: 1px solid var(--nav-border);
+    border-radius: 6px;
+    padding: 8px 9px;
+    cursor: pointer;
+    transition: background 0.18s;
+}
+
+.rjf-nav__burger span {
+    display: block;
+    height: 2px;
+    background: var(--nav-text);
+    border-radius: 2px;
+    transition: transform 0.22s, opacity 0.22s, width 0.22s;
+    width: 100%;
+}
+
+.rjf-nav__burger:hover {
+    background: rgba(0,74,173,0.06);
+}
+
+/* Open state */
+.rjf-nav__burger.is-open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+.rjf-nav__burger.is-open span:nth-child(2) { opacity: 0; transform: scaleX(0); }
+.rjf-nav__burger.is-open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+
+/* ── MOBILE ──────────────────────────────────────────────── */
+@media (max-width: 1000px) {
+    .rjf-nav__burger { display: flex; }
+    .rjf-nav__cta { display: none; }
+
+    .rjf-nav__links {
+        position: fixed;
+        top: var(--nav-h);
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: #fff;
+        flex-direction: column;
+        align-items: stretch;
+        gap: 0;
+        padding: 16px 20px 32px;
+        overflow-y: auto;
+        transform: translateX(100%);
+        transition: transform 0.28s cubic-bezier(0.4,0,0.2,1);
+        border-top: 1px solid var(--nav-border);
+    }
+
+    .rjf-nav__links.is-open {
+        transform: translateX(0);
+    }
+
+    .rjf-nav__item { width: 100%; }
+
+    .rjf-nav__link {
+        padding: 12px 8px;
+        font-size: 1rem;
+        color: var(--nav-text);
+        border-radius: 0;
+        border-bottom: 1px solid var(--nav-border);
+        justify-content: space-between;
+    }
+
+    .rjf-nav__link--drop { cursor: pointer; }
+
+    .rjf-dropdown {
+        display: none !important; /* hide desktop dropdown on mobile */
+    }
+
+    /* Mobile accordion */
+    .rjf-mobile-sub {
+        display: none;
+        flex-direction: column;
+        padding: 8px 0 8px 16px;
+        border-bottom: 1px solid var(--nav-border);
+    }
+
+    .rjf-mobile-sub.is-open { display: flex; }
+
+    .rjf-mobile-sub a {
+        font-family: var(--nav-body);
+        font-size: 0.9rem;
+        color: var(--nav-muted);
+        text-decoration: none;
+        padding: 8px 4px;
+        border-bottom: 1px solid #f0f1f3;
+    }
+
+    .rjf-mobile-sub a:last-child { border-bottom: none; }
+    .rjf-mobile-sub a:hover { color: var(--nav-blue); }
+
+    .rjf-mobile-sub__label {
+        font-family: var(--nav-font);
+        font-size: 0.65rem;
+        letter-spacing: 0.12em;
+        text-transform: uppercase;
+        color: var(--nav-blue);
+        padding: 12px 4px 4px;
+        font-weight: 700;
+    }
+
+    .rjf-mobile-cta {
+        margin-top: 20px;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .rjf-mobile-cta a {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 8px;
+        padding: 14px;
+        border-radius: 8px;
+        font-family: var(--nav-font);
+        font-size: 0.95rem;
+        font-weight: 600;
+        letter-spacing: 0.05em;
+        text-transform: uppercase;
+        text-decoration: none;
+    }
+
+    .rjf-mobile-cta__phone {
+        background: var(--nav-blue);
+        color: #fff;
+    }
+
+    .rjf-mobile-cta__appt {
+        background: var(--nav-yellow);
+        color: #111;
+    }
+}
+
+@media (max-width: 480px) {
+    .rjf-nav__logo-rj { font-size: 1.2rem; }
+}
+</style>
+
+<script>
+(function () {
+    const nav    = document.getElementById('rjfNav');
+    const burger = document.getElementById('rjfBurger');
+    const links  = document.getElementById('rjfLinks');
+
+    /* Scroll effect */
+    function onScroll() {
+        nav.classList.toggle('is-scrolled', window.scrollY > 10);
+    }
+    window.addEventListener('scroll', onScroll, { passive: true });
+    onScroll();
+
+    /* Burger toggle */
+    burger.addEventListener('click', function () {
+        const open = !links.classList.contains('is-open');
+        links.classList.toggle('is-open', open);
+        burger.classList.toggle('is-open', open);
+        burger.setAttribute('aria-expanded', open);
+        document.body.style.overflow = open ? 'hidden' : '';
+    });
+
+    /* Close on outside click */
+    document.addEventListener('click', function (e) {
+        if (!nav.contains(e.target)) {
+            links.classList.remove('is-open');
+            burger.classList.remove('is-open');
+            burger.setAttribute('aria-expanded', 'false');
+            document.body.style.overflow = '';
+        }
+    });
+
+    /* Build mobile accordion from desktop dropdown content */
+    document.querySelectorAll('.rjf-nav__item--drop').forEach(function (item) {
+        const trigger = item.querySelector('.rjf-nav__link--drop');
+        const dropdown = item.querySelector('.rjf-dropdown');
+        if (!dropdown) return;
+
+        /* Build mobile sub-menu */
+        const sub = document.createElement('div');
+        sub.className = 'rjf-mobile-sub';
+
+        dropdown.querySelectorAll('.rjf-dropdown__col').forEach(function (col) {
+            col.querySelectorAll('.rjf-dropdown__label').forEach(function (lbl) {
+                const span = document.createElement('span');
+                span.className = 'rjf-mobile-sub__label';
+                span.textContent = lbl.textContent;
+                sub.appendChild(span);
+            });
+            col.querySelectorAll('a').forEach(function (a) {
+                const clone = a.cloneNode(true);
+                sub.appendChild(clone);
+            });
+        });
+
+        item.appendChild(sub);
+
+        /* Toggle on mobile */
+        trigger.addEventListener('click', function (e) {
+            if (window.innerWidth > 1000) return;
+            e.preventDefault();
+            const open = !sub.classList.contains('is-open');
+            /* Close other subs */
+            document.querySelectorAll('.rjf-mobile-sub.is-open').forEach(function (s) {
+                if (s !== sub) {
+                    s.classList.remove('is-open');
+                    s.previousElementSibling && s.previousElementSibling.querySelector('.rjf-chevron') &&
+                        (s.previousElementSibling.querySelector('.rjf-chevron').style.transform = '');
+                }
+            });
+            sub.classList.toggle('is-open', open);
+            const chevron = trigger.querySelector('.rjf-chevron');
+            if (chevron) chevron.style.transform = open ? 'rotate(180deg)' : '';
+        });
+    });
+
+    /* Mobile CTA buttons — inject after links */
+    const mobileCta = document.createElement('div');
+    mobileCta.className = 'rjf-mobile-cta';
+    mobileCta.innerHTML = `
+        <a href="tel:{{ site.phone }}" class="rjf-mobile-cta__phone">
+            <svg width="16" height="16" viewBox="0 0 20 20" fill="currentColor"><path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z"/></svg>
+            {{ site.phone_display }}
+        </a>
+        <a href="{{ site.baseurl }}/contact/" class="rjf-mobile-cta__appt">Schedule Service</a>
+    `;
+    links.appendChild(mobileCta);
+})();
+</script>
