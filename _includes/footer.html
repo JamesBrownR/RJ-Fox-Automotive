@@ -1,5 +1,284 @@
-<footer class="bg-black text-white text-center py-4 border-top border-secondary">
-    <div class="container">
-        <p class="mb-1">&copy; 2024 RJ Fox Automotive. All Rights Reserved.</p>
+<footer class="site-footer">
+    <div class="footer-main">
+        <div class="container">
+            <div class="footer-grid">
+
+                <!-- Brand + Contact -->
+                <div class="footer-brand">
+                    <div class="footer-logo">RJ FOX <span>AUTOMOTIVE</span></div>
+                    <p class="footer-tagline">Honest auto repair in Eustis, FL. Transmission specialists for all makes and models — with written estimates before any work begins.</p>
+                    <div class="footer-contact-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <span>{{ site.address }}</span>
+                    </div>
+                    <div class="footer-contact-item">
+                        <i class="fas fa-phone"></i>
+                        <a href="tel:{{ site.phone }}">{{ site.phone_display }}</a>
+                    </div>
+                    <div class="footer-contact-item">
+                        <i class="fas fa-envelope"></i>
+                        <a href="{{ site.baseurl }}/contact">Send us a message</a>
+                    </div>
+                </div>
+
+                <!-- Services -->
+                <div>
+                    <p class="footer-col-title">Services</p>
+                    <ul class="footer-links">
+                        <li><a href="{{ site.baseurl }}/services/transmission-repair/">Transmission Repair</a></li>
+                        <li><a href="{{ site.baseurl }}/services/engine-repair/">Engine Repair</a></li>
+                        <li><a href="{{ site.baseurl }}/services/ac-installation-repair/">AC Repair</a></li>
+                        <li><a href="{{ site.baseurl }}/services/diesel-engines/">Diesel Engines</a></li>
+                        <li><a href="{{ site.baseurl }}/services/auto-brake-repair/">Brake Repair</a></li>
+                        <li><a href="{{ site.baseurl }}/services/auto-electrical-repair/">Electrical Repair</a></li>
+                        <li><a href="{{ site.baseurl }}/services/wheel-alignment/">Wheel Alignment</a></li>
+                        <li><a href="{{ site.baseurl }}/services/check-engine-light/">Check Engine Light</a></li>
+                        <li><a href="{{ site.baseurl }}/services/"><strong>All Services &rarr;</strong></a></li>
+                    </ul>
+                </div>
+
+                <!-- Company -->
+                <div>
+                    <p class="footer-col-title">Company</p>
+                    <ul class="footer-links">
+                        <li><a href="{{ site.baseurl }}/">Home</a></li>
+                        <li><a href="{{ site.baseurl }}/about-us/">About Us</a></li>
+                        <li><a href="{{ site.baseurl }}/reviews/">Reviews</a></li>
+                        <li><a href="{{ site.baseurl }}/gallery/">Gallery</a></li>
+                        <li><a href="{{ site.baseurl }}/blog/">Blog</a></li>
+                        <li><a href="{{ site.baseurl }}/faqs/">FAQs</a></li>
+                        <li><a href="{{ site.baseurl }}/contact/">Contact</a></li>
+                          <li><a href="{{ site.baseurl }}/services/">Services</a></li>
+                        <li><a href="{{ site.baseurl }}/service-areas/">Service Areas</a></li>
+                    </ul>
+                </div>
+
+                <!-- Hours -->
+                <div>
+                    <p class="footer-col-title">Hours</p>
+                    <div class="footer-hours-row">
+                        <span class="day">Mon &ndash; Fri</span>
+                        <span class="time">8:00 AM &ndash; 6:00 PM</span>
+                    </div>
+                    <div class="footer-hours-row">
+                        <span class="day">Saturday</span>
+                        <span class="time">8:00 AM &ndash; 2:00 PM</span>
+                    </div>
+                    <div class="footer-hours-row closed">
+                        <span class="day">Sunday</span>
+                        <span class="time">Closed</span>
+                    </div>
+                    <a href="{{ site.google_maps_link }}" target="_blank" rel="noopener" class="footer-directions-btn">
+                        <i class="fas fa-map-marker-alt"></i> Get Directions
+                    </a>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <div class="footer-bottom">
+        <div class="container">
+            <div class="footer-bottom-inner">
+                <span class="footer-copyright">&copy; 2026 RJ Fox Automotive. All rights reserved.</span>
+                <span class="footer-badge">&#10003; Locally owned &amp; operated &middot; Eustis, FL</span>
+            </div>
+        </div>
     </div>
 </footer>
+
+<style>
+    .site-footer {
+        background-color: #111;
+        color: #fff;
+        font-family: 'Open Sans', sans-serif;
+    }
+
+    .footer-main {
+        padding: 56px 0 48px;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+    }
+
+    .footer-grid {
+        display: grid;
+        grid-template-columns: 2fr 1fr 1fr 1fr;
+        gap: 48px;
+    }
+
+    .footer-logo {
+        font-family: 'Oswald', sans-serif;
+        font-size: 1.4rem;
+        font-weight: 700;
+        text-transform: uppercase;
+        letter-spacing: 0.05em;
+        color: #fff;
+        margin-bottom: 12px;
+    }
+
+    .footer-logo span {
+        color: #ffc107;
+    }
+
+    .footer-tagline {
+        font-size: 0.85rem;
+        color: rgba(255, 255, 255, 0.55);
+        line-height: 1.65;
+        margin-bottom: 20px;
+    }
+
+    .footer-contact-item {
+        display: flex;
+        align-items: flex-start;
+        gap: 10px;
+        margin-bottom: 10px;
+        font-size: 0.85rem;
+        color: rgba(255, 255, 255, 0.7);
+    }
+
+    .footer-contact-item i {
+        color: #ffc107;
+        font-size: 13px;
+        margin-top: 3px;
+        flex-shrink: 0;
+        width: 14px;
+    }
+
+    .footer-contact-item a {
+        color: rgba(255, 255, 255, 0.7);
+        text-decoration: none;
+        transition: color 0.15s;
+    }
+
+    .footer-contact-item a:hover {
+        color: #ffc107;
+    }
+
+    .footer-col-title {
+        font-family: 'Oswald', sans-serif;
+        font-size: 0.7rem;
+        font-weight: 700;
+        text-transform: uppercase;
+        letter-spacing: 0.18em;
+        color: #ffc107;
+        margin-bottom: 16px;
+        margin-top: 0;
+    }
+
+    .footer-links {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+    }
+
+    .footer-links li {
+        margin-bottom: 9px;
+    }
+
+    .footer-links a {
+        font-size: 0.85rem;
+        color: rgba(255, 255, 255, 0.6);
+        text-decoration: none;
+        transition: color 0.15s;
+    }
+
+    .footer-links a:hover {
+        color: #fff;
+    }
+
+    .footer-hours-row {
+        display: flex;
+        justify-content: space-between;
+        font-size: 0.82rem;
+        margin-bottom: 8px;
+    }
+
+    .footer-hours-row .day {
+        color: rgba(255, 255, 255, 0.5);
+    }
+
+    .footer-hours-row .time {
+        color: rgba(255, 255, 255, 0.85);
+    }
+
+    .footer-hours-row.closed .time {
+        color: rgba(255, 255, 255, 0.3);
+    }
+
+    .footer-directions-btn {
+        display: inline-flex;
+        align-items: center;
+        gap: 7px;
+        background: #ffc107;
+        color: #111;
+        font-size: 0.78rem;
+        font-weight: 700;
+        text-transform: uppercase;
+        letter-spacing: 0.06em;
+        padding: 9px 16px;
+        border-radius: 6px;
+        text-decoration: none;
+        margin-top: 20px;
+        transition: background 0.2s;
+    }
+
+    .footer-directions-btn:hover {
+        background: #e6ac00;
+        color: #111;
+    }
+
+    .footer-directions-btn i {
+        font-size: 11px;
+    }
+
+    .footer-bottom {
+        background: rgba(0, 0, 0, 0.4);
+        padding: 18px 0;
+    }
+
+    .footer-bottom-inner {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        gap: 12px;
+    }
+
+    .footer-copyright {
+        font-size: 0.78rem;
+        color: rgba(255, 255, 255, 0.3);
+    }
+
+    .footer-badge {
+        font-size: 0.72rem;
+        font-weight: 600;
+        text-transform: uppercase;
+        letter-spacing: 0.08em;
+        color: rgba(255, 255, 255, 0.45);
+        background: rgba(255, 193, 7, 0.1);
+        border: 0.5px solid rgba(255, 193, 7, 0.25);
+        border-radius: 20px;
+        padding: 5px 14px;
+    }
+
+    @media (max-width: 900px) {
+        .footer-grid {
+            grid-template-columns: 1fr 1fr;
+            gap: 36px;
+        }
+
+        .footer-brand {
+            grid-column: 1 / -1;
+        }
+    }
+
+    @media (max-width: 540px) {
+        .footer-grid {
+            grid-template-columns: 1fr;
+        }
+
+        .footer-bottom-inner {
+            flex-direction: column;
+            align-items: flex-start;
+        }
+    }
+</style>
