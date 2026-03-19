@@ -1,0 +1,431 @@
+---
+layout: default
+title: About
+description: "Robert J. Fox Jr. has been doing honest auto repair in Eustis, FL for over 40 years. Born and raised in Eustis, Rob started RJ Fox Automotive to give Lake County drivers a shop they could actually trust."
+---
+
+<style>
+  .about-hero {
+    position: relative;
+    height: 70vh;
+    min-height: 480px;
+    overflow: hidden;
+    display: flex;
+    align-items: flex-end;
+  }
+  .about-hero__img {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+  }
+  .about-hero__overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+      to top,
+      rgba(0,0,0,0.88) 0%,
+      rgba(0,0,0,0.4) 55%,
+      rgba(0,0,0,0.15) 100%
+    );
+  }
+  .about-hero__content {
+    position: relative;
+    z-index: 2;
+    padding: 0 24px 52px;
+    max-width: 860px;
+    margin: 0 auto;
+    width: 100%;
+  }
+  .about-hero__eyebrow {
+    display: inline-block;
+    font-family: 'Oswald', sans-serif;
+    font-size: 0.72rem;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: #ffc107;
+    margin-bottom: 14px;
+  }
+  .about-hero h1 {
+    font-family: 'Oswald', sans-serif;
+    font-size: clamp(2.2rem, 6vw, 4rem);
+    font-weight: 700;
+    text-transform: uppercase;
+    color: #fff;
+    line-height: 1.05;
+    margin: 0 0 16px;
+  }
+  .about-hero h1 span { color: #ffc107; }
+  .about-hero__sub {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 1.05rem;
+    color: rgba(255,255,255,0.8);
+    max-width: 560px;
+    line-height: 1.65;
+    margin: 0;
+  }
+
+  /* STAT BAR */
+  .about-stats { background: #004aad; }
+  .about-stats__inner {
+    max-width: 1100px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+  }
+  .about-stat {
+    padding: 28px 24px;
+    text-align: center;
+    border-right: 1px solid rgba(255,255,255,0.15);
+  }
+  .about-stat:last-child { border-right: none; }
+  .about-stat__number {
+    font-family: 'Oswald', sans-serif;
+    font-size: 2.4rem;
+    font-weight: 700;
+    color: #ffc107;
+    line-height: 1;
+    display: block;
+    margin-bottom: 6px;
+  }
+  .about-stat__label {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 0.78rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: rgba(255,255,255,0.75);
+  }
+
+  /* MAIN CONTENT */
+  .about-body {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 72px 24px;
+    display: grid;
+    grid-template-columns: 1fr 380px;
+    gap: 64px;
+    align-items: start;
+  }
+  .about-prose h2 {
+    font-family: 'Oswald', sans-serif;
+    font-size: 1.5rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: #004aad;
+    margin: 44px 0 16px;
+  }
+  .about-prose h2:first-child { margin-top: 0; }
+  .about-prose p {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 1.05rem;
+    line-height: 1.85;
+    color: #333;
+    margin-bottom: 20px;
+  }
+  .about-prose p:last-child { margin-bottom: 0; }
+
+  .about-pullquote {
+    border-left: 4px solid #ffc107;
+    padding: 20px 24px;
+    margin: 36px 0;
+    background: #f5f6f8;
+    border-radius: 0 8px 8px 0;
+  }
+  .about-pullquote p {
+    font-family: 'Oswald', sans-serif;
+    font-size: 1.25rem;
+    font-weight: 500;
+    text-transform: uppercase;
+    color: #111;
+    letter-spacing: 0.03em;
+    line-height: 1.4;
+    margin: 0;
+  }
+
+  /* SIDEBAR */
+  .about-sidebar {
+    position: sticky;
+    top: 90px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  .about-card {
+    border: 1px solid #e2e5ea;
+    border-radius: 10px;
+    overflow: hidden;
+  }
+  .about-card__head {
+    background: #004aad;
+    color: #fff;
+    padding: 14px 20px;
+    font-family: 'Oswald', sans-serif;
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+  }
+  .about-card__head--yellow {
+    background: #ffc107;
+    color: #111;
+  }
+  .about-card__body {
+    padding: 20px;
+    background: #fff;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 0.9rem;
+    line-height: 1.7;
+    color: #444;
+  }
+  .about-cta {
+    background: #004aad;
+    border-radius: 10px;
+    padding: 28px 24px;
+    text-align: center;
+  }
+  .about-cta h3 {
+    font-family: 'Oswald', sans-serif;
+    font-size: 1.1rem;
+    text-transform: uppercase;
+    color: #fff;
+    margin: 0 0 8px;
+  }
+  .about-cta p {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 0.85rem;
+    color: rgba(255,255,255,0.75);
+    margin: 0 0 18px;
+  }
+  .about-cta__phone {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    background: #ffc107;
+    color: #111;
+    font-family: 'Oswald', sans-serif;
+    font-size: 1.1rem;
+    text-transform: uppercase;
+    padding: 13px;
+    border-radius: 8px;
+    text-decoration: none;
+    margin-bottom: 10px;
+    transition: background 0.2s;
+  }
+  .about-cta__phone:hover { background: #e6ac00; color: #111; }
+  .about-cta__appt {
+    display: block;
+    background: rgba(255,255,255,0.12);
+    color: #fff;
+    font-family: 'Oswald', sans-serif;
+    text-transform: uppercase;
+    font-size: 0.88rem;
+    padding: 11px;
+    border-radius: 8px;
+    text-decoration: none;
+    transition: background 0.2s;
+  }
+  .about-cta__appt:hover { background: rgba(255,255,255,0.2); color: #fff; }
+  .about-hours {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.875rem;
+  }
+  .about-hours tr { border-bottom: 1px solid #e2e5ea; }
+  .about-hours tr:last-child { border-bottom: none; }
+  .about-hours td { padding: 8px 0; font-family: 'Open Sans', sans-serif; color: #444; }
+  .about-hours td:last-child { text-align: right; color: #666; }
+
+  /* BOTTOM CTA */
+  .about-bottom {
+    background: #111;
+    color: #fff;
+    padding: 64px 24px;
+    text-align: center;
+  }
+  .about-bottom h2 {
+    font-family: 'Oswald', sans-serif;
+    font-size: clamp(1.6rem, 4vw, 2.4rem);
+    text-transform: uppercase;
+    margin: 0 0 12px;
+  }
+  .about-bottom p {
+    font-family: 'Open Sans', sans-serif;
+    color: rgba(255,255,255,0.65);
+    max-width: 500px;
+    margin: 0 auto 32px;
+    font-size: 1rem;
+    line-height: 1.7;
+  }
+  .about-bottom__btns {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 14px;
+    justify-content: center;
+  }
+  .about-bottom__btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 14px 28px;
+    border-radius: 8px;
+    font-family: 'Oswald', sans-serif;
+    font-size: 1rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    text-decoration: none;
+    transition: background 0.2s, color 0.2s;
+  }
+  .about-bottom__btn--yellow { background: #ffc107; color: #111; }
+  .about-bottom__btn--yellow:hover { background: #e6ac00; color: #111; }
+  .about-bottom__btn--outline { background: transparent; color: #fff; border: 2px solid rgba(255,255,255,0.35); }
+  .about-bottom__btn--outline:hover { background: rgba(255,255,255,0.07); color: #fff; }
+
+  @media (max-width: 900px) {
+    .about-body { grid-template-columns: 1fr; gap: 40px; }
+    .about-sidebar { position: static; }
+  }
+  @media (max-width: 560px) {
+    .about-stats__inner { grid-template-columns: 1fr; }
+    .about-stat { border-right: none; border-bottom: 1px solid rgba(255,255,255,0.15); }
+    .about-stat:last-child { border-bottom: none; }
+  }
+</style>
+
+<!-- HERO -->
+<section class="about-hero">
+  <img
+    src="{{ site.baseurl }}/Pics/about.webp"
+    alt="RJ Fox Automotive shop on David Walker Dr in Eustis FL, auto repair Lake County"
+    class="about-hero__img"
+  >
+  <div class="about-hero__overlay"></div>
+  <div class="about-hero__content">
+    <span class="about-hero__eyebrow">Eustis, FL · Locally Owned Since the 1980s</span>
+    <h1>Built on <span>Honest Work</span></h1>
+    <p class="about-hero__sub">Robert J. Fox Jr. has been fixing cars in Eustis for over 40 years. Same town he grew up in. Same commitment to doing the job right.</p>
+  </div>
+</section>
+
+<!-- STATS -->
+<div class="about-stats">
+  <div class="about-stats__inner">
+    <div class="about-stat">
+      <span class="about-stat__number">40+</span>
+      <span class="about-stat__label">Years in the Trade</span>
+    </div>
+    <div class="about-stat">
+      <span class="about-stat__number">Eustis</span>
+      <span class="about-stat__label">Born and Raised</span>
+    </div>
+    <div class="about-stat">
+      <span class="about-stat__number">All</span>
+      <span class="about-stat__label">Makes and Models</span>
+    </div>
+  </div>
+</div>
+
+<!-- BODY -->
+<div class="about-body">
+
+  <div class="about-prose">
+
+    <h2>Rob Fox</h2>
+    <p>Robert J. Fox Jr. was born and raised in Eustis. He has never left, and that is not an accident. This is his community, these are his neighbors, and that shapes how he runs the shop. When you bring your car to RJ Fox Automotive, you are dealing with someone who has a stake in this town and a reputation to protect in it.</p>
+
+    <p>Rob started working on cars in the 1980s, taught himself the trade, and has spent more than four decades at it. He built his skills the way most good mechanics do, by working on real cars with real problems, learning what works and what does not, and developing the kind of diagnostic instinct that only comes from years of hands-on experience. There is no shortcut to that.</p>
+
+    <div class="about-pullquote">
+      <p>"Forty years doing this and the job has always been the same. Find out what is actually wrong and fix it right."</p>
+    </div>
+
+    <h2>Why He Started the Shop</h2>
+    <p>Rob started RJ Fox Automotive to do honest work. That sounds simple, but it is harder to find than it should be in the auto repair industry. Too many shops recommend work that is not needed, quote one price and charge another, or send the hard jobs out to a specialty rebuilder and mark up the cost. Rob built this shop around doing the opposite of all of that.</p>
+
+    <p>You get a diagnosis before you get a recommendation. You get a written estimate before anyone touches your car. If something changes during the repair, you get a call before the work continues. The bill matches what was discussed. That is how it has worked here since the beginning.</p>
+
+    <h2>Transmission Work</h2>
+    <p>Transmission repair is what RJ Fox Automotive is known for throughout Lake County. While most general repair shops send transmission jobs to an outside rebuilder and mark up the cost, Rob does that work in-house. Automatic, manual, CVT, clutch systems, the full range. That means better quality control, direct communication with the person actually doing the work, and pricing that does not include a middleman.</p>
+
+    <p>If you have been quoted a transmission repair somewhere else and want a second opinion, or if you have gotten conflicting information about what your vehicle actually needs, bring it in. Rob will tell you what he finds and what it costs to fix, and he will be straight with you if the repair does not make sense for the vehicle.</p>
+
+    <h2>Serving Eustis and Lake County</h2>
+    <p>RJ Fox Automotive is at 801 David Walker Dr in Eustis, a short drive from Mount Dora, Tavares, Leesburg, and Clermont. Rob and his team work on all makes and models, domestic and import, gas and diesel. They have been doing it here for over 40 years and they are not going anywhere.</p>
+
+  </div>
+
+  <!-- SIDEBAR -->
+  <aside class="about-sidebar">
+
+    <div class="about-cta">
+      <h3>Come See Us</h3>
+      <p>Honest estimates before any work begins. No pressure.</p>
+      <a href="tel:{{ site.phone }}" class="about-cta__phone">
+        <i class="fa-solid fa-phone"></i> {{ site.phone_display }}
+      </a>
+      <a href="{{ site.baseurl }}/contact" class="about-cta__appt">
+        <i class="fa-solid fa-calendar-check"></i> Schedule Service
+      </a>
+    </div>
+
+    <div class="about-card">
+      <div class="about-card__head">Shop Hours</div>
+      <div class="about-card__body">
+        <table class="about-hours">
+          <tr><td>Monday</td><td>8am to 6pm</td></tr>
+          <tr><td>Tuesday</td><td>8am to 6pm</td></tr>
+          <tr><td>Wednesday</td><td>8am to 6pm</td></tr>
+          <tr><td>Thursday</td><td>8am to 6pm</td></tr>
+          <tr><td>Friday</td><td>8am to 6pm</td></tr>
+          <tr><td>Saturday</td><td>8am to 2pm</td></tr>
+          <tr><td>Sunday</td><td>Closed</td></tr>
+        </table>
+      </div>
+    </div>
+
+    <div class="about-card">
+      <div class="about-card__head about-card__head--yellow">Find Us</div>
+      <div class="about-card__body">
+        <p style="margin: 0 0 10px;">
+          <strong>RJ Fox Automotive</strong><br>
+          {{ site.address_street }}<br>
+          {{ site.address_city }}, {{ site.address_state }} {{ site.address_zip }}
+        </p>
+        <a href="{{ site.google_maps_link }}" target="_blank" rel="noopener" style="color: #004aad; font-size: 0.82rem; font-weight: 600;">
+          <i class="fa-solid fa-map-pin"></i> Get Directions
+        </a>
+      </div>
+    </div>
+
+    <div class="about-card">
+      <div class="about-card__head">Services</div>
+      <div class="about-card__body">
+        <ul style="margin: 0; padding: 0; list-style: none;">
+          <li style="padding: 6px 0; border-bottom: 1px solid #e2e5ea;"><a href="{{ site.baseurl }}/services/transmission-repair/" style="color: #004aad; text-decoration: none; font-size: 0.875rem;"><i class="fa-solid fa-chevron-right" style="font-size: 0.65rem; margin-right: 8px;"></i>Transmission Repair</a></li>
+          <li style="padding: 6px 0; border-bottom: 1px solid #e2e5ea;"><a href="{{ site.baseurl }}/services/engine-repair/" style="color: #004aad; text-decoration: none; font-size: 0.875rem;"><i class="fa-solid fa-chevron-right" style="font-size: 0.65rem; margin-right: 8px;"></i>Engine Repair</a></li>
+          <li style="padding: 6px 0; border-bottom: 1px solid #e2e5ea;"><a href="{{ site.baseurl }}/services/ac-installation-repair/" style="color: #004aad; text-decoration: none; font-size: 0.875rem;"><i class="fa-solid fa-chevron-right" style="font-size: 0.65rem; margin-right: 8px;"></i>AC Repair</a></li>
+          <li style="padding: 6px 0; border-bottom: 1px solid #e2e5ea;"><a href="{{ site.baseurl }}/services/diesel-engines/" style="color: #004aad; text-decoration: none; font-size: 0.875rem;"><i class="fa-solid fa-chevron-right" style="font-size: 0.65rem; margin-right: 8px;"></i>Diesel Engines</a></li>
+          <li style="padding: 6px 0; border-bottom: 1px solid #e2e5ea;"><a href="{{ site.baseurl }}/services/auto-brake-repair/" style="color: #004aad; text-decoration: none; font-size: 0.875rem;"><i class="fa-solid fa-chevron-right" style="font-size: 0.65rem; margin-right: 8px;"></i>Brake Repair</a></li>
+          <li style="padding: 6px 0;"><a href="{{ site.baseurl }}/services/" style="color: #004aad; text-decoration: none; font-size: 0.875rem;"><i class="fa-solid fa-chevron-right" style="font-size: 0.65rem; margin-right: 8px;"></i>All Services</a></li>
+        </ul>
+      </div>
+    </div>
+
+  </aside>
+</div>
+
+<!-- BOTTOM CTA -->
+<section class="about-bottom">
+  <h2>40 Years. Same Town. Same Standards.</h2>
+  <p>Stop by 801 David Walker Dr in Eustis or give us a call. We give honest estimates before any work begins.</p>
+  <div class="about-bottom__btns">
+    <a href="tel:{{ site.phone }}" class="about-bottom__btn about-bottom__btn--yellow">
+      <i class="fa-solid fa-phone"></i> Call {{ site.phone_display }}
+    </a>
+    <a href="{{ site.baseurl }}/contact" class="about-bottom__btn about-bottom__btn--outline">
+      <i class="fa-solid fa-calendar-check"></i> Schedule Service
+    </a>
+  </div>
+</section>
