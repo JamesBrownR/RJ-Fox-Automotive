@@ -237,12 +237,12 @@
 
 /* ── DROPDOWN ────────────────────────────────────────────── */
 .rjf-dropdown {
-    visibility: hidden;
-    opacity: 0;
+    display: none;
     position: absolute;
     top: calc(100% + 10px);
     left: 50%;
-    transform: translateX(-50%) translateY(-6px);
+    transform: translateX(-50%);
+
     background: #fff;
     border: 1px solid var(--nav-border);
     border-radius: var(--nav-radius);
@@ -260,10 +260,7 @@
 }
 
 .rjf-nav__item--drop:hover .rjf-dropdown {
-    visibility: visible;
-    opacity: 1;
-    pointer-events: auto;
-    transform: translateX(-50%) translateY(0);
+    display: block;
 }
 
 .rjf-nav__item--drop:hover .rjf-dropdown--sm {
