@@ -4,7 +4,6 @@ title: TRANSMISSION SHOP EUSTIS, FL | Transmission Repair, Rebuild, Flush, Clutc
 description: Transmission repair specialists in Eustis, FL. Rob Fox has been fixing cars in Lake County for 40+ years. Honest diagnosis, written estimates, all makes and models. Call (352) 250-3210.
 ---
 
-<link rel="preload" as="image" href="/Pics/Hero.webp">
 <style>
   /* ── TOKENS ─────────────────────────────────────── */
   :root {
@@ -35,11 +34,12 @@ description: Transmission repair specialists in Eustis, FL. Rob Fox has been fix
   }
  
   .rjf-hero__bg {
-    position: absolute;
-    inset: 0;
-    background:
-      url('/Pics/Hero.webp') center/cover no-repeat;
-    }
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
  
   
  
@@ -840,7 +840,7 @@ description: Transmission repair specialists in Eustis, FL. Rob Fox has been fix
  
 <!-- ── HERO ──────────────────────────────────────────────── -->
 <section class="rjf-hero">
-  <div fetchpriority="high" class="rjf-hero__bg"></div>
+<img src="/Pics/Hero.webp" fetchpriority="high" alt="" class="rjf-hero__bg">
   <div class="rjf-hero__overlay"></div>
   <div class="rjf-hero__accent"></div>
  
