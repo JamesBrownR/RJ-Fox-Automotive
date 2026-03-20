@@ -8,12 +8,17 @@
     
 
     <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-ER4XLHYHRC"></script>
-<script>
+<script defer src="https://www.googletagmanager.com/gtag/js?id=G-ER4XLHYHRC"></script>
+    <script>
+  window.addEventListener('load', function() {
+    var s = document.createElement('script');
+    s.src = 'https://www.googletagmanager.com/gtag/js?id=G-ER4XLHYHRC';
+    s.async = true;
+    document.head.appendChild(s);
+  });
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
   gtag('js', new Date());
-
   gtag('config', 'G-ER4XLHYHRC');
 </script>
 
