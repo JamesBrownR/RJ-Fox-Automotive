@@ -1,0 +1,119 @@
+<script>
+(function () {
+  'use strict';
+
+  // ── HELPER ──────────────────────────────────────────────────────────────
+  function gEvent(eventName, params) {
+    if (typeof gtag !== 'function') return;
+    gtag('event', eventName, params || {});
+  }
+
+  // ── 1. PHONE CLICKS ─────────────────────────────────────────────────────
+  // Fires on any <a href="tel:..."> click anywhere on the site
+  document.addEventListener('click', function (e) {
+    var el = e.target.closest('a[href^="tel:"]');
+    if (!el) return;
+    gEvent('phone_click', {
+      event_category: 'Contact',
+      event_label: el.href.replace('tel:', ''),
+      page_location: window.location.href
+    });
+  });
+
+  // ── 2. SCHEDULE SERVICE / CTA BUTTON CLICKS ─────────────────────────────
+  // Matches any link whose text contains "Schedule" or points to /contact/
+  document.addEventListener('click', function (e) {
+    var el = e.target.closest('a');
+    if (!el) return;
+    var href = el.getAttribute('href') || '';
+    var text = el.textContent.trim();
+    var isSchedule = /schedule/i.test(text) || href.includes('/contact');
+    if (!isSchedule) return;
+    gEvent('schedule_click', {
+      event_category: 'Contact',
+      event_label: text || href,
+      page_location: window.location.href
+    });
+  });
+
+  // ── 3. GET DIRECTIONS CLICKS ────────────────────────────────────────────
+  document.addEventListener('click', function (e) {
+    var el = e.target.closest('a[href*="maps.google"], a[href*="google.com/maps"]');
+    if (!el) return;
+    gEvent('get_directions', {
+      event_category: 'Contact',
+      event_label: 'Google Maps',
+      page_location: window.location.href
+    });
+  });
+
+  // ── 4. CONTACT FORM SUBMISSION ──────────────────────────────────────────
+  // Listens for the Formspree form on /contact/
+  var contactForm = document.querySelector('form[action*="formspree"]');
+  if (contactForm) {
+    contactForm.addEventListener('submit', function () {
+      gEvent('form_submit', {
+        event_category: 'Contact',
+        event_label: 'Contact Form',
+        page_location: window.location.href
+      });
+    });
+  }
+
+  // ── 5. SERVICE PAGE VIEWS ───────────────────────────────────────────────
+  // Fires once when a /services/ page loads, passing the service name
+  if (window.location.pathname.indexOf('/services/') === 0) {
+    var serviceName = window.location.pathname
+      .replace('/services/', '')
+      .replace(/\/$/, '')
+      .replace(/-/g, ' ');
+    gEvent('service_page_view', {
+      event_category: 'Engagement',
+      event_label: serviceName || 'services index',
+      page_location: window.location.href
+    });
+  }
+
+  // ── 6. REVIEW PAGE VIEW ─────────────────────────────────────────────────
+  if (window.location.pathname.indexOf('/reviews') === 0) {
+    gEvent('reviews_page_view', {
+      event_category: 'Engagement',
+      event_label: 'Reviews',
+      page_location: window.location.href
+    });
+  }
+
+  // ── 7. GALLERY PAGE VIEW ────────────────────────────────────────────────
+  if (window.location.pathname.indexOf('/gallery') === 0) {
+    gEvent('gallery_page_view', {
+      event_category: 'Engagement',
+      event_label: 'Gallery',
+      page_location: window.location.href
+    });
+  }
+
+  // ── 8. BLOG SCROLL DEPTH ────────────────────────────────────────────────
+  // On blog posts, fires at 25%, 50%, 75%, and 100% scroll depth
+  if (document.querySelector('article') && window.location.pathname.indexOf('/blog/') === 0) {
+    var milestones = { 25: false, 50: false, 75: false, 100: false };
+    window.addEventListener('scroll', function () {
+      var scrollTop  = window.scrollY || document.documentElement.scrollTop;
+      var docHeight  = document.documentElement.scrollHeight - window.innerHeight;
+      if (docHeight <= 0) return;
+      var pct = Math.round((scrollTop / docHeight) * 100);
+      [25, 50, 75, 100].forEach(function (mark) {
+        if (!milestones[mark] && pct >= mark) {
+          milestones[mark] = true;
+          gEvent('blog_scroll_depth', {
+            event_category: 'Engagement',
+            event_label: document.title,
+            value: mark,
+            page_location: window.location.href
+          });
+        }
+      });
+    }, { passive: true });
+  }
+
+})();
+</script>
