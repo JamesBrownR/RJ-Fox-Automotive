@@ -226,6 +226,47 @@ layout: default
   .sa-faq .accordion-button:focus { box-shadow: none; }
   .sa-faq .accordion-body { font-size: .9rem; color: var(--sa-muted); line-height: 1.75; }
 
+  /* ── SERVICE DETAILS GRID ────────────────────────────── */
+  .sa-svc-details {
+    margin: 44px 0 36px;
+    padding-top: 36px;
+    border-top: 2px solid var(--sa-border);
+  }
+  .sa-svc-details > h2 {
+    font-family: 'Oswald', sans-serif;
+    font-size: 1.45rem;
+    color: var(--sa-blue);
+    text-transform: uppercase;
+    margin: 0 0 24px;
+  }
+  .sa-svc-details__grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+    gap: 14px;
+  }
+  .sa-svc-details__item {
+    background: var(--sa-light);
+    border: 1px solid var(--sa-border);
+    border-left: 4px solid var(--sa-blue);
+    border-radius: 0 var(--sa-radius) var(--sa-radius) 0;
+    padding: 16px 18px;
+  }
+  .sa-svc-details__item h3 {
+    font-family: 'Oswald', sans-serif;
+    font-size: .88rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: .05em;
+    color: var(--sa-text);
+    margin: 0 0 6px;
+  }
+  .sa-svc-details__item p {
+    font-size: .83rem;
+    color: var(--sa-muted);
+    line-height: 1.65;
+    margin: 0;
+  }
+
   /* ── SIDEBAR ─────────────────────────────────────────── */
   .sa-sidebar { position: sticky; top: 80px; display: flex; flex-direction: column; gap: 20px; }
 
@@ -379,6 +420,7 @@ layout: default
   @media (max-width: 580px) {
     .sa-hero { padding: 80px 20px 56px; }
     .sa-trust__inner { gap: 14px 20px; }
+    .sa-svc-details__grid { grid-template-columns: 1fr; }
   }
 </style>
 
@@ -426,6 +468,22 @@ layout: default
   <!-- CONTENT -->
   <article class="sa-content">
     {{ content }}
+
+    <!-- SERVICE DETAILS SECTION -->
+    {% assign svc_details = site.data.service_details[page.service_slug] %}
+    {% if svc_details %}
+    <div class="sa-svc-details">
+      <h2>{{ svc_details.heading }}</h2>
+      <div class="sa-svc-details__grid">
+        {% for item in svc_details.items %}
+        <div class="sa-svc-details__item">
+          <h3>{{ item.name }}</h3>
+          <p>{{ item.desc }}</p>
+        </div>
+        {% endfor %}
+      </div>
+    </div>
+    {% endif %}
 
     <!-- REVIEW -->
     {% if area.review %}
